@@ -390,6 +390,7 @@ p { margin: 0 0 var(--space-2); }
 .article-card {
   position: relative;
   padding-top: var(--space-2);
+  padding-bottom: var(--space-3);
   border-top: 1px solid var(--border);
 }
 .article-card .index-mark {
