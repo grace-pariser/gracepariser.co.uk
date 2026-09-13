@@ -22,6 +22,6 @@ return [
         'dek' => 'As-told-to piece making the case that HR remains essential, prompted by a tech CEO firing his entire HR department and calling it unnecessary.',
         'outlet' => 'The Telegraph',
         'date' => 'September 2026',
-        'href' => null,
+        'href' => 'https://www.telegraph.co.uk/gift/463a3d80be760008',
     ],
 ];

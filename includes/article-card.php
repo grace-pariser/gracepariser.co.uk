@@ -7,7 +7,10 @@ function render_article_card(array $a, ?int $number = null): void {
     ?>
     <div class="article-card">
         <?php if ($number !== null): ?><span class="index-mark">No. <?= str_pad((string)$number, 2, '0', STR_PAD_LEFT) ?></span><?php endif; ?>
-        <h3><?php if (!empty($a['href'])): ?><a href="<?= htmlspecialchars($a['href']) ?>"><?= $title ?></a><?php else: ?><?= $title ?><?php endif; ?></h3>
+        <h3><?php if (!empty($a['href'])):
+            $isExternal = str_starts_with($a['href'], 'http');
+            $attrs = $isExternal ? ' target="_blank" rel="noopener"' : '';
+        ?><a href="<?= htmlspecialchars($a['href']) ?>"<?= $attrs ?>><?= $title ?></a><?php else: ?><?= $title ?><?php endif; ?></h3>
         <p><?= $dek ?></p>
         <?php if ($metaStr): ?><p class="article-meta"><?= $metaStr ?></p><?php endif; ?>
     </div>

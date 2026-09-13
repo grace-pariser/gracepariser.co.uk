@@ -7,21 +7,30 @@ require __DIR__ . '/includes/header.php';
 $featured = [
     [
         'outlet' => 'The Telegraph',
+        'logo' => '/assets/images/press/telegraph.svg',
+        'logoClass' => 'press-logo-telegraph',
         'date' => 'September 2026',
         'title' => 'Sorry, but your company really does need HR',
         'body' => 'As-told-to piece making the case that HR remains essential, prompted by a tech CEO firing his entire HR department and calling it unnecessary.',
+        'href' => 'https://www.telegraph.co.uk/gift/463a3d80be760008',
     ],
     [
         'outlet' => 'Personnel Today',
+        'logo' => '/assets/images/press/personnel-today.png',
+        'logoClass' => 'press-logo-pt',
         'date' => null,
         'title' => 'Seven ways to prepare now for the Employment Rights Bill',
         'body' => 'Commented on why employers should hold off changing contracts until secondary legislation is clearer.',
+        'href' => 'https://www.personneltoday.com/hr/prepare-employment-rights-bill/',
     ],
     [
         'outlet' => 'Personnel Today',
+        'logo' => '/assets/images/press/personnel-today.png',
+        'logoClass' => 'press-logo-pt',
         'date' => null,
         'title' => 'Bereavement leave: understanding the value of employer support',
         'body' => 'Commented on flexible return-to-work approaches for grieving employees.',
+        'href' => 'https://www.personneltoday.com/hr/bereavement-leave-understanding-the-value-of-employer-support/',
     ],
 ];
 ?>
@@ -38,10 +47,10 @@ $featured = [
     <div class="card-grid">
         <?php foreach ($featured as $i => $f): ?>
             <div class="article-card">
-                <span class="index-mark">No. <?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></span>
-                <h3><?= htmlspecialchars($f['title']) ?></h3>
+                <img src="<?= htmlspecialchars($f['logo']) ?>" alt="<?= htmlspecialchars($f['outlet']) ?>" class="press-logo <?= htmlspecialchars($f['logoClass']) ?>" style="margin-bottom:0.75em;">
+                <h3><a href="<?= htmlspecialchars($f['href']) ?>" target="_blank" rel="noopener"><?= htmlspecialchars($f['title']) ?></a></h3>
                 <p><?= htmlspecialchars($f['body']) ?></p>
-                <p class="article-meta"><?= htmlspecialchars(implode(' · ', array_filter([$f['outlet'], $f['date']]))) ?></p>
+                <?php if ($f['date']): ?><p class="article-meta"><?= htmlspecialchars($f['date']) ?></p><?php endif; ?>
             </div>
         <?php endforeach; ?>
     </div>

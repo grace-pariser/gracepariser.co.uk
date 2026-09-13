@@ -33,9 +33,9 @@ $articles = require __DIR__ . '/includes/articles.php';
 
 <section class="press-strip wrap">
     <p class="section-label">As seen in</p>
-    <ul>
-        <li>The Telegraph</li>
-        <li>Personnel Today</li>
+    <ul class="press-logos">
+        <li><a href="https://www.telegraph.co.uk" target="_blank" rel="noopener"><img src="/assets/images/press/telegraph.svg" alt="The Telegraph" class="press-logo press-logo-telegraph"></a></li>
+        <li><a href="https://www.personneltoday.com" target="_blank" rel="noopener"><img src="/assets/images/press/personnel-today.png" alt="Personnel Today" class="press-logo press-logo-pt"></a></li>
     </ul>
 </section>
 
