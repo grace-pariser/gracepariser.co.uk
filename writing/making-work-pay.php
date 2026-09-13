@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Making Work Pay: the gaps nobody's talking about — Grace Pariser";
+$pageTitle = "Making Work Pay: the gaps nobody's talking about | Grace Pariser";
 $pageDescription = "Making Work Pay: the gaps nobody's talking about.";
 $activeNav = 'writing';
 require __DIR__ . '/../includes/header.php';

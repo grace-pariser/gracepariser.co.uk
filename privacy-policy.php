@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Privacy Notice — Grace Pariser';
+$pageTitle = 'Privacy Notice | Grace Pariser';
 $pageDescription = 'How gracepariser.co.uk handles your data.';
 $activeNav = '';
 require __DIR__ . '/includes/header.php';

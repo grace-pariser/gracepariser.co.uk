@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Terms of Use — Grace Pariser';
+$pageTitle = 'Terms of Use | Grace Pariser';
 $pageDescription = 'Terms of use for gracepariser.co.uk.';
 $activeNav = '';
 require __DIR__ . '/includes/header.php';

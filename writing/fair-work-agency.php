@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'The Fair Work Agency, and what it actually means for employers — Grace Pariser';
+$pageTitle = 'The Fair Work Agency, and what it actually means for employers | Grace Pariser';
 $pageDescription = 'The Fair Work Agency, and what it actually means for employers.';
 $activeNav = 'writing';
 require __DIR__ . '/../includes/header.php';

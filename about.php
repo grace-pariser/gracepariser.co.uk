@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'About — Grace Pariser';
+$pageTitle = 'About | Grace Pariser';
 $pageDescription = 'Employment law and HR consultant, owner of HR On Call, and founder of Practice Hub, Pop + Pixel and The HR Vault.';
 $activeNav = 'about';
 require __DIR__ . '/includes/header.php';

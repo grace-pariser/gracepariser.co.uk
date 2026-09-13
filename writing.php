@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Writing — Grace Pariser';
+$pageTitle = 'Writing | Grace Pariser';
 $pageDescription = 'Employment law and HR, written the way I would actually explain it to you over coffee.';
 $activeNav = 'writing';
 require __DIR__ . '/includes/header.php';

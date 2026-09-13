@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Cookie Notice — Grace Pariser';
+$pageTitle = 'Cookie Notice | Grace Pariser';
 $pageDescription = 'How gracepariser.co.uk uses cookies.';
 $activeNav = '';
 require __DIR__ . '/includes/header.php';

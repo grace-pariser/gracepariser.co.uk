@@ -34,7 +34,7 @@ $products = [
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grace Pariser — Links</title>
+<title>Grace Pariser | Links</title>
 <meta name="description" content="All my pages, products and profiles in one place.">
 <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
@@ -55,9 +55,24 @@ $products = [
     <a class="links-btn links-btn-primary" href="/contact.php">Get in touch</a>
 
     <div class="links-group">
-        <a class="links-btn" href="https://gracepariser.co.uk/">gracepariser.co.uk</a>
-        <a class="links-btn" href="https://gracepariser.co.uk/writing.php">My writing</a>
-        <a class="links-btn" href="https://www.thehrvault.co.uk/legal-updates.php" target="_blank" rel="noopener">Employment legal updates</a>
+        <a class="product-card" href="https://gracepariser.co.uk/">
+            <span class="product-text">
+                <span class="product-name">My website</span>
+                <span class="product-desc">About me, press, writing, and how to work with me.</span>
+            </span>
+        </a>
+        <a class="product-card" href="https://gracepariser.co.uk/writing.php">
+            <span class="product-text">
+                <span class="product-name">Writing</span>
+                <span class="product-desc">Employment law and HR, written in my own words.</span>
+            </span>
+        </a>
+        <a class="product-card" href="https://www.thehrvault.co.uk/legal-updates.php" target="_blank" rel="noopener">
+            <span class="product-text">
+                <span class="product-name">Employment Legal Updates</span>
+                <span class="product-desc">Tracked changes in UK employment law, from The HR Vault.</span>
+            </span>
+        </a>
     </div>
 
     <div class="links-group">

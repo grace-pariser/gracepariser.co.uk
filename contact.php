@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Contact — Grace Pariser';
+$pageTitle = 'Contact | Grace Pariser';
 $pageDescription = 'Get in touch about consultancy work, press enquiries, or anything else.';
 $activeNav = 'contact';
 require __DIR__ . '/includes/header.php';

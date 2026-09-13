@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Press — Grace Pariser';
+$pageTitle = 'Press | Grace Pariser';
 $pageDescription = 'Employment law and HR commentary for national and trade press.';
 $activeNav = 'press';
 require __DIR__ . '/includes/header.php';
