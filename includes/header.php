@@ -60,6 +60,9 @@ function nav_class(string $key, string $active): string {
             'name' => 'HR On Call Ltd',
             'url' => 'https://on-call.co.uk',
             'founder' => ['@id' => 'https://gracepariser.co.uk/#person'],
+            'sameAs' => [
+                'https://find-and-update.company-information.service.gov.uk/company/16891106',
+            ],
         ],
         [
             '@type' => 'WebSite',
