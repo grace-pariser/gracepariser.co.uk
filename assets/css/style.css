@@ -231,6 +231,7 @@ h3 { font-size: 1.25rem; }
 p { margin: 0 0 var(--space-2); }
 
 .prose { max-width: var(--measure); }
+.prose-wide { max-width: 850px; }
 .prose p { margin: 0 0 1.3em; }
 .prose > *:last-child { margin-bottom: 0; }
 

@@ -12,7 +12,7 @@ require __DIR__ . '/includes/header.php';
 </section>
 
 <section class="section wrap" style="border-top:none; padding-top:2rem;">
-    <div class="prose">
+    <div class="prose prose-wide">
         <p>These terms apply to your use of gracepariser.co.uk (the "site"). By using the site you accept them.</p>
 
         <h3>About this site</h3>
