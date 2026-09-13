@@ -1,0 +1,126 @@
+#!/bin/bash
+#
+# Deploy hook. Runs on the live server when GitHub Actions pushes to the bare
+# repo. Checks out the new code, waits out the opcache window, health-checks
+# the real public URL, and automatically rolls back if the site is not healthy.
+#
+# Config comes from deploy.conf next to this hook, so the same script is used
+# on every site. Do not edit this on the server; edit it in the repo under
+# deploy/post-receive and re-install, or the next person will be confused.
+
+set -u
+
+GITDIR="$(cd "$(dirname "$0")/.." && pwd)"
+CONF="$GITDIR/deploy.conf"
+
+if [ ! -f "$CONF" ]; then
+    echo "!! No deploy.conf in $GITDIR - refusing to deploy."
+    exit 1
+fi
+# shellcheck disable=SC1090
+. "$CONF"
+
+: "${WORKTREE:?deploy.conf must set WORKTREE}"
+: "${HEALTH_URL:?deploy.conf must set HEALTH_URL}"
+: "${OPCACHE_WAIT:=95}"
+: "${HEALTH_RETRIES:=6}"
+: "${OPCACHE_RESET_URL:=}"
+
+STATEFILE="$GITDIR/deployed-sha"
+UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+
+# core.bare=false is required: without it git ignores --work-tree on a bare repo.
+G="git -c core.bare=false --git-dir=$GITDIR --work-tree=$WORKTREE"
+
+# A browser User-Agent is mandatory. mod_security on the InMotion box answers
+# 406 to a bare curl, which would look like a failed deploy and trigger a
+# pointless rollback.
+http_code() {
+    curl -s -o /dev/null -w "%{http_code}" -A "$UA" --max-time 25 "$1" 2>/dev/null
+}
+
+health_ok() {
+    local i=1 code=""
+    while [ "$i" -le "$HEALTH_RETRIES" ]; do
+        code="$(http_code "$HEALTH_URL")"
+        if [ "$code" = "200" ]; then
+            echo "     health check OK (HTTP 200, attempt $i)"
+            return 0
+        fi
+        echo "     attempt $i/$HEALTH_RETRIES returned HTTP ${code:-no-response}"
+        i=$((i + 1))
+        [ "$i" -le "$HEALTH_RETRIES" ] && sleep 5
+    done
+    return 1
+}
+
+while read -r oldrev newrev refname; do
+    [ "$refname" = "refs/heads/main" ] || { echo "-- ignoring $refname"; continue; }
+
+    PREV="$(cat "$STATEFILE" 2>/dev/null || true)"
+
+    echo "================================================================"
+    echo " Deploying ${newrev:0:8} -> $WORKTREE"
+    [ -n "$PREV" ] && echo " Last known good: ${PREV:0:8}"
+    echo "================================================================"
+
+    echo " [1/4] Checking out..."
+    if ! $G checkout -f main 2>&1 | sed 's/^/     /'; then
+        echo " !! Checkout failed. Live site may be inconsistent - investigate now."
+        exit 1
+    fi
+
+    if [ -n "$OPCACHE_RESET_URL" ]; then
+        echo " [2/4] Forcing an opcache reset: $OPCACHE_RESET_URL"
+        reset_code="$(http_code "$OPCACHE_RESET_URL")"
+        echo "       reset endpoint returned HTTP ${reset_code:-no-response}"
+    fi
+
+    echo " [3/4] Waiting ${OPCACHE_WAIT}s as a safety margin."
+    echo "       (A fixed wait alone is not reliable - this InMotion box has"
+    echo "        served stale bytecode well past 95s before. OPCACHE_RESET_URL"
+    echo "        above is the real fix; this wait just covers a slower box or"
+    echo "        a site with no reset endpoint configured.)"
+    sleep "$OPCACHE_WAIT"
+
+    echo " [4/4] Health check: $HEALTH_URL"
+    if health_ok; then
+        echo "$newrev" > "$STATEFILE"
+        echo ""
+        echo " DEPLOYED OK: ${newrev:0:8} is live."
+        continue
+    fi
+
+    echo ""
+    echo " !! HEALTH CHECK FAILED."
+
+    if [ -z "$PREV" ]; then
+        echo " !! No previously recorded good commit, so no automatic rollback."
+        echo " !! The site is serving ${newrev:0:8}. Investigate immediately."
+        exit 1
+    fi
+
+    echo " !! Rolling back to ${PREV:0:8}..."
+    if ! $G checkout -f "$PREV" 2>&1 | sed 's/^/     /'; then
+        echo " !! ROLLBACK CHECKOUT FAILED. Manual intervention required."
+        exit 1
+    fi
+
+    if [ -n "$OPCACHE_RESET_URL" ]; then
+        echo " !! Forcing an opcache reset after rollback: $OPCACHE_RESET_URL"
+        reset_code="$(http_code "$OPCACHE_RESET_URL")"
+        echo "     reset endpoint returned HTTP ${reset_code:-no-response}"
+    fi
+
+    echo " !! Waiting ${OPCACHE_WAIT}s then re-checking..."
+    sleep "$OPCACHE_WAIT"
+
+    if health_ok; then
+        echo " !! Rolled back successfully. Site is healthy on ${PREV:0:8}."
+        echo " !! The bad commit was ${newrev:0:8} - fix it and push again."
+    else
+        echo " !! ROLLBACK DID NOT RESTORE HEALTH."
+        echo " !! The problem is probably not the code. Check the server."
+    fi
+    exit 1
+done

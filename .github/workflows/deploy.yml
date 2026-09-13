@@ -1,0 +1,78 @@
+name: Deploy to live
+
+# Fires on any push to main, including a Pull Request merged from the GitHub
+# web UI or the mobile app, so deploys no longer depend on one laptop.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-live-gracepariser
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # InMotion waits 95s for the opcache before health-checking, and a
+    # rollback repeats that wait, so allow generous headroom.
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install deploy key
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p 2222 209.182.203.135 >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Push to live server
+        # The server hooks do the real work: pre-receive parses every PHP file and
+        # rejects the push if any fail (live untouched); post-receive checks out,
+        # waits out the opcache, health-checks the public URL and auto-rolls-back.
+        #
+        # Retries exist because two pushes racing for the same ref make the loser
+        # report "failed to update ref" and exit 128, even though the winner
+        # deployed perfectly. That is a false alarm, so before failing we check
+        # whether live already carries our commit.
+        run: |
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/deploy_key -p 2222 -o IdentitiesOnly=yes"
+          REMOTE="ssh://nfc6da5@209.182.203.135/home/nfc6da5/git/gracepariser.co.uk.git"
+          MINE="$(git rev-parse HEAD)"
+
+          for attempt in 1 2 3; do
+            echo "--- attempt $attempt ---"
+            if out="$(git push "$REMOTE" HEAD:main 2>&1)"; then
+              echo "$out"
+              echo "Deployed."
+              exit 0
+            fi
+            echo "$out"
+
+            if echo "$out" | grep -q "Everything up-to-date"; then
+              echo "Live already has this commit."
+              exit 0
+            fi
+
+            # A syntax-gate rejection is a real failure. Do not retry it.
+            if echo "$out" | grep -qiE "PHP SYNTAX ERROR|pre-receive hook declined"; then
+              echo "Rejected by the syntax gate. Live was not touched."
+              exit 1
+            fi
+
+            sleep $((attempt * 15))
+
+            live="$(git ls-remote "$REMOTE" refs/heads/main 2>/dev/null | cut -f1)"
+            if [ "$live" = "$MINE" ]; then
+              echo "Live is already at $MINE (another run won the race). Nothing to do."
+              exit 0
+            fi
+          done
+
+          echo "Deploy failed after 3 attempts."
+          exit 1

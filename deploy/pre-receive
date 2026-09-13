@@ -1,0 +1,63 @@
+#!/bin/bash
+#
+# Gatekeeper. Runs BEFORE the push is accepted, so anything rejected here never
+# reaches the live site at all. This is the cheap safety net: a PHP parse error
+# is caught with the live docroot completely untouched.
+#
+# Lives in the repo at deploy/pre-receive. Do not edit on the server.
+
+set -u
+
+GITDIR="$(cd "$(dirname "$0")/.." && pwd)"
+ZERO="0000000000000000000000000000000000000000"
+
+while read -r oldrev newrev refname; do
+    [ "$refname" = "refs/heads/main" ] || continue
+    [ "$newrev" = "$ZERO" ] && continue
+
+    TMP="$(mktemp -d)"
+    trap 'rm -rf "$TMP"' EXIT
+
+    if ! git --git-dir="$GITDIR" archive "$newrev" | tar -x -C "$TMP" 2>/dev/null; then
+        echo "!! Could not extract $newrev for checking. Rejecting."
+        exit 1
+    fi
+
+    # NOTE: deliberately a temp file, not `find | while` and not process
+    # substitution. Process substitution needs /dev/fd, which is missing on the
+    # InMotion box (it silently checked zero files). A pipe would put the loop
+    # in a subshell, so the `bad` counter would be lost. A temp file works
+    # everywhere and keeps the counter.
+    LIST="$TMP.phplist"
+    find "$TMP" -type f -name '*.php' > "$LIST"
+
+    bad=0
+    checked=0
+    while IFS= read -r f; do
+        [ -n "$f" ] || continue
+        checked=$((checked + 1))
+        if ! out="$(php -l "$f" 2>&1)"; then
+            echo "!! PHP SYNTAX ERROR in ${f#"$TMP"/}"
+            echo "   $(echo "$out" | head -2 | tail -1)"
+            bad=$((bad + 1))
+        fi
+    done < "$LIST"
+    rm -f "$LIST"
+
+    if [ "$checked" -eq 0 ]; then
+        echo "!! Checked 0 PHP files. The syntax gate is not working, so it is"
+        echo "!! not safe to trust this deploy. Rejecting."
+        exit 1
+    fi
+
+    if [ "$bad" -ne 0 ]; then
+        echo ""
+        echo "!! Rejected: $bad file(s) with syntax errors out of $checked checked."
+        echo "!! The live site has NOT been touched."
+        exit 1
+    fi
+
+    echo "-- pre-receive: $checked PHP files parsed cleanly."
+done
+
+exit 0
