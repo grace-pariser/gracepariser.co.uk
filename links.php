@@ -1,23 +1,50 @@
 <?php
-// Standalone link-in-bio page. Not in the main nav on purpose - this is
-// meant to be shared directly (Instagram/LinkedIn bio, etc).
-$pageTitle = 'Grace Pariser — Links';
-$pageDescription = 'All my pages, products and profiles in one place.';
-require __DIR__ . '/includes/header.php';
+// Standalone link-in-bio page. Deliberately does NOT use includes/header.php
+// or includes/footer.php - no nav, no site chrome, just the page itself.
+// Not in the main nav either - meant to be shared directly (social bios etc).
 
-$groups = [
-    'Products & services' => [
-        ['label' => 'HR On Call — employment law & HR consultancy', 'href' => 'https://on-call.co.uk'],
-        ['label' => 'The HR Vault — for HR consultants', 'href' => 'https://thehrvault.co.uk'],
-        ['label' => 'Practice Hub — practice management for HR consultants', 'href' => 'https://practice-hub.co.uk'],
-        ['label' => 'Pop + Pixel — websites for HR consultants', 'href' => 'https://popandpixel.co.uk'],
+$products = [
+    [
+        'name' => 'HR On Call',
+        'desc' => 'Employment law and HR consultancy for business owners.',
+        'logo' => '/assets/images/products/hr-on-call.png',
+        'href' => 'https://on-call.co.uk',
     ],
-    'Elsewhere' => [
-        ['label' => 'LinkedIn', 'href' => 'https://www.linkedin.com/in/grace-pariser/'],
-        ['label' => 'Qwoted (press &amp; media)', 'href' => 'https://app.qwoted.com/sources/grace-pariser'],
+    [
+        'name' => 'The HR Vault',
+        'desc' => 'The back office of an HR consultancy, in one subscription.',
+        'logo' => '/assets/images/products/hr-vault.webp',
+        'href' => 'https://thehrvault.co.uk',
+    ],
+    [
+        'name' => 'Practice Hub',
+        'desc' => 'Practice management built for how HR consultants actually work.',
+        'logo' => '/assets/images/products/practice-hub.png',
+        'href' => 'https://practice-hub.co.uk',
+    ],
+    [
+        'name' => 'Pop + Pixel',
+        'desc' => 'Websites for HR consultants.',
+        'logo' => '/assets/images/products/pop-pixel.png',
+        'href' => 'https://popandpixel.co.uk',
     ],
 ];
-?>
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grace Pariser — Links</title>
+<meta name="description" content="All my pages, products and profiles in one place.">
+<link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=<?= @filemtime(__DIR__ . '/assets/css/style.css') ?: 1 ?>">
+</head>
+<body>
+<main>
 
 <section class="hero wrap links-hero">
     <h1>Grace Pariser</h1>
@@ -25,14 +52,26 @@ $groups = [
 </section>
 
 <section class="section wrap links-page" style="border-top:none;">
-    <?php foreach ($groups as $heading => $links): ?>
-        <div class="links-group">
-            <p class="section-label"><?= htmlspecialchars($heading) ?></p>
-            <?php foreach ($links as $l): $external = str_starts_with($l['href'], 'http'); ?>
-                <a class="links-btn" href="<?= htmlspecialchars($l['href']) ?>"<?= $external ? ' target="_blank" rel="noopener"' : '' ?>><?= $l['label'] /* label may include &amp; */ ?></a>
-            <?php endforeach; ?>
-        </div>
-    <?php endforeach; ?>
+    <a class="links-btn links-btn-primary" href="/contact.php">Get in touch</a>
+
+    <div class="links-group">
+        <p class="section-label">Products &amp; services</p>
+        <?php foreach ($products as $p): ?>
+            <a class="product-card" href="<?= htmlspecialchars($p['href']) ?>" target="_blank" rel="noopener">
+                <span class="product-name"><?= htmlspecialchars($p['name']) ?></span>
+                <span class="product-desc"><?= htmlspecialchars($p['desc']) ?></span>
+                <img class="product-logo" src="<?= htmlspecialchars($p['logo']) ?>" alt="<?= htmlspecialchars($p['name']) ?>">
+            </a>
+        <?php endforeach; ?>
+    </div>
+
+    <div class="links-group">
+        <p class="section-label">Elsewhere</p>
+        <a class="links-btn" href="https://www.linkedin.com/in/grace-pariser/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="links-btn" href="https://app.qwoted.com/sources/grace-pariser" target="_blank" rel="noopener">Qwoted (press &amp; media)</a>
+    </div>
 </section>
 
-<?php require __DIR__ . '/includes/footer.php'; ?>
+</main>
+</body>
+</html>
