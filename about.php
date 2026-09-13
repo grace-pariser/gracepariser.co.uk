@@ -23,6 +23,9 @@ require __DIR__ . '/includes/header.php';
                 <p>I've also ended up building software, which was never the plan. Watching other HR consultants (myself included) run their practices out of a mess of spreadsheets and shared folders got old, so I built Practice Hub to fix it. Pop + Pixel came next, a website product, because most consultants would rather be advising clients than fighting with a website builder. Then The HR Vault: I was already keeping my own library of HR documents and resources up to date for my own work, and it made more sense to let other consultants subscribe to it than have everyone duplicate the same job separately. I'm an HR person first. The rest happened because the tools I wanted didn't exist yet.</p>
                 <p>Based in Plymouth. Happy to work with clients further afield too.</p>
             </div>
+            <div class="cta-row">
+                <a class="btn-quiet" href="https://www.linkedin.com/in/grace-pariser/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+            </div>
         </div>
         <div class="photo-placeholder aspect-portrait">Photo: Grace Pariser</div>
     </div>

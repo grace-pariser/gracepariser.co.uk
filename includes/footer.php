@@ -5,6 +5,7 @@
       <a class="wordmark" href="/">Grace Pariser</a>
       <p class="footer-tagline">Employment Law &amp; HR <span class="masthead-dot">&middot;</span> Plymouth</p>
       <a class="footer-email" href="mailto:enquiries@gracepariser.co.uk">enquiries@gracepariser.co.uk</a>
+      <a class="footer-email" href="https://www.linkedin.com/in/grace-pariser/" target="_blank" rel="noopener">Connect on LinkedIn</a>
     </div>
     <div class="footer-col">
       <p class="footer-heading">Site</p>

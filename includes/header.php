@@ -52,6 +52,7 @@ function nav_class(string $key, string $active): string {
             'description' => 'Employment law and HR consultant based in Plymouth, and owner of HR On Call Ltd.',
             'worksFor' => ['@id' => 'https://gracepariser.co.uk/#organization'],
             'knowsAbout' => ['Employment Law', 'HR Consultancy', 'TUPE', 'Settlement Agreements', 'Disciplinary Process', 'Employment Rights Bill'],
+            'sameAs' => ['https://www.linkedin.com/in/grace-pariser/'],
         ],
         [
             '@type' => 'Organization',

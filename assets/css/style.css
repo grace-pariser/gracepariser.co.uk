@@ -551,8 +551,10 @@ p { margin: 0 0 var(--space-2); }
   margin: 0.6em 0 0.9em;
 }
 .footer-email {
+  display: block;
   color: var(--ink-soft);
   font-weight: 600;
+  margin-top: 0.4em;
 }
 .footer-email:hover { color: var(--accent); }
 
