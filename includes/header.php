@@ -62,6 +62,7 @@ function nav_class(string $key, string $active): string {
             'founder' => ['@id' => 'https://gracepariser.co.uk/#person'],
             'sameAs' => [
                 'https://find-and-update.company-information.service.gov.uk/company/16891106',
+                'https://www.linkedin.com/company/hr-on-call-ltd/',
             ],
         ],
         [
