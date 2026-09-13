@@ -19,7 +19,7 @@ $error = $_GET['error'] ?? null;
     <?php if ($sent): ?>
         <p class="form-status ok">Thanks, that's landed with me. I'll be in touch shortly.</p>
     <?php elseif ($error): ?>
-        <p class="form-status err">Something went wrong sending that. Try again, or email <a href="mailto:grace@on-call.co.uk">grace@on-call.co.uk</a> directly.</p>
+        <p class="form-status err">Something went wrong sending that. Try again, or email <a href="mailto:enquires@gracepariser.co.uk">enquires@gracepariser.co.uk</a> directly.</p>
     <?php endif; ?>
 
     <form method="post" action="/process-contact.php">

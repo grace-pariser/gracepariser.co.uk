@@ -4,7 +4,7 @@
     <div class="footer-brand">
       <a class="wordmark" href="/">Grace Pariser</a>
       <p class="footer-tagline">Employment Law &amp; HR <span class="masthead-dot">&middot;</span> Plymouth</p>
-      <a class="footer-email" href="mailto:grace@on-call.co.uk">grace@on-call.co.uk</a>
+      <a class="footer-email" href="mailto:enquires@gracepariser.co.uk">enquires@gracepariser.co.uk</a>
     </div>
     <div class="footer-col">
       <p class="footer-heading">Site</p>

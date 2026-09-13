@@ -13,7 +13,7 @@ require __DIR__ . '/includes/header.php';
     <div class="prose">
         <p>This site does not currently set any cookies: no analytics, no tracking, and no advertising cookies.</p>
         <p>If that changes, for example if analytics are added in future, this notice will be updated first and you'll be asked for consent where the law requires it.</p>
-        <p>Any questions, contact <a href="mailto:grace@on-call.co.uk">grace@on-call.co.uk</a>.</p>
+        <p>Any questions, contact <a href="mailto:enquires@gracepariser.co.uk">enquires@gracepariser.co.uk</a>.</p>
 
         <p class="article-meta">Last updated September 2026.</p>
     </div>

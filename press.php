@@ -73,7 +73,7 @@ $featured = [
         <p class="section-label">Get in touch</p>
         <div class="cta-row" style="margin-top:0;">
             <a class="btn" href="/contact.php">Contact form</a>
-            <a class="btn-quiet" href="mailto:grace@on-call.co.uk">grace@on-call.co.uk</a>
+            <a class="btn-quiet" href="mailto:enquires@gracepariser.co.uk">enquires@gracepariser.co.uk</a>
         </div>
     </div>
 </section>

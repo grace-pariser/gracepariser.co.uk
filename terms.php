@@ -26,7 +26,7 @@ require __DIR__ . '/includes/header.php';
         <p>The site is provided as-is. While reasonable care is taken to keep it accurate and available, no guarantee is given that it will be error-free or uninterrupted.</p>
 
         <h3>Contact</h3>
-        <p>Questions about these terms can be sent to <a href="mailto:grace@on-call.co.uk">grace@on-call.co.uk</a>.</p>
+        <p>Questions about these terms can be sent to <a href="mailto:enquires@gracepariser.co.uk">enquires@gracepariser.co.uk</a>.</p>
 
         <p class="article-meta">Last updated September 2026.</p>
     </div>
