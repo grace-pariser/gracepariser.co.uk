@@ -55,6 +55,12 @@ $products = [
     <a class="links-btn links-btn-primary" href="/contact.php">Get in touch</a>
 
     <div class="links-group">
+        <a class="links-btn" href="https://gracepariser.co.uk/">gracepariser.co.uk</a>
+        <a class="links-btn" href="https://gracepariser.co.uk/writing.php">My writing</a>
+        <a class="links-btn" href="https://www.thehrvault.co.uk/legal-updates.php" target="_blank" rel="noopener">Employment legal updates</a>
+    </div>
+
+    <div class="links-group">
         <p class="section-label">Products &amp; services</p>
         <?php foreach ($products as $p): ?>
             <a class="product-card" href="<?= htmlspecialchars($p['href']) ?>" target="_blank" rel="noopener">
