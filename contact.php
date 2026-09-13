@@ -16,7 +16,7 @@ $error = $_GET['error'] ?? null;
     <p class="form-note">Or email me directly at <a href="mailto:enquiries@gracepariser.co.uk">enquiries@gracepariser.co.uk</a>.</p>
 </section>
 
-<section class="section wrap" style="border-top:none;">
+<section class="section wrap" style="border-top:none; padding-top:1.5rem;">
     <div class="split">
         <div class="panel contact-panel">
             <p class="section-label">Send a message</p>

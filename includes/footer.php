@@ -3,7 +3,7 @@
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <a class="wordmark" href="/">Grace Pariser</a>
-      <p class="footer-tagline">Employment Law &amp; HR <span class="masthead-dot">&middot;</span> Plymouth</p>
+      <p class="footer-tagline">Employment Law | HR | Tech for HR</p>
       <a class="footer-email" href="mailto:enquiries@gracepariser.co.uk">enquiries@gracepariser.co.uk</a>
       <a class="footer-email" href="https://www.linkedin.com/in/grace-pariser/" target="_blank" rel="noopener">Connect on LinkedIn</a>
     </div>

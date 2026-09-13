@@ -48,7 +48,7 @@ $products = [
 
 <section class="hero wrap links-hero">
     <h1>Grace Pariser</h1>
-    <p class="hero-role">Employment law &amp; HR &middot; Plymouth</p>
+    <p class="hero-role">Employment Law | HR | Tech for HR</p>
 </section>
 
 <section class="section wrap links-page" style="border-top:none;">
@@ -58,8 +58,10 @@ $products = [
         <p class="section-label">Products &amp; services</p>
         <?php foreach ($products as $p): ?>
             <a class="product-card" href="<?= htmlspecialchars($p['href']) ?>" target="_blank" rel="noopener">
-                <span class="product-name"><?= htmlspecialchars($p['name']) ?></span>
-                <span class="product-desc"><?= htmlspecialchars($p['desc']) ?></span>
+                <span class="product-text">
+                    <span class="product-name"><?= htmlspecialchars($p['name']) ?></span>
+                    <span class="product-desc"><?= htmlspecialchars($p['desc']) ?></span>
+                </span>
                 <img class="product-logo" src="<?= htmlspecialchars($p['logo']) ?>" alt="<?= htmlspecialchars($p['name']) ?>">
             </a>
         <?php endforeach; ?>
@@ -67,8 +69,19 @@ $products = [
 
     <div class="links-group">
         <p class="section-label">Elsewhere</p>
-        <a class="links-btn" href="https://www.linkedin.com/in/grace-pariser/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="links-btn" href="https://app.qwoted.com/sources/grace-pariser" target="_blank" rel="noopener">Qwoted (press &amp; media)</a>
+        <a class="product-card" href="https://www.linkedin.com/in/grace-pariser/" target="_blank" rel="noopener">
+            <span class="product-text">
+                <span class="product-name">LinkedIn</span>
+            </span>
+            <img class="product-logo" src="/assets/images/products/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a class="product-card" href="https://app.qwoted.com/sources/grace-pariser" target="_blank" rel="noopener">
+            <span class="product-text">
+                <span class="product-name">Qwoted</span>
+                <span class="product-desc">Press &amp; media requests</span>
+            </span>
+            <img class="product-logo" src="/assets/images/products/qwoted.svg" alt="Qwoted">
+        </a>
     </div>
 </section>
 

@@ -76,7 +76,7 @@ function nav_class(string $key, string $active): string {
 <header class="site-header">
   <div class="wrap masthead-row">
     <a class="wordmark" href="/">Grace Pariser</a>
-    <p class="masthead-tag">Employment Law &amp; HR <span class="masthead-dot">&middot;</span> Plymouth</p>
+    <p class="masthead-tag">Employment Law | HR | Tech for HR</p>
     <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">Menu</button>
   </div>
   <div class="wrap nav-row">
