@@ -4,14 +4,16 @@
    for nav, labels, metadata. No pills, no shadows, no gradients. */
 
 :root {
-  --paper: #f6f1e7;
+  --paper: #fbf8f2;
   --paper-raised: #fffdf8;
   --ink: #201d19;
   --ink-soft: #55504a;
   --ink-faint: #948d7f;
   --border: #e2d8c2;
-  --accent: #a1451f;
-  --accent-hover: #7d3417;
+  --accent: #db2777;
+  --accent-hover: #be185d;
+  --accent-on-dark: #f472b6;
+  --accent-2: #c9a962;
   --ink-block: #211c17;
 
   --serif: 'Source Serif 4', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
@@ -129,7 +131,7 @@ a:hover { color: var(--accent-hover); }
   color: var(--ink-faint);
   margin: 0;
 }
-.masthead-dot { color: var(--accent); }
+.masthead-dot { color: var(--accent-2); }
 
 .nav-row {
   border-top: 1px solid var(--border);
@@ -374,7 +376,7 @@ p { margin: 0 0 var(--space-2); }
   font-family: var(--serif);
   font-style: italic;
   font-size: 0.9375rem;
-  color: var(--accent);
+  color: var(--accent-2);
   margin-bottom: 0.5em;
 }
 .article-card h3 {
@@ -408,8 +410,8 @@ p { margin: 0 0 var(--space-2); }
   color: var(--paper);
   padding: var(--space-4);
 }
-.panel-ink .section-label { color: var(--accent); }
-.panel-ink .section-label::before { background: var(--accent); }
+.panel-ink .section-label { color: var(--accent-on-dark); }
+.panel-ink .section-label::before { background: var(--accent-on-dark); }
 .panel-ink .prose p { color: var(--paper); }
 .panel-ink a.btn {
   border-color: var(--paper);
@@ -420,9 +422,9 @@ p { margin: 0 0 var(--space-2); }
   color: var(--ink-block);
 }
 .panel-ink a.btn-quiet {
-  color: var(--accent);
+  color: var(--accent-on-dark);
 }
-.panel-ink a.btn-quiet:hover { color: #c96a3f; }
+.panel-ink a.btn-quiet:hover { color: var(--paper); }
 
 /* ---------- Article page ---------- */
 
