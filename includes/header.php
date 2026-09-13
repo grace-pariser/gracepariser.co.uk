@@ -1,0 +1,38 @@
+<?php
+// Expects $pageTitle, $pageDescription, $activeNav to be set by the caller.
+$pageTitle = $pageTitle ?? 'Grace Pariser';
+$pageDescription = $pageDescription ?? 'Employment law and HR consultant, Plymouth.';
+$activeNav = $activeNav ?? '';
+
+function nav_class(string $key, string $active): string {
+    return $key === $active ? ' class="is-active"' : '';
+}
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><?= htmlspecialchars($pageTitle) ?></title>
+<meta name="description" content="<?= htmlspecialchars($pageDescription) ?>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=1">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap masthead-row">
+    <a class="wordmark" href="/">Grace Pariser</a>
+    <p class="masthead-tag">Employment Law &amp; HR <span class="masthead-dot">&middot;</span> Plymouth</p>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  </div>
+  <div class="wrap nav-row">
+    <nav class="site-nav" id="site-nav">
+      <a href="/about.php"<?= nav_class('about', $activeNav) ?>>About</a>
+      <a href="/press.php"<?= nav_class('press', $activeNav) ?>>Press</a>
+      <a href="/writing.php"<?= nav_class('writing', $activeNav) ?>>Writing</a>
+      <a href="/work-with-me.php"<?= nav_class('work', $activeNav) ?>>Work with me</a>
+    </nav>
+  </div>
+</header>
+<main>

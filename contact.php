@@ -1,0 +1,48 @@
+<?php
+$pageTitle = 'Contact — Grace Pariser';
+$pageDescription = 'Get in touch about consultancy work, press enquiries, or anything else.';
+$activeNav = '';
+require __DIR__ . '/includes/header.php';
+
+$sent = isset($_GET['sent']);
+$error = $_GET['error'] ?? null;
+?>
+
+<section class="hero wrap">
+    <h1>Get in touch</h1>
+    <div class="prose lede">
+        <p>Whether it's a consultancy enquiry, a press request, or something else entirely, tell me a bit about it and I'll come back to you directly.</p>
+    </div>
+</section>
+
+<section class="section wrap" style="border-top:none;">
+    <?php if ($sent): ?>
+        <p class="form-status ok">Thanks, that's landed with me. I'll be in touch shortly.</p>
+    <?php elseif ($error): ?>
+        <p class="form-status err">Something went wrong sending that. Try again, or email <a href="mailto:grace@on-call.co.uk">grace@on-call.co.uk</a> directly.</p>
+    <?php endif; ?>
+
+    <form method="post" action="/process-contact.php">
+        <div class="form-field hp-field" aria-hidden="true">
+            <label for="website">Leave this field blank</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" name="ts" value="<?= time() ?>">
+
+        <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button class="btn" type="submit">Send</button>
+    </form>
+</section>
+
+<?php require __DIR__ . '/includes/footer.php'; ?>
