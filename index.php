@@ -8,7 +8,7 @@ $articles = require __DIR__ . '/includes/articles.php';
 ?>
 
 <section class="hero wrap">
-    <h1 class="hero-headline-long">I'm Grace Pariser, an employment law and HR consultant based in Plymouth, and owner of HR On Call Ltd.</h1>
+    <h1 class="hero-headline-long">I'm Grace Pariser, an employment law and HR consultant based in Plymouth.</h1>
     <div class="prose lede">
         <p>I've been doing this for the best part of a decade now, in-house and then on my own, and if there's one thing nine years has taught me it's that most people who've never had to run a disciplinary process think it's a lot simpler than it is.</p>
     </div>
