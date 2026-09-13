@@ -632,3 +632,40 @@ p { margin: 0 0 var(--space-2); }
 
 .footer-meta { color: var(--ink-faint); font-size: 0.8125rem; margin: 0 0 0.5em; }
 .footer-meta:last-child { margin-bottom: 0; }
+
+/* ---------- Links page (link-in-bio) ---------- */
+
+.links-hero {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+  padding-bottom: var(--space-3);
+}
+.links-hero h1 { margin-bottom: 0.3em; }
+
+.links-page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding-top: 0;
+}
+.links-group { margin-bottom: var(--space-4); }
+.links-group .section-label { justify-content: center; }
+.links-btn {
+  display: block;
+  text-align: center;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--ink);
+  background: var(--paper-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9em 1.2em;
+  margin-bottom: 0.75rem;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+.links-btn:last-child { margin-bottom: 0; }
+.links-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
