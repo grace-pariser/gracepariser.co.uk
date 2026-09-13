@@ -4,7 +4,7 @@
     <div class="footer-brand">
       <a class="wordmark" href="/">Grace Pariser</a>
       <p class="footer-tagline">Employment Law &amp; HR <span class="masthead-dot">&middot;</span> Plymouth</p>
-      <a class="footer-email" href="mailto:enquires@gracepariser.co.uk">enquires@gracepariser.co.uk</a>
+      <a class="footer-email" href="mailto:enquiries@gracepariser.co.uk">enquiries@gracepariser.co.uk</a>
     </div>
     <div class="footer-col">
       <p class="footer-heading">Site</p>
@@ -18,11 +18,23 @@
     </div>
     <div class="footer-col">
       <p class="footer-heading">Elsewhere</p>
-      <ul>
-        <li><a href="https://on-call.co.uk" target="_blank" rel="noopener">HR On Call</a></li>
-        <li><a href="https://thehrvault.co.uk" target="_blank" rel="noopener">The HR Vault</a></li>
-        <li><a href="https://practice-hub.co.uk" target="_blank" rel="noopener">Practice Hub</a></li>
-        <li><a href="https://popandpixel.co.uk" target="_blank" rel="noopener">Pop + Pixel</a></li>
+      <ul class="footer-elsewhere">
+        <li>
+          <a href="https://on-call.co.uk" target="_blank" rel="noopener">HR On Call</a>
+          <a class="footer-sub-email" href="mailto:hello@on-call.co.uk">hello@on-call.co.uk</a>
+        </li>
+        <li>
+          <a href="https://thehrvault.co.uk" target="_blank" rel="noopener">The HR Vault</a>
+          <a class="footer-sub-email" href="mailto:hello@thehrvault.co.uk">hello@thehrvault.co.uk</a>
+        </li>
+        <li>
+          <a href="https://practice-hub.co.uk" target="_blank" rel="noopener">Practice Hub</a>
+          <a class="footer-sub-email" href="mailto:hello@practice-hub.co.uk">hello@practice-hub.co.uk</a>
+        </li>
+        <li>
+          <a href="https://popandpixel.co.uk" target="_blank" rel="noopener">Pop + Pixel</a>
+          <a class="footer-sub-email" href="mailto:hello@popandpixel.co.uk">hello@popandpixel.co.uk</a>
+        </li>
       </ul>
     </div>
   </div>

@@ -563,6 +563,18 @@ p { margin: 0 0 var(--space-2); }
 .footer-col a { color: var(--ink-soft); font-weight: 500; }
 .footer-col a:hover { color: var(--accent); }
 
+.footer-elsewhere li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.9em;
+}
+.footer-sub-email {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-faint);
+}
+.footer-sub-email:hover { color: var(--accent); }
+
 .footer-legal {
   border-top: 1px solid var(--border);
   padding: var(--space-3) 0 var(--space-2);

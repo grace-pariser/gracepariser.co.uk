@@ -14,7 +14,7 @@ require __DIR__ . '/includes/header.php';
         <p>This notice explains what happens to your data when you use gracepariser.co.uk.</p>
 
         <h3>Who controls your data</h3>
-        <p>Grace Pariser is the data controller for this site. You can contact me at <a href="mailto:enquires@gracepariser.co.uk">enquires@gracepariser.co.uk</a>.</p>
+        <p>Grace Pariser is the data controller for this site. You can contact me at <a href="mailto:enquiries@gracepariser.co.uk">enquiries@gracepariser.co.uk</a>.</p>
 
         <h3>What's collected</h3>
         <p>The only personal data this site collects is what you submit through the <a href="/contact.php">contact form</a>: your name, email address, and message. That information is emailed directly to me and is not stored in a database on this site.</p>
@@ -27,7 +27,7 @@ require __DIR__ . '/includes/header.php';
         <p>Enquiries are kept for as long as needed to deal with them and for a reasonable period afterwards, then deleted.</p>
 
         <h3>Your rights</h3>
-        <p>Under UK data protection law you have the right to ask what data is held about you, to have it corrected, and to have it deleted. Contact <a href="mailto:enquires@gracepariser.co.uk">enquires@gracepariser.co.uk</a> to exercise any of these.</p>
+        <p>Under UK data protection law you have the right to ask what data is held about you, to have it corrected, and to have it deleted. Contact <a href="mailto:enquiries@gracepariser.co.uk">enquiries@gracepariser.co.uk</a> to exercise any of these.</p>
         <p>You also have the right to complain to the Information Commissioner's Office (ICO) if you believe your data has been mishandled: <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>, or 0303 123 1113.</p>
 
         <p class="article-meta">Last updated September 2026.</p>

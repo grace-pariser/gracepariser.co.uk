@@ -31,7 +31,7 @@ if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL
     fail('invalid');
 }
 
-$to = 'enquires@gracepariser.co.uk';
+$to = 'enquiries@gracepariser.co.uk';
 $subject = 'gracepariser.co.uk enquiry from ' . $name;
 $body = "Name: $name\nEmail: $email\n\n$message\n";
 $headers = 'From: no-reply@gracepariser.co.uk' . "\r\n" .
