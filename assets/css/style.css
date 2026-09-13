@@ -563,17 +563,32 @@ p { margin: 0 0 var(--space-2); }
 .footer-col a { color: var(--ink-soft); font-weight: 500; }
 .footer-col a:hover { color: var(--accent); }
 
-.footer-elsewhere li {
+/* ---------- Contact page: other businesses ---------- */
+
+.contact-elsewhere {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 480px;
+}
+.contact-elsewhere li {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 0.9em;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85em 0;
+  border-top: 1px solid var(--border);
+  font-family: var(--sans);
 }
-.footer-sub-email {
-  font-size: 0.8125rem;
+.contact-elsewhere span {
+  font-weight: 600;
+  color: var(--heading);
+}
+.contact-elsewhere a {
+  color: var(--ink-soft);
   font-weight: 500;
-  color: var(--ink-faint);
 }
-.footer-sub-email:hover { color: var(--accent); }
+.contact-elsewhere a:hover { color: var(--accent); }
 
 .footer-legal {
   border-top: 1px solid var(--border);

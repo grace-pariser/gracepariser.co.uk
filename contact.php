@@ -45,4 +45,14 @@ $error = $_GET['error'] ?? null;
     </form>
 </section>
 
+<section class="section wrap">
+    <p class="section-label">Other enquiries</p>
+    <ul class="contact-elsewhere">
+        <li><span>HR On Call</span><a href="mailto:hello@on-call.co.uk">hello@on-call.co.uk</a></li>
+        <li><span>The HR Vault</span><a href="mailto:hello@thehrvault.co.uk">hello@thehrvault.co.uk</a></li>
+        <li><span>Practice Hub</span><a href="mailto:hello@practice-hub.co.uk">hello@practice-hub.co.uk</a></li>
+        <li><span>Pop + Pixel</span><a href="mailto:hello@popandpixel.co.uk">hello@popandpixel.co.uk</a></li>
+    </ul>
+</section>
+
 <?php require __DIR__ . '/includes/footer.php'; ?>
