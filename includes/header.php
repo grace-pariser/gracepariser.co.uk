@@ -85,7 +85,7 @@ function nav_class(string $key, string $active): string {
       <a href="/press.php"<?= nav_class('press', $activeNav) ?>>Press</a>
       <a href="/writing.php"<?= nav_class('writing', $activeNav) ?>>Writing</a>
       <a href="/work-with-me.php"<?= nav_class('work', $activeNav) ?>>Work with me</a>
-      <a href="/contact.php"<?= nav_class('contact', $activeNav) ?>>Contact</a>
+      <a href="/contact.php" class="nav-contact<?= $activeNav === 'contact' ? ' is-active' : '' ?>">Contact</a>
     </nav>
   </div>
 </header>

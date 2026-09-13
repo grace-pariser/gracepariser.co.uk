@@ -156,6 +156,12 @@ a:hover { color: var(--accent-hover); }
 .site-nav a.is-active {
   color: var(--accent);
 }
+.site-nav a.nav-contact {
+  color: var(--accent);
+}
+.site-nav a.nav-contact:hover {
+  color: var(--accent-hover);
+}
 
 .nav-toggle {
   display: none;

@@ -29,7 +29,7 @@
   </div>
   <div class="wrap footer-legal">
     <p class="footer-meta">&copy; <?= date('Y') ?> Grace Pariser.</p>
-    <p class="footer-meta">The HR Vault is a trading name of <a href="https://on-call.co.uk" target="_blank" rel="noopener">HR On Call Ltd</a>. HR On Call Ltd is a company registered in England and Wales under company number 16891106. VAT number: 515981373.</p>
+    <p class="footer-meta"><a href="https://thehrvault.co.uk" target="_blank" rel="noopener">The HR Vault</a> is a trading name of <a href="https://on-call.co.uk" target="_blank" rel="noopener">HR On Call Ltd</a>. HR On Call Ltd is a company registered in England and Wales under company number 16891106. VAT number: 515981373.</p>
     <p class="footer-meta"><a href="https://practice-hub.co.uk" target="_blank" rel="noopener">Practice Hub</a> and <a href="https://popandpixel.co.uk" target="_blank" rel="noopener">Pop + Pixel</a> are trading names of <a href="https://rocket-digital.uk" target="_blank" rel="noopener">Rocket Digital Ltd</a>. Rocket Digital Ltd is a company registered in England and Wales under company number 17109960.</p>
   </div>
   <div class="wrap footer-bottom">
