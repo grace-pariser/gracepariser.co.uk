@@ -64,7 +64,7 @@ $products = [
         <a class="product-card" href="https://gracepariser.co.uk/writing.php">
             <span class="product-text">
                 <span class="product-name">Writing</span>
-                <span class="product-desc">Employment law and HR, written in my own words.</span>
+                <span class="product-desc">My personal thoughts on HR and the Employment Rights Act.</span>
             </span>
         </a>
         <a class="product-card" href="https://www.thehrvault.co.uk/legal-updates.php" target="_blank" rel="noopener">
