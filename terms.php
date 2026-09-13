@@ -5,11 +5,13 @@ $activeNav = '';
 require __DIR__ . '/includes/header.php';
 ?>
 
-<section class="hero wrap">
+<section class="hero wrap" style="padding-bottom:0;">
+    <p class="section-label">Legal</p>
     <h1>Terms of use</h1>
+    <p class="byline">Last updated September 2026</p>
 </section>
 
-<section class="section wrap" style="border-top:none;">
+<section class="section wrap" style="border-top:none; padding-top:2rem;">
     <div class="prose">
         <p>These terms apply to your use of gracepariser.co.uk (the "site"). By using the site you accept them.</p>
 
@@ -27,8 +29,6 @@ require __DIR__ . '/includes/header.php';
 
         <h3>Contact</h3>
         <p>Questions about these terms can be sent to <a href="mailto:enquiries@gracepariser.co.uk">enquiries@gracepariser.co.uk</a>.</p>
-
-        <p class="article-meta">Last updated September 2026.</p>
     </div>
 </section>
 

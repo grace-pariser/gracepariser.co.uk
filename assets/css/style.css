@@ -228,6 +228,16 @@ p { margin: 0 0 var(--space-2); }
 .prose p { margin: 0 0 1.3em; }
 .prose > *:last-child { margin-bottom: 0; }
 
+/* Legal-page subheadings: give each subsection its own breathing room and
+   a hairline rule, so a long policy doesn't read as one flat wall of text. */
+.prose h3 {
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 1.125rem;
+}
+.prose h3:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+
 /* Drop cap on the opening paragraph of a long-form piece. */
 .dropcap > p:first-of-type::first-letter {
   font-family: var(--serif);
@@ -569,13 +579,11 @@ p { margin: 0 0 var(--space-2); }
   list-style: none;
   margin: 0;
   padding: 0;
-  max-width: 480px;
 }
 .contact-elsewhere li {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.2em;
   padding: 0.85em 0;
   border-top: 1px solid var(--border);
   font-family: var(--sans);
@@ -587,8 +595,12 @@ p { margin: 0 0 var(--space-2); }
 .contact-elsewhere a {
   color: var(--ink-soft);
   font-weight: 500;
+  font-size: 0.9375rem;
 }
 .contact-elsewhere a:hover { color: var(--accent); }
+
+.contact-panel { padding: var(--space-4); }
+.contact-panel form { margin-top: var(--space-2); }
 
 .footer-legal {
   border-top: 1px solid var(--border);
