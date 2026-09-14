@@ -353,6 +353,15 @@ p { margin: 0 0 var(--space-2); }
 }
 .press-logo-pt { height: 18px; }
 
+/* Consistent-size variant, for a strip where logos should all read as
+   the same visual weight regardless of native aspect ratio. */
+.press-logo-uniform {
+  width: 110px;
+  height: 26px;
+  object-fit: contain;
+  object-position: left center;
+}
+
 /* Full-colour, static variant for standalone use (e.g. on a press card,
    not inside the hover-to-reveal "as seen in" strip). */
 .article-card .press-logo {
