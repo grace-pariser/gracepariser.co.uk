@@ -59,9 +59,13 @@
     author.textContent = post.authorName || 'Grace Pariser';
     date.textContent = post.date;
     text.innerHTML = '';
-    var p = document.createElement('p');
-    p.innerHTML = linkify(post.text);
-    text.appendChild(p);
+    post.text.split(/\n{2,}/).forEach(function (para) {
+      para = para.trim();
+      if (!para) return;
+      var p = document.createElement('p');
+      p.innerHTML = linkify(para).replace(/\n/g, '<br>');
+      text.appendChild(p);
+    });
     link.href = post.url;
     modal.hidden = false;
     document.body.style.overflow = 'hidden';

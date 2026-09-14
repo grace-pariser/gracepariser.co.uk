@@ -701,9 +701,6 @@ p { margin: 0 0 var(--space-2); }
   display: block;
   margin-bottom: var(--space-2);
 }
-.linkedin-modal-text p {
-  white-space: pre-line;
-}
 .linkedin-modal-close {
   position: absolute;
   top: var(--space-2);
