@@ -2,6 +2,7 @@
 $pageTitle = 'The Fair Work Agency, and what it actually means for employers | Grace Pariser';
 $pageDescription = 'The Fair Work Agency, and what it actually means for employers.';
 $activeNav = 'writing';
+$noIndex = true; // Placeholder page, no article body yet - keep it out of search until it does.
 require __DIR__ . '/../includes/header.php';
 ?>
 

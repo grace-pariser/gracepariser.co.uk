@@ -3,6 +3,12 @@
 $pageTitle = $pageTitle ?? 'Grace Pariser';
 $pageDescription = $pageDescription ?? 'Employment law and HR consultant, Plymouth.';
 $activeNav = $activeNav ?? '';
+$noIndex = $noIndex ?? false;
+// No dedicated 1200x630 social card exists yet, so the site's square
+// logo is used as a fallback - not ideal, but better than no preview
+// image at all. Worth replacing with a proper branded card or a real
+// photo later.
+$ogImage = $ogImage ?? 'https://gracepariser.co.uk/assets/images/favicon-512x512.png';
 
 $canonicalPath = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
 if ($canonicalPath === '/index.php') { $canonicalPath = '/'; }
@@ -19,15 +25,22 @@ function nav_class(string $key, string $active): string {
 <title><?= htmlspecialchars($pageTitle) ?></title>
 <meta name="description" content="<?= htmlspecialchars($pageDescription) ?>">
 <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl) ?>">
+<?php if ($noIndex): ?>
+<meta name="robots" content="noindex,follow">
+<?php endif; ?>
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Grace Pariser">
 <meta property="og:title" content="<?= htmlspecialchars($pageTitle) ?>">
 <meta property="og:description" content="<?= htmlspecialchars($pageDescription) ?>">
 <meta property="og:url" content="<?= htmlspecialchars($canonicalUrl) ?>">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="<?= htmlspecialchars($ogImage) ?>">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle) ?>">
 <meta name="twitter:description" content="<?= htmlspecialchars($pageDescription) ?>">
+<meta name="twitter:image" content="<?= htmlspecialchars($ogImage) ?>">
 
 <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
@@ -52,7 +65,32 @@ function nav_class(string $key, string $active): string {
             'description' => 'Employment law and HR consultant based in Plymouth, and owner of HR On Call Ltd.',
             'worksFor' => ['@id' => 'https://gracepariser.co.uk/#organization'],
             'knowsAbout' => ['Employment Law', 'HR Consultancy', 'TUPE', 'Settlement Agreements', 'Disciplinary Process', 'Employment Rights Bill'],
-            'sameAs' => ['https://www.linkedin.com/in/grace-pariser/'],
+            'alumniOf' => [
+                [
+                    '@type' => 'CollegeOrUniversity',
+                    'name' => 'University of Plymouth',
+                ],
+            ],
+            'hasCredential' => [
+                [
+                    '@type' => 'EducationalOccupationalCredential',
+                    'credentialCategory' => 'professional certification',
+                    'name' => 'Chartered Member, CIPD',
+                ],
+                [
+                    '@type' => 'EducationalOccupationalCredential',
+                    'credentialCategory' => 'degree',
+                    'name' => 'MA Human Resource Management, University of Plymouth',
+                ],
+            ],
+            'homeLocation' => [
+                '@type' => 'Place',
+                'name' => 'Plymouth, UK',
+            ],
+            'sameAs' => [
+                'https://www.linkedin.com/in/grace-pariser/',
+                'https://app.qwoted.com/sources/grace-pariser',
+            ],
         ],
         [
             '@type' => 'Organization',
@@ -60,6 +98,7 @@ function nav_class(string $key, string $active): string {
             'name' => 'HR On Call Ltd',
             'url' => 'https://on-call.co.uk',
             'founder' => ['@id' => 'https://gracepariser.co.uk/#person'],
+            'areaServed' => 'Plymouth, Devon, UK',
             'sameAs' => [
                 'https://find-and-update.company-information.service.gov.uk/company/16891106',
                 'https://www.linkedin.com/company/hr-on-call-ltd/',

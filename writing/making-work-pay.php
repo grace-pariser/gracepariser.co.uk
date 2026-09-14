@@ -2,6 +2,7 @@
 $pageTitle = "Making Work Pay: the gaps nobody's talking about | Grace Pariser";
 $pageDescription = "Making Work Pay: the gaps nobody's talking about.";
 $activeNav = 'writing';
+$noIndex = true; // Placeholder page, no article body yet - keep it out of search until it does.
 require __DIR__ . '/../includes/header.php';
 ?>
 
