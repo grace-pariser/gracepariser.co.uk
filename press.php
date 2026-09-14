@@ -58,7 +58,7 @@ $featured = [
 </section>
 
 <section class="section wrap">
-    <p class="section-label">What I can speak to</p>
+    <p class="section-label">What I can speak about</p>
     <div class="prose">
         <ul>
             <li>The Employment Rights Bill and the wider Making Work Pay agenda</li>
