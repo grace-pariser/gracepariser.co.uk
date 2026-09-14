@@ -306,6 +306,57 @@ p { margin: 0 0 var(--space-2); }
   color: var(--ink-soft);
 }
 
+/* ---------- Timeline (career / qualifications) ---------- */
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: var(--measure);
+}
+.timeline li {
+  position: relative;
+  padding: 0 0 var(--space-3) var(--space-3);
+  margin-left: 0.3rem;
+  border-left: 1px solid var(--border);
+}
+.timeline li:last-child {
+  padding-bottom: 0;
+  border-left-color: transparent;
+}
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 0.4rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.timeline-date {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.3em;
+}
+.timeline-title {
+  margin: 0 0 0.15em;
+  font-size: 1.0625rem;
+  color: var(--heading);
+}
+.timeline-org {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
 /* ---------- Hero ---------- */
 
 .hero { padding-top: var(--space-5); padding-bottom: var(--space-4); }

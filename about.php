@@ -38,4 +38,91 @@ require __DIR__ . '/includes/header.php';
     </div>
 </section>
 
+<section class="section wrap">
+    <p class="section-label">The version with dates</p>
+    <ul class="timeline">
+        <li>
+            <span class="timeline-date">Apr 2026 &ndash; present</span>
+            <h3 class="timeline-title">Founder &amp; Director</h3>
+            <p class="timeline-org">Rocket Digital Ltd</p>
+        </li>
+        <li>
+            <span class="timeline-date">Feb 2025 &ndash; present</span>
+            <h3 class="timeline-title">Founder &amp; Director</h3>
+            <p class="timeline-org">HR On Call Ltd</p>
+        </li>
+        <li>
+            <span class="timeline-date">Jul 2023 &ndash; Feb 2025</span>
+            <h3 class="timeline-title">HR &amp; Employment Law Consultant</h3>
+            <p class="timeline-org">Neathouse Partners Ltd</p>
+        </li>
+        <li>
+            <span class="timeline-date">Aug 2022 &ndash; Jul 2023</span>
+            <h3 class="timeline-title">HR Business Partner</h3>
+            <p class="timeline-org">Sekoya Specialist Employment Services</p>
+        </li>
+        <li>
+            <span class="timeline-date">Feb 2022 &ndash; Mar 2022</span>
+            <h3 class="timeline-title">HR Consultant</h3>
+            <p class="timeline-org">Nectar HR</p>
+        </li>
+        <li>
+            <span class="timeline-date">Sep 2021 &ndash; Jul 2022</span>
+            <h3 class="timeline-title">HR Consultant &amp; Owner</h3>
+            <p class="timeline-org">Astute HR Solutions Ltd</p>
+        </li>
+        <li>
+            <span class="timeline-date">Apr 2021 &ndash; Sep 2021</span>
+            <h3 class="timeline-title">HR Advisor, then Senior HR Advisor</h3>
+            <p class="timeline-org">Vospers Motor House</p>
+        </li>
+        <li>
+            <span class="timeline-date">Apr 2020 &ndash; Oct 2020</span>
+            <h3 class="timeline-title">HR Manager (volunteer)</h3>
+            <p class="timeline-org">The Cyber Helpline</p>
+        </li>
+        <li>
+            <span class="timeline-date">Sep 2017 &ndash; Mar 2020</span>
+            <h3 class="timeline-title">HR Team Administrator, then HR Coordinator</h3>
+            <p class="timeline-org">chapmanbdsp</p>
+        </li>
+    </ul>
+
+    <p class="section-label" style="margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border);">Qualifications</p>
+    <ul class="timeline">
+        <li>
+            <span class="timeline-date">2026</span>
+            <h3 class="timeline-title">Student Member, CILEX</h3>
+            <p class="timeline-org">Studying towards the CPQ Foundation Stage: legal systems, contract law, the law of tort, legal research and professional ethics</p>
+        </li>
+        <li>
+            <span class="timeline-date">2025</span>
+            <h3 class="timeline-title">Chartered Member</h3>
+            <p class="timeline-org">CIPD</p>
+        </li>
+        <li>
+            <span class="timeline-date">2020 &ndash; 2021</span>
+            <h3 class="timeline-title">MA Human Resource Management</h3>
+            <p class="timeline-org">University of Plymouth, awarded the Plymouth Business School Prize for Best Student Contribution to the MA in HRM</p>
+        </li>
+        <li>
+            <span class="timeline-date">2020</span>
+            <h3 class="timeline-title">CIPD Level 5</h3>
+        </li>
+        <li>
+            <span class="timeline-date">2020</span>
+            <h3 class="timeline-title">CIPD Level 3</h3>
+        </li>
+        <li>
+            <span class="timeline-date">2012 &ndash; 2015</span>
+            <h3 class="timeline-title">BSc (Hons) International Relations with Politics</h3>
+            <p class="timeline-org">University of Plymouth</p>
+        </li>
+    </ul>
+
+    <div class="prose" style="margin-top:var(--space-3);">
+        <p>Somewhere in the middle of all that I also spent a year as a parent governor at Plymouth Nursery School Federation, which had more in common with HR than I expected.</p>
+    </div>
+</section>
+
 <?php require __DIR__ . '/includes/footer.php'; ?>
