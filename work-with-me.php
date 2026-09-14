@@ -13,7 +13,7 @@ require __DIR__ . '/includes/header.php';
 </section>
 
 <section class="section wrap">
-    <p class="section-label">For business owners: HR On Call</p>
+    <p class="section-label">For business owners</p>
     <div class="prose">
         <p>Retainer support, project work, and one-off advice on TUPE, settlement agreements, disciplinary and grievance processes, and bespoke document drafting.</p>
         <p>I work with businesses directly.</p>
