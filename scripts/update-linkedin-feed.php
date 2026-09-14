@@ -31,17 +31,23 @@ if ($xml === false) {
 
 function linkedin_feed_snippet(string $html, int $maxLength): string
 {
+    // Turn line/paragraph breaks into newlines before stripping tags, so
+    // posts don't collapse into one run-on block of text.
+    $html = preg_replace('/<br\s*\/?>/i', "\n", $html);
+    $html = preg_replace('/<\/(p|div)>/i', "\n\n", $html);
     $text = strip_tags($html);
     $text = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
-    $text = preg_replace('/\s+/', ' ', $text);
+    $text = preg_replace('/[ \t]+/', ' ', $text);
+    $text = preg_replace('/ *\n */', "\n", $text);
+    $text = preg_replace('/\n{3,}/', "\n\n", $text);
     $text = trim($text);
     if (strlen($text) <= $maxLength) {
         return $text;
     }
     $truncated = substr($text, 0, $maxLength);
-    $lastSpace = strrpos($truncated, ' ');
-    if ($lastSpace !== false) {
-        $truncated = substr($truncated, 0, $lastSpace);
+    $lastBreak = max(strrpos($truncated, ' '), strrpos($truncated, "\n"));
+    if ($lastBreak !== false && $lastBreak > 0) {
+        $truncated = substr($truncated, 0, $lastBreak);
     }
     return rtrim($truncated, " \t\n\r,.") . '...';
 }

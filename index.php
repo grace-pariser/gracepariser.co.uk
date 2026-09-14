@@ -106,7 +106,10 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
                 <?php endif; ?>
                 <div class="linkedin-card-body">
                     <span class="linkedin-feed-date"><?= htmlspecialchars($post['date']) ?></span>
-                    <p><?= htmlspecialchars($post['text']) ?></p>
+                    <?php foreach (explode("\n\n", $post['text']) as $para): ?>
+                        <?php if (trim($para) === '') continue; ?>
+                        <p><?= nl2br(htmlspecialchars($para)) ?></p>
+                    <?php endforeach; ?>
                     <span class="linkedin-card-link">Read on LinkedIn &rarr;</span>
                 </div>
             </a>
