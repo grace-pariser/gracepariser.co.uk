@@ -74,7 +74,7 @@ $articles = require __DIR__ . '/includes/articles.php';
         <p>Sometimes it's me having a rant about something I think is ridiculous.</p>
         <p>Usually it's somewhere in between.</p>
     </div>
-    <p class="section-label" style="margin-top:2rem;">Recent writing</p>
+    <p class="section-label" style="margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border);">Recent writing</p>
     <div class="card-grid">
         <?php foreach ($articles as $i => $a): render_article_card($a, $i + 1); endforeach; ?>
     </div>
