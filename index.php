@@ -26,7 +26,7 @@ $articles = require __DIR__ . '/includes/articles.php';
     <p class="section-label">Employment law is changing. A lot.</p>
     <div class="prose">
         <p>Employment law hasn't exactly sat still over the last few years, but there's a lot happening at the moment.</p>
-        <p>Day-one unfair dismissal rights. Changes to redundancy consultation. A new Fair Work Agency with its own enforcement powers. And the wider Making Work Pay agenda, which I think is achieving the opposite of what it says on the tin.</p>
+        <p>Day-one unfair dismissal rights. A new Fair Work Agency with its own enforcement powers. And the wider Making Work Pay agenda, which I think is achieving the opposite of what it says on the tin.</p>
     </div>
     <div class="pull-quote">
         <p>A Making Work Pay agenda that I think is achieving the opposite of what it says on the tin.</p>
