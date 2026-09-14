@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'About | Grace Pariser';
-$pageDescription = "I run HR On Call, and I built the tools I wished existed: Practice Hub, Pop + Pixel, and The HR Vault.";
+$pageDescription = "I'm an HR person first. Practice Hub, Pop + Pixel and The HR Vault happened because the tools I wanted didn't exist yet.";
 $activeNav = 'about';
 require __DIR__ . '/includes/header.php';
 ?>

@@ -58,7 +58,7 @@ $products = [
         <a class="product-card" href="https://gracepariser.co.uk/">
             <span class="product-text">
                 <span class="product-name">My website</span>
-                <span class="product-desc">Everything else: my bio, press, and how to work with me.</span>
+                <span class="product-desc">My bio, press, writing, and how to work with me.</span>
             </span>
         </a>
         <a class="product-card" href="https://gracepariser.co.uk/writing.php">
