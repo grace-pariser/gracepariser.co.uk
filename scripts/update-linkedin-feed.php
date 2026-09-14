@@ -123,6 +123,11 @@ function linkedin_feed_fetch_og_image(string $url): ?string
     return null;
 }
 
+$authorImage = null;
+if (preg_match('~https://media\.licdn\.com/dms/image/v2/[^"\'\s\\\\]*profile-displayphoto[^"\'\s\\\\]*~', $html, $avatarMatch)) {
+    $authorImage = html_entity_decode($avatarMatch[0], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+}
+
 $posts = [];
 foreach ($postNodes as $node) {
     $url = $node['url'] ?? $node['mainEntityOfPage'] ?? null;
@@ -137,6 +142,8 @@ foreach ($postNodes as $node) {
         'url' => $url,
         'text' => linkedin_feed_snippet($cleanText, $snippetLength),
         'fullText' => $cleanText,
+        'authorName' => $node['author']['name'] ?? 'Grace Pariser',
+        'authorImage' => $authorImage,
         'date' => date('j M Y', strtotime($datePublished)),
         'image' => linkedin_feed_find_image($html, $url),
         'timestamp' => strtotime($datePublished),

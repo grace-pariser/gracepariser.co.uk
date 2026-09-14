@@ -21,6 +21,8 @@
   }
 
   var image = modal.querySelector('.linkedin-modal-image');
+  var avatar = modal.querySelector('.linkedin-modal-avatar');
+  var author = modal.querySelector('.linkedin-modal-author');
   var date = modal.querySelector('.linkedin-modal-date');
   var text = modal.querySelector('.linkedin-modal-text');
   var link = modal.querySelector('.linkedin-modal-link');
@@ -47,6 +49,14 @@
       image.hidden = true;
       image.removeAttribute('src');
     }
+    if (post.authorImage) {
+      avatar.src = post.authorImage;
+      avatar.hidden = false;
+    } else {
+      avatar.hidden = true;
+      avatar.removeAttribute('src');
+    }
+    author.textContent = post.authorName || 'Grace Pariser';
     date.textContent = post.date;
     text.innerHTML = '';
     var p = document.createElement('p');

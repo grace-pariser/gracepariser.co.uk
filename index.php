@@ -100,18 +100,28 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
     <?php if ($linkedinCards): ?>
     <ul class="linkedin-feed">
         <?php foreach ($linkedinCards as $i => $post): ?>
-        <li class="linkedin-card<?= $post['image'] ? '' : ' linkedin-card-no-image' ?><?= $i === 0 ? ' linkedin-card-lead' : '' ?>">
+        <li class="linkedin-card<?= $i === 0 ? ' linkedin-card-lead' : '' ?>">
             <button type="button" class="linkedin-card-trigger" data-linkedin-index="<?= $i ?>">
-                <?php if ($post['image']): ?>
-                <img src="<?= htmlspecialchars($post['image']) ?>" alt="" class="linkedin-card-image" loading="lazy">
-                <?php endif; ?>
-                <span class="linkedin-card-body">
-                    <span class="linkedin-feed-date"><?= htmlspecialchars($post['date']) ?></span>
-                    <?php foreach (explode("\n\n", $post['text']) as $para): ?>
-                        <?php if (trim($para) === '') continue; ?>
-                        <span class="linkedin-card-para"><?= nl2br(htmlspecialchars($para)) ?></span>
-                    <?php endforeach; ?>
-                    <span class="linkedin-card-link">Read full post &rarr;</span>
+                <span class="linkedin-card-header">
+                    <?php if ($post['authorImage']): ?>
+                    <img src="<?= htmlspecialchars($post['authorImage']) ?>" alt="" class="linkedin-card-avatar" loading="lazy">
+                    <?php endif; ?>
+                    <span class="linkedin-card-author">
+                        <span class="linkedin-card-author-name"><?= htmlspecialchars($post['authorName']) ?></span>
+                        <span class="linkedin-feed-date"><?= htmlspecialchars($post['date']) ?></span>
+                    </span>
+                </span>
+                <span class="linkedin-card-main">
+                    <?php if ($post['image']): ?>
+                    <img src="<?= htmlspecialchars($post['image']) ?>" alt="" class="linkedin-card-image" loading="lazy">
+                    <?php endif; ?>
+                    <span class="linkedin-card-body">
+                        <?php foreach (explode("\n\n", $post['text']) as $para): ?>
+                            <?php if (trim($para) === '') continue; ?>
+                            <span class="linkedin-card-para"><?= nl2br(htmlspecialchars($para)) ?></span>
+                        <?php endforeach; ?>
+                        <span class="linkedin-card-link">Read full post &rarr;</span>
+                    </span>
                 </span>
             </button>
         </li>
@@ -122,13 +132,21 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
         'date' => $p['date'],
         'url' => $p['url'],
         'image' => $p['image'],
+        'authorName' => $p['authorName'],
+        'authorImage' => $p['authorImage'],
     ], $linkedinCards), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>
     <div class="linkedin-modal" id="linkedin-modal" hidden>
         <div class="linkedin-modal-backdrop" data-linkedin-close></div>
         <div class="linkedin-modal-panel" role="dialog" aria-modal="true" aria-label="Full LinkedIn post">
             <button type="button" class="linkedin-modal-close" data-linkedin-close aria-label="Close">&times;</button>
+            <div class="linkedin-card-header linkedin-modal-header">
+                <img class="linkedin-card-avatar linkedin-modal-avatar" alt="" hidden>
+                <span class="linkedin-card-author">
+                    <span class="linkedin-card-author-name linkedin-modal-author"></span>
+                    <span class="linkedin-feed-date linkedin-modal-date"></span>
+                </span>
+            </div>
             <img class="linkedin-modal-image" alt="" hidden>
-            <span class="linkedin-feed-date linkedin-modal-date"></span>
             <div class="prose linkedin-modal-text"></div>
             <div class="cta-row">
                 <a class="btn-quiet linkedin-modal-link" target="_blank" rel="noopener">Read on LinkedIn</a>
