@@ -16,7 +16,7 @@ require __DIR__ . '/includes/header.php';
     <p class="section-label">For business owners: HR On Call</p>
     <div class="prose">
         <p>Retainer support, project work, and one-off advice on TUPE, settlement agreements, disciplinary and grievance processes, and bespoke document drafting.</p>
-        <p>I work with businesses directly, and through HR intermediaries.</p>
+        <p>I work with businesses directly.</p>
     </div>
     <div class="cta-row">
         <a class="btn" href="/contact.php">Enquire</a>
@@ -35,14 +35,14 @@ require __DIR__ . '/includes/header.php';
     </div>
     <div class="article-card">
         <h3>Practice Hub</h3>
-        <p>Practice management built for how HR consultants actually work.</p>
+        <p>The practice management system built specifically for independent HR consultants, so you can spend less time on admin and more time on the work that actually pays.</p>
         <div class="cta-row" style="margin-top:0.75rem;">
             <a class="btn" href="https://practice-hub.co.uk" target="_blank" rel="noopener">Explore Practice Hub</a>
         </div>
     </div>
     <div class="article-card">
         <h3>Pop + Pixel</h3>
-        <p>Websites for HR consultants.</p>
+        <p>Websites for HR consultancies, designed to make you look credible and bring in the clients you actually want. Built by a web designer who's also a working HR consultant.</p>
         <div class="cta-row" style="margin-top:0.75rem;">
             <a class="btn" href="https://popandpixel.co.uk" target="_blank" rel="noopener">Explore Pop + Pixel</a>
         </div>

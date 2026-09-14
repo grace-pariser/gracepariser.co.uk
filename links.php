@@ -18,13 +18,13 @@ $products = [
     ],
     [
         'name' => 'Practice Hub',
-        'desc' => 'Practice management built for how HR consultants actually work.',
+        'desc' => 'Practice management built for independent HR consultants.',
         'logo' => '/assets/images/products/practice-hub.png',
         'href' => 'https://practice-hub.co.uk',
     ],
     [
         'name' => 'Pop + Pixel',
-        'desc' => 'Websites for HR consultants.',
+        'desc' => 'Websites for HR consultancies, built by a working HR consultant.',
         'logo' => '/assets/images/products/pop-pixel.png',
         'href' => 'https://popandpixel.co.uk',
     ],
