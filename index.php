@@ -86,7 +86,7 @@ $articles = require __DIR__ . '/includes/articles.php';
         <div class="prose">
             <p>Working on a story about employment law, HR or workplace rights?</p>
             <p>Get in touch.</p>
-            <p>I'll give you a straight answer, even if it's not the one that makes for the tidiest headline.</p>
+            <p>I'll give you a straight answer.</p>
         </div>
         <div class="cta-row">
             <a class="btn" href="/contact.php">Get in touch</a>
