@@ -26,6 +26,17 @@
   var link = modal.querySelector('.linkedin-modal-link');
   var lastTrigger = null;
 
+  function escapeHtml(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function linkify(str) {
+    var urlPattern = /(https?:\/\/[^\s<]+[^\s<.,;:!?)'"])/g;
+    return escapeHtml(str).replace(urlPattern, function (url) {
+      return '<a href="' + url + '" target="_blank" rel="noopener">' + url + '</a>';
+    });
+  }
+
   function open(index) {
     var post = posts[index];
     if (!post) return;
@@ -39,7 +50,7 @@
     date.textContent = post.date;
     text.innerHTML = '';
     var p = document.createElement('p');
-    p.textContent = post.text;
+    p.innerHTML = linkify(post.text);
     text.appendChild(p);
     link.href = post.url;
     modal.hidden = false;

@@ -131,7 +131,7 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
             <span class="linkedin-feed-date linkedin-modal-date"></span>
             <div class="prose linkedin-modal-text"></div>
             <div class="cta-row">
-                <a class="btn-quiet linkedin-modal-link" target="_blank" rel="noopener">Read on LinkedIn &rarr;</a>
+                <a class="btn-quiet linkedin-modal-link" target="_blank" rel="noopener">Read on LinkedIn</a>
             </div>
         </div>
     </div>

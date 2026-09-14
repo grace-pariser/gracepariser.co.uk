@@ -89,6 +89,40 @@ function linkedin_feed_find_image(string $html, string $postUrl): ?string
     return null;
 }
 
+// When a post has no native LinkedIn image, fall back to the Open Graph
+// image of the first external link in the post text, if any (best-effort;
+// failures here just mean no fallback image, not a script failure).
+function linkedin_feed_first_external_url(string $text): ?string
+{
+    if (!preg_match('/https?:\/\/[^\s]+/', $text, $m)) {
+        return null;
+    }
+    $url = rtrim($m[0], '.,;:!?)\'"');
+    // Skip LinkedIn's own domains, including its lnkd.in shortener, which
+    // serves an interstitial "you are leaving LinkedIn" page rather than
+    // redirecting - its og:image is just LinkedIn's favicon, not useful.
+    foreach (['linkedin.com', 'lnkd.in'] as $ownDomain) {
+        if (stripos($url, $ownDomain) !== false) {
+            return null;
+        }
+    }
+    return $url;
+}
+
+function linkedin_feed_fetch_og_image(string $url): ?string
+{
+    $cmd = 'curl -sL --max-time 10 -A ' . escapeshellarg('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36') . ' ' . escapeshellarg($url);
+    $pageHtml = shell_exec($cmd);
+    if (!$pageHtml) {
+        return null;
+    }
+    if (preg_match('/<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']/i', $pageHtml, $m)
+        || preg_match('/<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']/i', $pageHtml, $m)) {
+        return html_entity_decode($m[1], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    }
+    return null;
+}
+
 $posts = [];
 foreach ($postNodes as $node) {
     $url = $node['url'] ?? $node['mainEntityOfPage'] ?? null;
@@ -118,6 +152,12 @@ usort($posts, fn($a, $b) => $b['timestamp'] <=> $a['timestamp']);
 $posts = array_slice($posts, 0, $maxPosts);
 foreach ($posts as &$post) {
     unset($post['timestamp']);
+    if (!$post['image']) {
+        $externalUrl = linkedin_feed_first_external_url($post['fullText']);
+        if ($externalUrl) {
+            $post['image'] = linkedin_feed_fetch_og_image($externalUrl);
+        }
+    }
 }
 unset($post);
 
