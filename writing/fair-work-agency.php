@@ -12,7 +12,7 @@ require __DIR__ . '/../includes/header.php';
 </section>
 
 <section class="section wrap" style="border-top:none;">
-    <p class="article-note">Full piece coming soon. This page is wired up and ready for the body copy.</p>
+    <p class="article-note">Still writing this one. Check back soon.</p>
 </section>
 
 <?php require __DIR__ . '/../includes/footer.php'; ?>
