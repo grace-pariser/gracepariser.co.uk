@@ -727,9 +727,8 @@ p { margin: 0 0 var(--space-2); }
 
 .card-logo {
   display: block;
-  height: 32px;
-  width: auto;
-  max-width: 140px;
+  width: 130px;
+  height: 34px;
   object-fit: contain;
   object-position: left center;
   margin-bottom: 0.85em;

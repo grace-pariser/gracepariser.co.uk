@@ -29,7 +29,6 @@ require __DIR__ . '/includes/header.php';
 
     <div class="article-card">
         <img src="/assets/images/products/hr-vault.webp" alt="The HR Vault" class="card-logo">
-        <h3>The HR Vault</h3>
         <p>The back office of an HR consultancy, in one subscription. The document library, the builders that draft for you, the calculators and toolkits, and 30 minutes of expert advice a month, so you spend your time on clients instead of paperwork. Monthly, rolling, cancel whenever you like.</p>
         <div class="cta-row" style="margin-top:0.75rem;">
             <a class="btn" href="https://thehrvault.co.uk" target="_blank" rel="noopener">Explore The HR Vault</a>
@@ -37,7 +36,6 @@ require __DIR__ . '/includes/header.php';
     </div>
     <div class="article-card">
         <img src="/assets/images/products/practice-hub.png" alt="Practice Hub" class="card-logo">
-        <h3>Practice Hub</h3>
         <p>The practice management system built specifically for independent HR consultants, so you can spend less time on admin and more time on the work that actually pays.</p>
         <div class="cta-row" style="margin-top:0.75rem;">
             <a class="btn" href="https://practice-hub.co.uk" target="_blank" rel="noopener">Explore Practice Hub</a>
@@ -45,7 +43,6 @@ require __DIR__ . '/includes/header.php';
     </div>
     <div class="article-card">
         <img src="/assets/images/products/pop-pixel.png" alt="Pop + Pixel" class="card-logo">
-        <h3>Pop + Pixel</h3>
         <p>Websites for HR consultancies, designed to make you look credible and bring in the clients you actually want. Built by a web designer who's also a working HR consultant.</p>
         <div class="cta-row" style="margin-top:0.75rem;">
             <a class="btn" href="https://popandpixel.co.uk" target="_blank" rel="noopener">Explore Pop + Pixel</a>
