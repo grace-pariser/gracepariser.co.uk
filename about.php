@@ -106,6 +106,20 @@ $testimonials = require __DIR__ . '/includes/testimonials.php';
                     <p class="timeline-org">CIPD</p>
                 </li>
                 <li>
+                    <span class="timeline-date">2023</span>
+                    <h3 class="timeline-title">Responsive Web Design</h3>
+                    <p class="timeline-org">freeCodeCamp</p>
+                </li>
+                <li>
+                    <span class="timeline-date">2023</span>
+                    <h3 class="timeline-title">SEO Fundamentals Course</h3>
+                    <p class="timeline-org">Semrush, with Greg Gifford</p>
+                </li>
+                <li>
+                    <h3 class="timeline-title">Make Sure Customers Find You Online</h3>
+                    <p class="timeline-org">Google Digital Garage</p>
+                </li>
+                <li>
                     <span class="timeline-date">2020 &ndash; 2021</span>
                     <h3 class="timeline-title">MA Human Resource Management</h3>
                     <p class="timeline-org">University of Plymouth, awarded the Plymouth Business School Prize for Best Student Contribution to the MA in HRM</p>
@@ -139,7 +153,8 @@ $testimonials = require __DIR__ . '/includes/testimonials.php';
             <div class="quote-card carousel-slide">
                 <p>&ldquo;<?= htmlspecialchars($t['quote']) ?>&rdquo;</p>
                 <span class="quote-attribution">
-                    <strong><?= htmlspecialchars($t['name']) ?></strong><?= $t['role'] ? ', ' . htmlspecialchars($t['role']) : '' ?>
+                    <strong><?= htmlspecialchars($t['name']) ?></strong>
+                    <?php if ($t['role']): ?><span class="quote-role"><?= htmlspecialchars($t['role']) ?></span><?php endif; ?>
                 </span>
             </div>
             <?php endforeach; ?>

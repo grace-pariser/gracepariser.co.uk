@@ -36,6 +36,17 @@ $products = [
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grace Pariser | Links</title>
 <meta name="description" content="All my pages, products and profiles in one place.">
+<link rel="canonical" href="https://gracepariser.co.uk/links.php">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Grace Pariser">
+<meta property="og:title" content="Grace Pariser | Links">
+<meta property="og:description" content="All my pages, products and profiles in one place.">
+<meta property="og:url" content="https://gracepariser.co.uk/links.php">
+<meta property="og:image" content="https://gracepariser.co.uk/assets/images/favicon-512x512.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Grace Pariser | Links">
+<meta name="twitter:description" content="All my pages, products and profiles in one place.">
+<meta name="twitter:image" content="https://gracepariser.co.uk/assets/images/favicon-512x512.png">
 <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">

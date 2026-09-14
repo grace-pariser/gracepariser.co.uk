@@ -531,8 +531,14 @@ p { margin: 0 0 var(--space-2); }
   letter-spacing: 0.02em;
 }
 .quote-attribution strong {
+  display: block;
   color: var(--ink);
   font-weight: 700;
+  font-size: 0.875rem;
+}
+.quote-role {
+  display: block;
+  margin-top: 0.15em;
 }
 
 /* ---------- Carousel ---------- */
@@ -542,9 +548,14 @@ p { margin: 0 0 var(--space-2); }
   gap: var(--space-3);
   margin-top: var(--space-3);
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding-bottom: var(--space-2);
+  scrollbar-width: none;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
 }
 .carousel-track .carousel-slide {
   flex: 0 0 auto;
