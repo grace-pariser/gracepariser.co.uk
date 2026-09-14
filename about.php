@@ -125,4 +125,26 @@ require __DIR__ . '/includes/header.php';
     </div>
 </section>
 
+<section class="section wrap">
+    <p class="section-label">What people say</p>
+    <div class="card-grid card-grid-2">
+        <div class="quote-card">
+            <p>"Grace's employment law knowledge, approach and attention to detail is second to none. We wish we'd found her sooner, and will be using her continually as we grow our business."</p>
+            <span class="quote-attribution"><strong>Alison Lambert</strong>, The HR Guru Ltd</span>
+        </div>
+        <div class="quote-card">
+            <p>"What really sets her apart is her rare combination of tech know-how and HR expertise. Brilliant service from start to finish. Highly recommended."</p>
+            <span class="quote-attribution"><strong>Lorna Simpson</strong>, Marches HR &amp; SafeGuardHR</span>
+        </div>
+        <div class="quote-card">
+            <p>"I can not rate Grace highly enough. Such a time saver for my business, and she's also a really nice person."</p>
+            <span class="quote-attribution"><strong>Samantha Bonser</strong>, HR4 Business</span>
+        </div>
+        <div class="quote-card">
+            <p>"Grace is an extremely capable HR professional who demonstrated a high level of commitment in delivering HR best practice. She is very pragmatic and focused in her approach."</p>
+            <span class="quote-attribution"><strong>Kathryn Cox</strong>, HR Director, chapmanbdsp</span>
+        </div>
+    </div>
+</section>
+
 <?php require __DIR__ . '/includes/footer.php'; ?>

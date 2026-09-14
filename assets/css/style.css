@@ -475,6 +475,40 @@ p { margin: 0 0 var(--space-2); }
   .card-grid { grid-template-columns: 1fr; }
 }
 
+.card-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 700px) {
+  .card-grid-2 { grid-template-columns: 1fr; }
+}
+
+/* ---------- Quote / testimonial cards ---------- */
+
+.quote-card {
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  background: var(--paper-raised);
+}
+.quote-card p {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 0.85em;
+}
+.quote-attribution {
+  display: block;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  letter-spacing: 0.02em;
+}
+.quote-attribution strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .article-card {
   position: relative;
   padding-top: var(--space-2);
