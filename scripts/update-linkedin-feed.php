@@ -1,45 +1,61 @@
 <?php
-// Pulls Grace's public LinkedIn activity via an RSS.app bridge feed (LinkedIn
-// itself has no public API for this) and writes it to assets/data/linkedin-feed.json,
-// which includes/linkedin-feed.php reads for the homepage "From LinkedIn" section.
+// Pulls Grace's public LinkedIn post activity directly from her public
+// profile page (linkedin.com has no API for this, and the RSS.app bridge
+// we tried first requires a paid plan) and writes assets/data/linkedin-feed.json,
+// which includes/linkedin-feed.php reads for the homepage "From LinkedIn"
+// section.
+//
+// This works by reading structured data (schema.org JSON-LD) that LinkedIn
+// embeds in the logged-out profile page for search engines, plus a
+// best-effort scan of the surrounding HTML to pick up each post's image.
+// Both are undocumented implementation details of LinkedIn's page, not a
+// stable API, so this script can break without warning if LinkedIn changes
+// its markup. On failure it exits non-zero and leaves the existing cached
+// JSON untouched; the calling routine is responsible for flagging that to
+// Grace rather than failing silently.
 //
 // Run manually with `php scripts/update-linkedin-feed.php`, or via the
 // "Update LinkedIn feed" scheduled routine, which also commits and pushes
 // the result so the deploy pipeline picks it up.
 
-$feedUrl = 'https://rss.app/feeds/pseTVcr1EGWScdFN.xml';
+$profileUrl = 'https://www.linkedin.com/in/grace-pariser/';
 $outputPath = __DIR__ . '/../assets/data/linkedin-feed.json';
 $maxPosts = 6;
 $snippetLength = 240;
 
 // This PHP build has no openssl/curl extension, so shell out to the
 // system curl binary instead of using file_get_contents over https.
-$cmd = 'curl -s --max-time 20 -A ' . escapeshellarg('Mozilla/5.0 (compatible; gracepariser.co.uk feed updater)') . ' ' . escapeshellarg($feedUrl);
-$xmlString = shell_exec($cmd);
+$cmd = 'curl -sL --max-time 20 -A ' . escapeshellarg('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36') . ' ' . escapeshellarg($profileUrl);
+$html = shell_exec($cmd);
 
-if ($xmlString === null || trim($xmlString) === '') {
-    fwrite(STDERR, "Failed to fetch feed\n");
+if ($html === null || trim($html) === '') {
+    fwrite(STDERR, "Failed to fetch LinkedIn profile page\n");
     exit(1);
 }
 
-libxml_use_internal_errors(true);
-$xml = simplexml_load_string($xmlString);
-if ($xml === false) {
-    fwrite(STDERR, "Failed to parse feed XML\n");
+if (!preg_match('#<script type="application/ld\+json">(.*?)</script>#s', $html, $ldJsonMatch)) {
+    fwrite(STDERR, "Could not find the embedded LinkedIn structured data (ld+json) - LinkedIn may have changed their page layout\n");
     exit(1);
 }
 
-function linkedin_feed_snippet(string $html, int $maxLength): string
+$structuredData = json_decode($ldJsonMatch[1], true);
+$graph = $structuredData[0]['@graph'] ?? $structuredData['@graph'] ?? null;
+if (!is_array($graph)) {
+    fwrite(STDERR, "Structured data didn't have the expected shape (no @graph) - LinkedIn may have changed their page layout\n");
+    exit(1);
+}
+
+$postNodes = array_values(array_filter($graph, fn($node) => ($node['@type'] ?? null) === 'DiscussionForumPosting'));
+if (count($postNodes) === 0) {
+    fwrite(STDERR, "Found structured data but no posts (DiscussionForumPosting) in it - LinkedIn may have changed their page layout\n");
+    exit(1);
+}
+
+function linkedin_feed_snippet(string $text, int $maxLength): string
 {
-    // Turn line/paragraph breaks into newlines before stripping tags, so
-    // posts don't collapse into one run-on block of text.
-    $html = preg_replace('/<br\s*\/?>/i', "\n", $html);
-    $html = preg_replace('/<\/(p|div)>/i', "\n\n", $html);
-    $text = strip_tags($html);
-    $text = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
     $text = preg_replace('/[ \t]+/', ' ', $text);
+    $text = preg_replace('/ *\n *(\n *)+/', "\n\n", $text);
     $text = preg_replace('/ *\n */', "\n", $text);
-    $text = preg_replace('/\n{3,}/', "\n\n", $text);
     $text = trim($text);
     if (strlen($text) <= $maxLength) {
         return $text;
@@ -52,29 +68,48 @@ function linkedin_feed_snippet(string $html, int $maxLength): string
     return rtrim($truncated, " \t\n\r,.") . '...';
 }
 
-$mediaNs = 'http://search.yahoo.com/mrss/';
+// Best-effort: each post's permalink appears multiple times in the page
+// (once near the structured data, again in a separate visual "posts"
+// carousel further down that carries the image). Check a window after
+// every occurrence of this specific post's own (unique) permalink.
+function linkedin_feed_find_image(string $html, string $postUrl): ?string
+{
+    $offset = 0;
+    while (($pos = strpos($html, $postUrl, $offset)) !== false) {
+        $window = substr($html, $pos, 3000);
+        if (preg_match('~https://media\.licdn\.com/[^"\'\s)]*feedshare[^"\'\s)]*~', $window, $imgMatch)) {
+            return html_entity_decode($imgMatch[0], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        }
+        $offset = $pos + strlen($postUrl);
+    }
+    return null;
+}
 
 $posts = [];
-foreach ($xml->channel->item as $item) {
-    $image = null;
-    $media = $item->children($mediaNs)->content;
-    if ($media && isset($media->attributes()['url'])) {
-        $image = (string) $media->attributes()['url'];
+foreach ($postNodes as $node) {
+    $url = $node['url'] ?? $node['mainEntityOfPage'] ?? null;
+    $text = $node['text'] ?? null;
+    $datePublished = $node['datePublished'] ?? null;
+    if (!$url || !$text || !$datePublished) {
+        continue;
     }
 
     $posts[] = [
-        'url' => (string) $item->link,
-        'text' => linkedin_feed_snippet((string) $item->description, $snippetLength),
-        'date' => date('j M Y', strtotime((string) $item->pubDate)),
-        'image' => $image,
-        'timestamp' => strtotime((string) $item->pubDate),
+        'url' => $url,
+        'text' => linkedin_feed_snippet($text, $snippetLength),
+        'date' => date('j M Y', strtotime($datePublished)),
+        'image' => linkedin_feed_find_image($html, $url),
+        'timestamp' => strtotime($datePublished),
     ];
-    if (count($posts) >= $maxPosts) {
-        break;
-    }
+}
+
+if (count($posts) === 0) {
+    fwrite(STDERR, "Parsed post nodes but none had the expected text/url/date fields - LinkedIn may have changed their page layout\n");
+    exit(1);
 }
 
 usort($posts, fn($a, $b) => $b['timestamp'] <=> $a['timestamp']);
+$posts = array_slice($posts, 0, $maxPosts);
 foreach ($posts as &$post) {
     unset($post['timestamp']);
 }
