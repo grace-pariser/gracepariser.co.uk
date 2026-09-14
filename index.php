@@ -98,11 +98,17 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
     </div>
     <?php if ($linkedinPosts): ?>
     <ul class="linkedin-feed">
-        <?php foreach (array_slice($linkedinPosts, 0, 4) as $post): ?>
-        <li>
+        <?php foreach (array_slice($linkedinPosts, 0, 4) as $i => $post): ?>
+        <li class="linkedin-card<?= $post['image'] ? '' : ' linkedin-card-no-image' ?><?= $i === 0 ? ' linkedin-card-lead' : '' ?>">
             <a href="<?= htmlspecialchars($post['url']) ?>" target="_blank" rel="noopener">
-                <span class="linkedin-feed-date"><?= htmlspecialchars($post['date']) ?></span>
-                <p><?= htmlspecialchars($post['text']) ?></p>
+                <?php if ($post['image']): ?>
+                <img src="<?= htmlspecialchars($post['image']) ?>" alt="" class="linkedin-card-image" loading="lazy">
+                <?php endif; ?>
+                <div class="linkedin-card-body">
+                    <span class="linkedin-feed-date"><?= htmlspecialchars($post['date']) ?></span>
+                    <p><?= htmlspecialchars($post['text']) ?></p>
+                    <span class="linkedin-card-link">Read on LinkedIn &rarr;</span>
+                </div>
             </a>
         </li>
         <?php endforeach; ?>

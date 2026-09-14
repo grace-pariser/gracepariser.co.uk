@@ -46,12 +46,21 @@ function linkedin_feed_snippet(string $html, int $maxLength): string
     return rtrim($truncated, " \t\n\r,.") . '...';
 }
 
+$mediaNs = 'http://search.yahoo.com/mrss/';
+
 $posts = [];
 foreach ($xml->channel->item as $item) {
+    $image = null;
+    $media = $item->children($mediaNs)->content;
+    if ($media && isset($media->attributes()['url'])) {
+        $image = (string) $media->attributes()['url'];
+    }
+
     $posts[] = [
         'url' => (string) $item->link,
         'text' => linkedin_feed_snippet((string) $item->description, $snippetLength),
         'date' => date('j M Y', strtotime((string) $item->pubDate)),
+        'image' => $image,
         'timestamp' => strtotime((string) $item->pubDate),
     ];
     if (count($posts) >= $maxPosts) {
