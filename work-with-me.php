@@ -15,7 +15,8 @@ require __DIR__ . '/includes/header.php';
 <section class="section wrap">
     <p class="section-label">For business owners: HR On Call</p>
     <div class="prose">
-        <p>Retainer support, project work, and one-off advice on TUPE, settlement agreements, disciplinary and grievance processes, and bespoke document drafting. I work with businesses directly and through HR intermediaries.</p>
+        <p>Retainer support, project work, and one-off advice on TUPE, settlement agreements, disciplinary and grievance processes, and bespoke document drafting.</p>
+        <p>I work with businesses directly, and through HR intermediaries.</p>
     </div>
     <div class="cta-row">
         <a class="btn" href="/contact.php">Enquire</a>

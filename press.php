@@ -38,7 +38,8 @@ $featured = [
 <section class="hero wrap">
     <h1>Press</h1>
     <div class="prose lede">
-        <p>I comment on employment law and HR for national and trade press. If you're working on something in this space, I'm easy to reach and I don't take three days to get back to you.</p>
+        <p>I comment on employment law and HR for national and trade press.</p>
+        <p>If you're working on something in this space, I'm easy to reach. And I don't take three days to get back to you.</p>
     </div>
 </section>
 
