@@ -360,6 +360,8 @@ p { margin: 0 0 var(--space-2); }
   height: 34px;
   object-fit: contain;
   object-position: center center;
+  filter: none;
+  opacity: 1;
 }
 
 /* Full-colour, static variant for standalone use (e.g. on a press card,
