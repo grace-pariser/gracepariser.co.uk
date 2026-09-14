@@ -3,6 +3,7 @@ $pageTitle = 'About | Grace Pariser';
 $pageDescription = "I'm an HR person first. Practice Hub, Pop + Pixel and The HR Vault happened because the tools I wanted didn't exist yet.";
 $activeNav = 'about';
 require __DIR__ . '/includes/header.php';
+$testimonials = require __DIR__ . '/includes/testimonials.php';
 ?>
 
 <section class="section wrap" style="border-top:none;">
@@ -132,22 +133,20 @@ require __DIR__ . '/includes/header.php';
 
 <section class="section wrap">
     <p class="section-label">What people say</p>
-    <div class="card-grid card-grid-2">
-        <div class="quote-card">
-            <p>"Grace's employment law knowledge, approach and attention to detail is second to none. We wish we'd found her sooner, and will be using her continually as we grow our business."</p>
-            <span class="quote-attribution"><strong>Alison Lambert</strong>, The HR Guru Ltd</span>
+    <div class="carousel">
+        <div class="carousel-track" id="testimonial-track">
+            <?php foreach ($testimonials as $t): ?>
+            <div class="quote-card carousel-slide">
+                <p>&ldquo;<?= htmlspecialchars($t['quote']) ?>&rdquo;</p>
+                <span class="quote-attribution">
+                    <strong><?= htmlspecialchars($t['name']) ?></strong><?= $t['role'] ? ', ' . htmlspecialchars($t['role']) : '' ?>
+                </span>
+            </div>
+            <?php endforeach; ?>
         </div>
-        <div class="quote-card">
-            <p>"What really sets her apart is her rare combination of tech know-how and HR expertise. Brilliant service from start to finish. Highly recommended."</p>
-            <span class="quote-attribution"><strong>Lorna Simpson</strong>, Marches HR &amp; SafeGuardHR</span>
-        </div>
-        <div class="quote-card">
-            <p>"I can not rate Grace highly enough. Such a time saver for my business, and she's also a really nice person."</p>
-            <span class="quote-attribution"><strong>Samantha Bonser</strong>, HR4 Business</span>
-        </div>
-        <div class="quote-card">
-            <p>"Grace is an extremely capable HR professional who demonstrated a high level of commitment in delivering HR best practice. She is very pragmatic and focused in her approach."</p>
-            <span class="quote-attribution"><strong>Kathryn Cox</strong>, HR Director, chapmanbdsp</span>
+        <div class="carousel-controls">
+            <button type="button" class="carousel-btn" data-carousel-prev="testimonial-track" aria-label="Previous">&larr;</button>
+            <button type="button" class="carousel-btn" data-carousel-next="testimonial-track" aria-label="Next">&rarr;</button>
         </div>
     </div>
 </section>

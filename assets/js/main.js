@@ -92,3 +92,21 @@
     if (e.key === 'Escape' && !modal.hidden) close();
   });
 })();
+
+(function () {
+  function scrollTrack(track, direction) {
+    var slide = track.querySelector('.carousel-slide');
+    var amount = slide ? slide.getBoundingClientRect().width + 24 : track.clientWidth * 0.8;
+    track.scrollBy({ left: amount * direction, behavior: 'smooth' });
+  }
+
+  document.querySelectorAll('[data-carousel-prev]').forEach(function (btn) {
+    var track = document.getElementById(btn.getAttribute('data-carousel-prev'));
+    if (track) btn.addEventListener('click', function () { scrollTrack(track, -1); });
+  });
+
+  document.querySelectorAll('[data-carousel-next]').forEach(function (btn) {
+    var track = document.getElementById(btn.getAttribute('data-carousel-next'));
+    if (track) btn.addEventListener('click', function () { scrollTrack(track, 1); });
+  });
+})();
