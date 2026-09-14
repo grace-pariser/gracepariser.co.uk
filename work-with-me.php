@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Work with me | Grace Pariser';
-$pageDescription = 'Grace Pariser and HR On Call: consultancy for business owners. Plus a back-office subscription for HR consultants.';
+$pageDescription = "Two ways to work with me: as a client of HR On Call, or a subscriber to the tools I've built for other consultants.";
 $activeNav = 'work';
 require __DIR__ . '/includes/header.php';
 ?>

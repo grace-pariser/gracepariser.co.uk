@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Contact | Grace Pariser';
-$pageDescription = 'Get in touch about consultancy work, press enquiries, or anything else.';
+$pageDescription = "Tell me what you need and I'll come back to you directly.";
 $activeNav = 'contact';
 require __DIR__ . '/includes/header.php';
 

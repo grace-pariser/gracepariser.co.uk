@@ -6,7 +6,7 @@
 $products = [
     [
         'name' => 'HR On Call',
-        'desc' => 'Employment law and HR consultancy for business owners.',
+        'desc' => 'Retainer support and one-off advice for business owners.',
         'logo' => '/assets/images/products/hr-on-call.png',
         'href' => 'https://on-call.co.uk',
     ],
@@ -58,7 +58,7 @@ $products = [
         <a class="product-card" href="https://gracepariser.co.uk/">
             <span class="product-text">
                 <span class="product-name">My website</span>
-                <span class="product-desc">About me, press, writing, and how to work with me.</span>
+                <span class="product-desc">Everything else: my bio, press, and how to work with me.</span>
             </span>
         </a>
         <a class="product-card" href="https://gracepariser.co.uk/writing.php">
@@ -70,7 +70,7 @@ $products = [
         <a class="product-card" href="https://www.thehrvault.co.uk/legal-updates.php" target="_blank" rel="noopener">
             <span class="product-text">
                 <span class="product-name">Employment Legal Updates</span>
-                <span class="product-desc">Tracked changes in UK employment law, from The HR Vault.</span>
+                <span class="product-desc">What's actually changing in employment law, kept up to date on The HR Vault.</span>
             </span>
         </a>
     </div>

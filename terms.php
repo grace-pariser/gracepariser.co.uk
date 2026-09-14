@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Terms of Use | Grace Pariser';
-$pageDescription = 'Terms of use for gracepariser.co.uk.';
+$pageDescription = 'The terms for using this site, in plain English.';
 $activeNav = '';
 require __DIR__ . '/includes/header.php';
 ?>
@@ -13,22 +13,22 @@ require __DIR__ . '/includes/header.php';
 
 <section class="section wrap" style="border-top:none; padding-top:2rem;">
     <div class="prose prose-wide">
-        <p>These terms apply to your use of gracepariser.co.uk (the "site"). By using the site you accept them.</p>
+        <p>These are the terms for using gracepariser.co.uk. Use the site and you've accepted them.</p>
 
         <h3>About this site</h3>
-        <p>This site is a personal and professional site for Grace Pariser. Content published here, including the Writing and Press sections, reflects personal opinion and commentary. It is not legal advice, and nothing on this site should be relied on as a substitute for advice specific to your circumstances. For HR consultancy services, see <a href="/work-with-me.php">Work with me</a>.</p>
+        <p>This is my personal and professional site. The Writing and Press pages are opinion and commentary, not legal advice, and nothing here replaces advice tailored to your own situation. If you want to work with me directly, see <a href="/work-with-me.php">Work with me</a>.</p>
 
         <h3>Content and copyright</h3>
-        <p>Unless stated otherwise, the content on this site is owned by Grace Pariser. You may read and share links to it, but you may not republish, redistribute, or reproduce it for commercial purposes without permission.</p>
+        <p>Unless I say otherwise, I own everything on this site. Read it, share a link to it, but don't republish or reproduce it for commercial purposes without asking me first.</p>
 
         <h3>Third-party links</h3>
-        <p>This site links to external sites, including press coverage and the other businesses mentioned in the footer. Grace Pariser is not responsible for the content or practices of third-party sites.</p>
+        <p>I link out to other sites here, including press coverage and the other businesses mentioned in the footer. I'm not responsible for what those sites do or say.</p>
 
         <h3>No liability</h3>
-        <p>The site is provided as-is. While reasonable care is taken to keep it accurate and available, no guarantee is given that it will be error-free or uninterrupted.</p>
+        <p>I keep this site as accurate and available as I reasonably can, but I can't guarantee it'll always be error-free or online.</p>
 
         <h3>Contact</h3>
-        <p>Questions about these terms can be sent to <a href="mailto:enquiries@gracepariser.co.uk">enquiries@gracepariser.co.uk</a>.</p>
+        <p>Questions about these terms go to <a href="mailto:enquiries@gracepariser.co.uk">enquiries@gracepariser.co.uk</a>.</p>
     </div>
 </section>
 
