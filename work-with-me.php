@@ -12,16 +12,6 @@ require __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<section class="press-strip wrap">
-    <p class="section-label">My services and products</p>
-    <ul class="press-logos">
-        <li><a href="https://hr.on-call.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/hr-on-call.png" alt="HR On Call" class="press-logo press-logo-uniform"></a></li>
-        <li><a href="https://thehrvault.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/hr-vault.webp" alt="The HR Vault" class="press-logo press-logo-uniform"></a></li>
-        <li><a href="https://practice-hub.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/practice-hub.png" alt="Practice Hub" class="press-logo press-logo-uniform"></a></li>
-        <li><a href="https://popandpixel.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/pop-pixel.png" alt="Pop + Pixel" class="press-logo press-logo-uniform"></a></li>
-    </ul>
-</section>
-
 <section class="section wrap">
     <p class="section-label">For business owners</p>
     <img src="/assets/images/products/hr-on-call.png" alt="HR On Call" class="card-logo">
