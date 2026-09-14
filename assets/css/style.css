@@ -724,3 +724,13 @@ p { margin: 0 0 var(--space-2); }
   object-fit: contain;
   object-position: right center;
 }
+
+.card-logo {
+  display: block;
+  height: 32px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 0.85em;
+}
