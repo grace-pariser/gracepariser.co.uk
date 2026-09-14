@@ -112,7 +112,7 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
                     </span>
                 </span>
                 <span class="linkedin-card-main">
-                    <?php if ($post['image']): ?>
+                    <?php if ($i === 0 && $post['image']): ?>
                     <img src="<?= htmlspecialchars($post['image']) ?>" alt="" class="linkedin-card-image" loading="lazy">
                     <?php endif; ?>
                     <span class="linkedin-card-body">

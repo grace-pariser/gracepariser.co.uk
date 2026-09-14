@@ -21,7 +21,6 @@
 $profileUrl = 'https://www.linkedin.com/in/grace-pariser/';
 $outputPath = __DIR__ . '/../assets/data/linkedin-feed.json';
 $maxPosts = 6;
-$snippetLength = 240;
 $noImageSnippetLength = 420;
 $leadSnippetLength = 550;
 
@@ -166,16 +165,11 @@ foreach ($posts as $i => &$post) {
             $post['image'] = linkedin_feed_fetch_og_image($externalUrl);
         }
     }
-    // The first post renders full-width as a "lead" item on the homepage,
-    // and a card with no image has all its space free for text - both get
-    // a longer snippet than a normal image card, which is tighter on room.
-    if ($i === 0) {
-        $length = $leadSnippetLength;
-    } elseif (!$post['image']) {
-        $length = $noImageSnippetLength;
-    } else {
-        $length = $snippetLength;
-    }
+    // Only the lead card shows an image on the homepage (the grid cards
+    // behind it are text-only there, though the modal still shows any
+    // image on click), so every non-lead card has the same free space
+    // and gets the longer, no-image-card snippet length.
+    $length = $i === 0 ? $leadSnippetLength : $noImageSnippetLength;
     $post['text'] = linkedin_feed_snippet($post['fullText'], $length);
 }
 unset($post);
