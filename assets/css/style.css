@@ -557,10 +557,11 @@ p { margin: 0 0 var(--space-2); }
   height: 100%;
   font-weight: 400;
 }
+/* LinkedIn's own share graphics are wide, irregular banners (not photos),
+   so show them at their natural ratio rather than cropping to a fixed box. */
 .linkedin-card-image {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 .linkedin-card-body {
@@ -604,11 +605,10 @@ p { margin: 0 0 var(--space-2); }
 }
 .linkedin-card-lead a {
   flex-direction: row;
-  align-items: stretch;
+  align-items: center;
 }
 .linkedin-card-lead .linkedin-card-image {
   width: 40%;
-  aspect-ratio: auto;
   flex-shrink: 0;
 }
 .linkedin-card-lead .linkedin-card-body {
@@ -619,7 +619,7 @@ p { margin: 0 0 var(--space-2); }
 }
 @media (max-width: 700px) {
   .linkedin-card-lead a { flex-direction: column; }
-  .linkedin-card-lead .linkedin-card-image { width: 100%; aspect-ratio: 16 / 10; }
+  .linkedin-card-lead .linkedin-card-image { width: 100%; }
 }
 
 .article-card {
