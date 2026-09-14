@@ -22,6 +22,7 @@ $profileUrl = 'https://www.linkedin.com/in/grace-pariser/';
 $outputPath = __DIR__ . '/../assets/data/linkedin-feed.json';
 $maxPosts = 6;
 $snippetLength = 240;
+$leadSnippetLength = 550;
 
 // This PHP build has no openssl/curl extension, so shell out to the
 // system curl binary instead of using file_get_contents over https.
@@ -140,7 +141,6 @@ foreach ($postNodes as $node) {
     $cleanText = linkedin_feed_clean($text);
     $posts[] = [
         'url' => $url,
-        'text' => linkedin_feed_snippet($cleanText, $snippetLength),
         'fullText' => $cleanText,
         'authorName' => $node['author']['name'] ?? 'Grace Pariser',
         'authorImage' => $authorImage,
@@ -157,8 +157,11 @@ if (count($posts) === 0) {
 
 usort($posts, fn($a, $b) => $b['timestamp'] <=> $a['timestamp']);
 $posts = array_slice($posts, 0, $maxPosts);
-foreach ($posts as &$post) {
+foreach ($posts as $i => &$post) {
     unset($post['timestamp']);
+    // The first post renders full-width as a "lead" item on the homepage,
+    // so it gets more room for text than the smaller grid cards behind it.
+    $post['text'] = linkedin_feed_snippet($post['fullText'], $i === 0 ? $leadSnippetLength : $snippetLength);
     if (!$post['image']) {
         $externalUrl = linkedin_feed_first_external_url($post['fullText']);
         if ($externalUrl) {
