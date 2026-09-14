@@ -7,3 +7,63 @@
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 })();
+
+(function () {
+  var modal = document.getElementById('linkedin-modal');
+  var dataScript = document.getElementById('linkedin-feed-data');
+  if (!modal || !dataScript) return;
+
+  var posts;
+  try {
+    posts = JSON.parse(dataScript.textContent);
+  } catch (e) {
+    return;
+  }
+
+  var image = modal.querySelector('.linkedin-modal-image');
+  var date = modal.querySelector('.linkedin-modal-date');
+  var text = modal.querySelector('.linkedin-modal-text');
+  var link = modal.querySelector('.linkedin-modal-link');
+  var lastTrigger = null;
+
+  function open(index) {
+    var post = posts[index];
+    if (!post) return;
+    if (post.image) {
+      image.src = post.image;
+      image.hidden = false;
+    } else {
+      image.hidden = true;
+      image.removeAttribute('src');
+    }
+    date.textContent = post.date;
+    text.innerHTML = '';
+    var p = document.createElement('p');
+    p.textContent = post.text;
+    text.appendChild(p);
+    link.href = post.url;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastTrigger) lastTrigger.focus();
+  }
+
+  document.querySelectorAll('.linkedin-card-trigger').forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      lastTrigger = trigger;
+      open(parseInt(trigger.getAttribute('data-linkedin-index'), 10));
+    });
+  });
+
+  modal.querySelectorAll('[data-linkedin-close]').forEach(function (el) {
+    el.addEventListener('click', close);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) close();
+  });
+})();

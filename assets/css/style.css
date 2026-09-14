@@ -551,11 +551,19 @@ p { margin: 0 0 var(--space-2); }
   border-color: var(--accent);
   transform: translateY(-3px);
 }
-.linkedin-card a {
+.linkedin-card-trigger {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
+  font: inherit;
   font-weight: 400;
+  text-align: left;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 /* LinkedIn's own share graphics are wide, irregular banners (not photos),
    so show them at their natural ratio rather than cropping to a fixed box. */
@@ -583,7 +591,8 @@ p { margin: 0 0 var(--space-2); }
   color: var(--ink-faint);
   margin-bottom: 0.5em;
 }
-.linkedin-card p {
+.linkedin-card-para {
+  display: block;
   font-family: var(--serif);
   color: var(--ink);
   margin: 0 0 0.75em;
@@ -603,7 +612,7 @@ p { margin: 0 0 var(--space-2); }
 .linkedin-card-lead {
   grid-column: 1 / -1;
 }
-.linkedin-card-lead a {
+.linkedin-card-lead .linkedin-card-trigger {
   flex-direction: row;
   align-items: center;
 }
@@ -614,12 +623,68 @@ p { margin: 0 0 var(--space-2); }
 .linkedin-card-lead .linkedin-card-body {
   padding: var(--space-3);
 }
-.linkedin-card-lead p {
+.linkedin-card-lead .linkedin-card-para {
   font-size: 1.0625rem;
 }
 @media (max-width: 700px) {
-  .linkedin-card-lead a { flex-direction: column; }
+  .linkedin-card-lead .linkedin-card-trigger { flex-direction: column; }
   .linkedin-card-lead .linkedin-card-image { width: 100%; }
+}
+
+/* ---------- LinkedIn post modal ---------- */
+
+.linkedin-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+}
+.linkedin-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(32, 29, 25, 0.55);
+}
+.linkedin-modal-panel {
+  position: relative;
+  max-width: 620px;
+  max-height: 85vh;
+  width: 100%;
+  overflow-y: auto;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  padding: var(--space-3);
+}
+.linkedin-modal-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: var(--space-2);
+}
+.linkedin-modal-date {
+  margin-bottom: 0.75em;
+}
+.linkedin-modal-text p {
+  white-space: pre-line;
+}
+.linkedin-modal-close {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border);
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.linkedin-modal-close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .article-card {

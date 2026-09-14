@@ -51,12 +51,16 @@ if (count($postNodes) === 0) {
     exit(1);
 }
 
-function linkedin_feed_snippet(string $text, int $maxLength): string
+function linkedin_feed_clean(string $text): string
 {
     $text = preg_replace('/[ \t]+/', ' ', $text);
     $text = preg_replace('/ *\n *(\n *)+/', "\n\n", $text);
     $text = preg_replace('/ *\n */', "\n", $text);
-    $text = trim($text);
+    return trim($text);
+}
+
+function linkedin_feed_snippet(string $text, int $maxLength): string
+{
     if (strlen($text) <= $maxLength) {
         return $text;
     }
@@ -94,9 +98,11 @@ foreach ($postNodes as $node) {
         continue;
     }
 
+    $cleanText = linkedin_feed_clean($text);
     $posts[] = [
         'url' => $url,
-        'text' => linkedin_feed_snippet($text, $snippetLength),
+        'text' => linkedin_feed_snippet($cleanText, $snippetLength),
+        'fullText' => $cleanText,
         'date' => date('j M Y', strtotime($datePublished)),
         'image' => linkedin_feed_find_image($html, $url),
         'timestamp' => strtotime($datePublished),

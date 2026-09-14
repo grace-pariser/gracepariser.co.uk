@@ -96,26 +96,45 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
     <div class="prose">
         <p>Shorter thoughts, posted more often, over on LinkedIn.</p>
     </div>
-    <?php if ($linkedinPosts): ?>
+    <?php $linkedinCards = array_slice($linkedinPosts, 0, 4); ?>
+    <?php if ($linkedinCards): ?>
     <ul class="linkedin-feed">
-        <?php foreach (array_slice($linkedinPosts, 0, 4) as $i => $post): ?>
+        <?php foreach ($linkedinCards as $i => $post): ?>
         <li class="linkedin-card<?= $post['image'] ? '' : ' linkedin-card-no-image' ?><?= $i === 0 ? ' linkedin-card-lead' : '' ?>">
-            <a href="<?= htmlspecialchars($post['url']) ?>" target="_blank" rel="noopener">
+            <button type="button" class="linkedin-card-trigger" data-linkedin-index="<?= $i ?>">
                 <?php if ($post['image']): ?>
                 <img src="<?= htmlspecialchars($post['image']) ?>" alt="" class="linkedin-card-image" loading="lazy">
                 <?php endif; ?>
-                <div class="linkedin-card-body">
+                <span class="linkedin-card-body">
                     <span class="linkedin-feed-date"><?= htmlspecialchars($post['date']) ?></span>
                     <?php foreach (explode("\n\n", $post['text']) as $para): ?>
                         <?php if (trim($para) === '') continue; ?>
-                        <p><?= nl2br(htmlspecialchars($para)) ?></p>
+                        <span class="linkedin-card-para"><?= nl2br(htmlspecialchars($para)) ?></span>
                     <?php endforeach; ?>
-                    <span class="linkedin-card-link">Read on LinkedIn &rarr;</span>
-                </div>
-            </a>
+                    <span class="linkedin-card-link">Read full post &rarr;</span>
+                </span>
+            </button>
         </li>
         <?php endforeach; ?>
     </ul>
+    <script type="application/json" id="linkedin-feed-data"><?= json_encode(array_map(fn($p) => [
+        'text' => $p['fullText'] ?? $p['text'],
+        'date' => $p['date'],
+        'url' => $p['url'],
+        'image' => $p['image'],
+    ], $linkedinCards), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>
+    <div class="linkedin-modal" id="linkedin-modal" hidden>
+        <div class="linkedin-modal-backdrop" data-linkedin-close></div>
+        <div class="linkedin-modal-panel" role="dialog" aria-modal="true" aria-label="Full LinkedIn post">
+            <button type="button" class="linkedin-modal-close" data-linkedin-close aria-label="Close">&times;</button>
+            <img class="linkedin-modal-image" alt="" hidden>
+            <span class="linkedin-feed-date linkedin-modal-date"></span>
+            <div class="prose linkedin-modal-text"></div>
+            <div class="cta-row">
+                <a class="btn-quiet linkedin-modal-link" target="_blank" rel="noopener">Read on LinkedIn &rarr;</a>
+            </div>
+        </div>
+    </div>
     <?php endif; ?>
     <div class="cta-row">
         <a class="btn-quiet" href="https://www.linkedin.com/in/grace-pariser/" target="_blank" rel="noopener">Follow on LinkedIn</a>
