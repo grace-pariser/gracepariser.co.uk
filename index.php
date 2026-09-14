@@ -5,6 +5,7 @@ $activeNav = '';
 require __DIR__ . '/includes/header.php';
 require __DIR__ . '/includes/article-card.php';
 $articles = require __DIR__ . '/includes/articles.php';
+$linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
 ?>
 
 <section class="hero wrap">
@@ -87,6 +88,28 @@ $articles = require __DIR__ . '/includes/articles.php';
     <p class="section-label" style="margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border);">Recent writing</p>
     <div class="card-grid">
         <?php foreach ($articles as $i => $a): render_article_card($a, $i + 1); endforeach; ?>
+    </div>
+</section>
+
+<section class="section wrap">
+    <p class="section-label">From LinkedIn</p>
+    <div class="prose">
+        <p>Shorter thoughts, posted more often, over on LinkedIn.</p>
+    </div>
+    <?php if ($linkedinPosts): ?>
+    <ul class="linkedin-feed">
+        <?php foreach (array_slice($linkedinPosts, 0, 4) as $post): ?>
+        <li>
+            <a href="<?= htmlspecialchars($post['url']) ?>" target="_blank" rel="noopener">
+                <span class="linkedin-feed-date"><?= htmlspecialchars($post['date']) ?></span>
+                <p><?= htmlspecialchars($post['text']) ?></p>
+            </a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    <?php endif; ?>
+    <div class="cta-row">
+        <a class="btn-quiet" href="https://www.linkedin.com/in/grace-pariser/" target="_blank" rel="noopener">Follow on LinkedIn</a>
     </div>
 </section>
 

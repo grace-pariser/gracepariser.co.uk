@@ -527,6 +527,44 @@ p { margin: 0 0 var(--space-2); }
   font-weight: 700;
 }
 
+/* ---------- LinkedIn feed ---------- */
+
+.linkedin-feed {
+  list-style: none;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+}
+.linkedin-feed li {
+  border-top: 1px solid var(--border);
+  padding: var(--space-2) 0;
+}
+.linkedin-feed li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+.linkedin-feed a {
+  display: block;
+  font-weight: 400;
+}
+.linkedin-feed-date {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.4em;
+}
+.linkedin-feed p {
+  font-family: var(--serif);
+  color: var(--ink);
+  margin: 0;
+}
+.linkedin-feed a:hover p {
+  color: var(--accent);
+}
+
 .article-card {
   position: relative;
   padding-top: var(--space-2);
