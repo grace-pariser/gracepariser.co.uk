@@ -20,6 +20,7 @@ require __DIR__ . '/includes/header.php';
     </div>
     <div class="cta-row">
         <a class="btn" href="/contact.php">Enquire</a>
+        <a class="btn-quiet" href="https://hr.on-call.co.uk" target="_blank" rel="noopener">Explore HR On Call</a>
     </div>
 </section>
 

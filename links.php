@@ -8,7 +8,7 @@ $products = [
         'name' => 'HR On Call',
         'desc' => 'Retainer support and one-off advice for business owners.',
         'logo' => '/assets/images/products/hr-on-call.png',
-        'href' => 'https://on-call.co.uk',
+        'href' => 'https://hr.on-call.co.uk',
     ],
     [
         'name' => 'The HR Vault',
