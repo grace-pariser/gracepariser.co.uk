@@ -362,6 +362,10 @@ p { margin: 0 0 var(--space-2); }
   object-position: center center;
   filter: none;
   opacity: 1;
+  transition: transform 150ms ease;
+}
+.press-logos a:hover .press-logo-uniform {
+  transform: scale(1.08);
 }
 
 /* Full-colour, static variant for standalone use (e.g. on a press card,
