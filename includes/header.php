@@ -4,11 +4,7 @@ $pageTitle = $pageTitle ?? 'Grace Pariser';
 $pageDescription = $pageDescription ?? 'Employment law and HR consultant, Plymouth.';
 $activeNav = $activeNav ?? '';
 $noIndex = $noIndex ?? false;
-// No dedicated 1200x630 social card exists yet, so the site's square
-// logo is used as a fallback - not ideal, but better than no preview
-// image at all. Worth replacing with a proper branded card or a real
-// photo later.
-$ogImage = $ogImage ?? 'https://gracepariser.co.uk/assets/images/favicon-512x512.png';
+$ogImage = $ogImage ?? 'https://gracepariser.co.uk/assets/images/og-image.png';
 
 $canonicalPath = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
 if ($canonicalPath === '/index.php') { $canonicalPath = '/'; }
@@ -35,8 +31,8 @@ function nav_class(string $key, string $active): string {
 <meta property="og:description" content="<?= htmlspecialchars($pageDescription) ?>">
 <meta property="og:url" content="<?= htmlspecialchars($canonicalUrl) ?>">
 <meta property="og:image" content="<?= htmlspecialchars($ogImage) ?>">
-<meta property="og:image:width" content="512">
-<meta property="og:image:height" content="512">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle) ?>">
 <meta name="twitter:description" content="<?= htmlspecialchars($pageDescription) ?>">
