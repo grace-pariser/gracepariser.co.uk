@@ -33,10 +33,10 @@ $articles = require __DIR__ . '/includes/articles.php';
 
 <section class="section wrap" style="border-top:none;">
     <div class="card-grid<?= count($articles) < 3 ? ' card-grid-2' : '' ?>">
-        <?php foreach ($articles as $i => $a): render_article_card($a, $i + 1); endforeach; ?>
+        <?php foreach ($articles as $a): render_article_card($a); endforeach; ?>
     </div>
 </section>
 
-<?php require __DIR__ . '/includes/linkedin-feed-section.php'; ?>
+<?php $linkedinFeedLead = false; require __DIR__ . '/includes/linkedin-feed-section.php'; ?>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

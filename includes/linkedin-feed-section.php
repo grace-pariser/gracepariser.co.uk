@@ -1,8 +1,12 @@
 <?php
 // "From LinkedIn" section: card grid + modal. Self-contained - just
-// require this file where the section should appear.
+// require this file where the section should appear. Set
+// $linkedinFeedLead = false before requiring to render a plain grid
+// of $linkedinFeedCount cards with no enlarged lead card.
+$linkedinFeedLead = $linkedinFeedLead ?? true;
+$linkedinFeedCount = $linkedinFeedCount ?? ($linkedinFeedLead ? 4 : 3);
 $linkedinPosts = require __DIR__ . '/linkedin-feed.php';
-$linkedinCards = array_slice($linkedinPosts, 0, 4);
+$linkedinCards = array_slice($linkedinPosts, 0, $linkedinFeedCount);
 ?>
 <section class="section wrap">
     <p class="section-label">From LinkedIn</p>
@@ -12,7 +16,7 @@ $linkedinCards = array_slice($linkedinPosts, 0, 4);
     <?php if ($linkedinCards): ?>
     <ul class="linkedin-feed">
         <?php foreach ($linkedinCards as $i => $post): ?>
-        <li class="linkedin-card<?= $i === 0 ? ' linkedin-card-lead' : '' ?>">
+        <li class="linkedin-card<?= ($i === 0 && $linkedinFeedLead) ? ' linkedin-card-lead' : '' ?>">
             <button type="button" class="linkedin-card-trigger" data-linkedin-index="<?= $i ?>">
                 <span class="linkedin-card-header">
                     <?php if ($post['authorImage']): ?>
@@ -24,7 +28,7 @@ $linkedinCards = array_slice($linkedinPosts, 0, 4);
                     </span>
                 </span>
                 <span class="linkedin-card-main">
-                    <?php if ($i === 0 && $post['image']): ?>
+                    <?php if ($i === 0 && $linkedinFeedLead && $post['image']): ?>
                     <img src="<?= htmlspecialchars($post['image']) ?>" alt="" class="linkedin-card-image" loading="lazy">
                     <?php endif; ?>
                     <span class="linkedin-card-body">

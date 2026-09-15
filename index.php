@@ -118,7 +118,7 @@ $articles = require __DIR__ . '/includes/articles.php';
     </div>
     <p class="section-label" style="margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border); border-left:none; padding-left:0;">Recent writing</p>
     <div class="card-grid<?= count($articles) < 3 ? ' card-grid-2' : '' ?>">
-        <?php foreach ($articles as $i => $a): render_article_card($a, $i + 1); endforeach; ?>
+        <?php foreach ($articles as $a): render_article_card($a); endforeach; ?>
     </div>
 </section>
 
