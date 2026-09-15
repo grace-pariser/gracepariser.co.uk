@@ -14,7 +14,7 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
         <p>I've been doing this for the best part of a decade now, first in-house and then on my own.</p>
         <p>And if there's one thing nine years of HR and employment law has taught me, it's that most people who've never had to deal with a disciplinary process think it's a lot simpler than it actually is.</p>
         <p>It isn't.</p>
-        <p>There are rules, risks, difficult conversations, managers who want to do something you really don't think they should do, and employees who have suddenly discovered Google.</p>
+        <p>There are rules, risks, difficult conversations, managers who want to do something you really don't think they should do, and employees who have suddenly discovered ChatGPT.</p>
         <p>I help employers work their way through all of that.</p>
     </div>
     <div class="cta-row">
