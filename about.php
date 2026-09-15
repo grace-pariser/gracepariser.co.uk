@@ -25,9 +25,7 @@ $testimonials = require __DIR__ . '/includes/testimonials.php';
                 <p>Fair enough.</p>
                 <p>A lot of people have opinions about HR. Most of them haven't had to sit across from someone during a redundancy conversation.</p>
                 <p>These days I get to choose who I work with. That helps.</p>
-                <p>I've also ended up building software, which was never the plan. Watching other HR consultants, myself included, run their practices out of a mess of spreadsheets and shared folders got old. So I built Practice Hub to fix it.</p>
-                <p>Pop + Pixel came next, a website product, because most consultants would rather be advising clients than fighting with a website builder.</p>
-                <p>Then The HR Vault. I was already keeping my own library of HR documents and resources up to date for my own work, and it made more sense to let other consultants subscribe to it than have everyone duplicate the same job separately.</p>
+                <p>I've always been a fan of tech. At some point I taught myself to code, and what started as a passion project on the side is now part of the business: The HR Vault, Pop + Pixel, and Practice Hub.</p>
                 <p>I'm an HR person first. The rest happened because the tools I wanted didn't exist yet.</p>
                 <p>Based in Plymouth. Happy to work with clients further afield too.</p>
             </div>
