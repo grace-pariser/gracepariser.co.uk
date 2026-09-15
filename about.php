@@ -33,7 +33,9 @@ $testimonials = require __DIR__ . '/includes/testimonials.php';
                 <a class="btn-quiet" href="https://www.linkedin.com/in/grace-pariser/" target="_blank" rel="noopener">Connect on LinkedIn</a>
             </div>
         </div>
-        <div class="photo-placeholder aspect-portrait">Photo: Grace Pariser</div>
+        <div class="photo-placeholder-wrap">
+            <div class="photo-placeholder aspect-portrait">Photo: Grace Pariser</div>
+        </div>
     </div>
 </section>
 

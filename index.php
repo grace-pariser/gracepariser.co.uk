@@ -87,7 +87,9 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
                 <a class="btn-quiet" href="/about.php">Full bio</a>
             </div>
         </div>
-        <div class="photo-placeholder aspect-portrait">Photo: Grace Pariser</div>
+        <div class="photo-placeholder-wrap">
+            <div class="photo-placeholder aspect-portrait">Photo: Grace Pariser</div>
+        </div>
     </div>
 </section>
 
