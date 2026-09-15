@@ -33,7 +33,7 @@ function linkedin_feed_card_text(array $post, int $maxLength = 420): string
     <ul class="linkedin-feed">
         <?php foreach ($linkedinCards as $i => $post): ?>
         <?php $isLead = $i === 0 && $linkedinFeedLead; ?>
-        <?php $cardText = linkedin_feed_card_text($post, $isLead ? 550 : 420); ?>
+        <?php $cardText = $isLead ? $post['fullText'] : linkedin_feed_card_text($post, 420); ?>
         <li class="linkedin-card<?= $isLead ? ' linkedin-card-lead' : '' ?>">
             <button type="button" class="linkedin-card-trigger" data-linkedin-index="<?= $i ?>">
                 <span class="linkedin-card-header">
