@@ -741,9 +741,10 @@ p { margin: 0 0 var(--space-2); }
   font-family: var(--serif);
   color: var(--ink);
   margin: 0 0 0.75em;
-  flex: 1;
 }
 .linkedin-card-link {
+  margin-top: auto;
+  padding-top: 0.5em;
   font-family: var(--sans);
   font-size: 0.8125rem;
   font-weight: 600;
