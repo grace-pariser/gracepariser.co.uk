@@ -5,13 +5,13 @@ $activeNav = 'writing';
 require __DIR__ . '/../includes/header.php';
 ?>
 
-<section class="article-header wrap">
+<section class="article-header wrap-narrow">
     <p class="section-label">Opinion</p>
     <h1>The Real Problem With HR Isn't HR</h1>
     <p class="byline">By Grace Pariser &middot; September 2026</p>
 </section>
 
-<section class="section wrap" style="border-top:none;">
+<section class="section wrap-narrow" style="border-top:none;">
     <div class="prose dropcap">
         <p>From 1 October, employers become liable for right to work breaches committed by their subcontractors' staff, even where the individual concerned has never been anywhere near their own payroll. A second change lands the same day. Employers must tell every new starter, in a standalone document with specified wording, that they have the right to join a trade union, and do it before day one. Employment lawyers have spent the summer briefing clients on both changes, and the reaction from company directors has been fairly uniform. Here comes HR with another problem.</p>
         <p>I've spent nine years advising employers on exactly this kind of change, and I recognise that reaction because I hear a slightly different version of it in most meetings I sit in. The assumption underneath it is that HR invented the problem, or at least chose to bring it through the door.</p>
@@ -32,6 +32,10 @@ require __DIR__ . '/../includes/header.php';
         <p>If directors want a genuinely different relationship with HR, the fix sits with them rather than with the profession. Bring HR into the risk decision before it's made, not after it's gone wrong, because a warning delivered in advance is advice and the same warning delivered afterwards just looks like an excuse. Treat what HR tells you about a policy as pricing information, the actual cost of a choice you're entitled to make, rather than as HR overstepping. And stop asking HR to defend, in the room with the board, decisions about risk appetite that were never HR's to take. None of that requires HR to change what it does. It requires the people setting the risk to own the fact that they set it.</p>
         <p>HR's reputation is a case of misdirected blame. The people who should be answering for the red tape are the ones deciding the risk is worth carrying, not the profession asked to manage it on their behalf.</p>
     </div>
+</section>
+
+<section class="section wrap-narrow">
+    <?php require __DIR__ . '/../includes/article-share.php'; ?>
 </section>
 
 <?php require __DIR__ . '/../includes/footer.php'; ?>

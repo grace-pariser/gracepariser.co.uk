@@ -94,6 +94,28 @@
 })();
 
 (function () {
+  document.querySelectorAll('[data-copy-url]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var url = btn.getAttribute('data-copy-url');
+      var original = btn.textContent;
+      var flash = function (text) {
+        btn.textContent = text;
+        setTimeout(function () { btn.textContent = original; }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function () {
+          flash('Copied!');
+        }, function () {
+          flash('Copy failed');
+        });
+      } else {
+        flash('Copy failed');
+      }
+    });
+  });
+})();
+
+(function () {
   function scrollTrack(track, direction) {
     var slide = track.querySelector('.carousel-slide');
     var amount = slide ? slide.getBoundingClientRect().width + 24 : track.clientWidth * 0.8;
