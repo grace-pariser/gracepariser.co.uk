@@ -43,6 +43,10 @@ require __DIR__ . '/../includes/header.php';
 </section>
 
 <section class="section wrap-article">
+    <?php require __DIR__ . '/../includes/article-bio.php'; ?>
+</section>
+
+<section class="section wrap-article">
     <?php require __DIR__ . '/../includes/article-share.php'; ?>
 </section>
 
