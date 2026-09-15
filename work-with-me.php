@@ -35,7 +35,7 @@ require __DIR__ . '/includes/header.php';
     <div class="card-grid">
         <div class="article-card">
             <img src="/assets/images/products/hr-vault.webp" alt="The HR Vault" class="card-logo">
-            <p>The back office of an HR consultancy, in one subscription. The document library, the builders that draft for you, the calculators and toolkits, and 30 minutes of expert advice a month, so you spend your time on clients instead of paperwork. Monthly, rolling, cancel whenever you like.</p>
+            <p>The back office of an HR consultancy, in one subscription: documents, builders, calculators, and 30 minutes of advice a month. Cancel whenever you like.</p>
             <div class="cta-row" style="margin-top:0.75rem;">
                 <a class="btn" href="https://thehrvault.co.uk" target="_blank" rel="noopener">Explore The HR Vault</a>
             </div>
