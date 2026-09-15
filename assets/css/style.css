@@ -494,6 +494,7 @@ p { margin: 0 0 var(--space-2); }
   filter: none;
   opacity: 1;
   align-self: flex-start;
+  height: 22px;
 }
 
 /* ---------- Two-column (bio + photo) ---------- */
@@ -881,6 +882,10 @@ p { margin: 0 0 var(--space-2); }
 }
 .article-card:hover .article-card-link {
   color: var(--accent-hover);
+}
+.article-card .cta-row {
+  margin-top: auto;
+  padding-top: 0.75rem;
 }
 
 /* ---------- Media / CTA panel ---------- */

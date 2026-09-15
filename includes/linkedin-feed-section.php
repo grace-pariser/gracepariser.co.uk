@@ -7,6 +7,24 @@ $linkedinFeedLead = $linkedinFeedLead ?? true;
 $linkedinFeedCount = $linkedinFeedCount ?? ($linkedinFeedLead ? 4 : 3);
 $linkedinPosts = require __DIR__ . '/linkedin-feed.php';
 $linkedinCards = array_slice($linkedinPosts, 0, $linkedinFeedCount);
+
+// The cached snippet for whichever post happens to be first is longer
+// (meant for the enlarged lead card). On a plain grid with no lead,
+// re-trim every card's text to the same length instead, so length
+// doesn't just depend on where a post happened to land.
+function linkedin_feed_card_text(array $post, int $maxLength = 420): string
+{
+    $text = $post['fullText'] ?? $post['text'];
+    if (strlen($text) <= $maxLength) {
+        return $text;
+    }
+    $truncated = substr($text, 0, $maxLength);
+    $lastBreak = max(strrpos($truncated, ' '), strrpos($truncated, "\n"));
+    if ($lastBreak !== false && $lastBreak > 0) {
+        $truncated = substr($truncated, 0, $lastBreak);
+    }
+    return rtrim($truncated, " \t\n\r,.") . '...';
+}
 ?>
 <section class="section wrap">
     <p class="section-label">From LinkedIn</p>
@@ -16,7 +34,9 @@ $linkedinCards = array_slice($linkedinPosts, 0, $linkedinFeedCount);
     <?php if ($linkedinCards): ?>
     <ul class="linkedin-feed">
         <?php foreach ($linkedinCards as $i => $post): ?>
-        <li class="linkedin-card<?= ($i === 0 && $linkedinFeedLead) ? ' linkedin-card-lead' : '' ?>">
+        <?php $isLead = $i === 0 && $linkedinFeedLead; ?>
+        <?php $cardText = $isLead ? $post['text'] : linkedin_feed_card_text($post); ?>
+        <li class="linkedin-card<?= $isLead ? ' linkedin-card-lead' : '' ?>">
             <button type="button" class="linkedin-card-trigger" data-linkedin-index="<?= $i ?>">
                 <span class="linkedin-card-header">
                     <?php if ($post['authorImage']): ?>
@@ -28,11 +48,11 @@ $linkedinCards = array_slice($linkedinPosts, 0, $linkedinFeedCount);
                     </span>
                 </span>
                 <span class="linkedin-card-main">
-                    <?php if ($i === 0 && $linkedinFeedLead && $post['image']): ?>
+                    <?php if ($isLead && $post['image']): ?>
                     <img src="<?= htmlspecialchars($post['image']) ?>" alt="" class="linkedin-card-image" loading="lazy">
                     <?php endif; ?>
                     <span class="linkedin-card-body">
-                        <?php foreach (explode("\n\n", $post['text']) as $para): ?>
+                        <?php foreach (explode("\n\n", $cardText) as $para): ?>
                             <?php if (trim($para) === '') continue; ?>
                             <span class="linkedin-card-para"><?= nl2br(htmlspecialchars($para)) ?></span>
                         <?php endforeach; ?>

@@ -31,7 +31,8 @@ $articles = require __DIR__ . '/includes/articles.php';
     </div>
 </section>
 
-<section class="section wrap" style="border-top:none;">
+<section class="section wrap">
+    <p class="section-label">Recent writing</p>
     <div class="card-grid<?= count($articles) < 3 ? ' card-grid-2' : '' ?>">
         <?php foreach ($articles as $a): render_article_card($a); endforeach; ?>
     </div>

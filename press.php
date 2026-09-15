@@ -49,9 +49,9 @@ $featured = [
         <?php foreach ($featured as $i => $f): ?>
             <div class="article-card">
                 <img src="<?= htmlspecialchars($f['logo']) ?>" alt="<?= htmlspecialchars($f['outlet']) ?>" class="press-logo <?= htmlspecialchars($f['logoClass']) ?>" style="margin-bottom:0.75em;">
+                <?php if ($f['date']): ?><p class="article-meta"><?= htmlspecialchars($f['date']) ?></p><?php endif; ?>
                 <h3><a href="<?= htmlspecialchars($f['href']) ?>" target="_blank" rel="noopener"><?= htmlspecialchars($f['title']) ?></a></h3>
                 <p><?= htmlspecialchars($f['body']) ?></p>
-                <?php if ($f['date']): ?><p class="article-meta"><?= htmlspecialchars($f['date']) ?></p><?php endif; ?>
             </div>
         <?php endforeach; ?>
     </div>
