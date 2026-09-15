@@ -220,7 +220,6 @@ main { display: block; }
 .section-label {
   display: flex;
   align-items: center;
-  gap: 0.6em;
   font-family: var(--sans);
   font-size: 0.8125rem;
   font-weight: 700;
@@ -228,13 +227,8 @@ main { display: block; }
   text-transform: uppercase;
   color: var(--accent);
   margin: 0 0 var(--space-2);
-}
-.section-label::before {
-  content: '';
-  display: inline-block;
-  width: 2rem;
-  height: 2px;
-  background: var(--accent);
+  border-left: 2px solid var(--accent);
+  padding-left: 0.75em;
 }
 
 h1, h2, h3 {
@@ -888,8 +882,7 @@ p { margin: 0 0 var(--space-2); }
   color: var(--paper);
   padding: var(--space-4);
 }
-.panel-ink .section-label { color: var(--accent-on-dark); }
-.panel-ink .section-label::before { background: var(--accent-on-dark); }
+.panel-ink .section-label { color: var(--accent-on-dark); border-left-color: var(--accent-on-dark); }
 .panel-ink .prose p { color: var(--paper); }
 .panel-ink a.btn {
   border-color: var(--paper);

@@ -97,14 +97,30 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
 </section>
 
 <section class="section wrap">
-    <p class="section-label">I write about this stuff</p>
-    <div class="prose">
-        <p>I regularly write about employment law, HR and the things I think employers (and HR people) actually need to know.</p>
-        <p>Sometimes it's a straightforward legal update.</p>
-        <p>Sometimes it's me having a rant about something I think is ridiculous.</p>
-        <p>Usually it's somewhere in between.</p>
+    <div class="split">
+        <div>
+            <p class="section-label">I write about this stuff</p>
+            <div class="prose">
+                <p>I regularly write about employment law, HR and the things I think employers (and HR people) actually need to know.</p>
+                <p>Sometimes it's a straightforward legal update.</p>
+                <p>Sometimes it's me having a rant about something I think is ridiculous.</p>
+                <p>Usually it's somewhere in between.</p>
+            </div>
+        </div>
+        <div class="panel changes-panel">
+            <p class="section-label">Topics I cover</p>
+            <ul class="changes-list">
+                <li>The Employment Rights Bill and Making Work Pay</li>
+                <li>The new Fair Work Agency</li>
+                <li>TUPE, redundancy, disciplinary process, settlement agreements</li>
+                <li>Whether businesses still need HR</li>
+            </ul>
+            <div class="cta-row">
+                <a class="btn-quiet" href="/press.php">Press &amp; speaking</a>
+            </div>
+        </div>
     </div>
-    <p class="section-label" style="margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border);">Recent writing</p>
+    <p class="section-label" style="margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border); border-left:none; padding-left:0;">Recent writing</p>
     <div class="card-grid">
         <?php foreach ($articles as $i => $a): render_article_card($a, $i + 1); endforeach; ?>
     </div>
