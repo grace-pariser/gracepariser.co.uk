@@ -13,7 +13,7 @@ $articles = require __DIR__ . '/includes/articles.php';
             <h1>Writing</h1>
             <div class="prose lede">
                 <p>Employment law and HR, written the way I'd actually explain it to you over coffee, not the legal-speak version.</p>
-                <p>Sometimes it's a straightforward legal update. Sometimes it's me having a rant about something I think is ridiculous. Usually it's somewhere in between.</p>
+                <p>This isn't a legal update service. It's my own take: opinion pieces, arguments, and the occasional rant about something I think is ridiculous.</p>
             </div>
         </div>
         <div class="panel changes-panel">
