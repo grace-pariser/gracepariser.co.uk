@@ -37,4 +37,6 @@ $articles = require __DIR__ . '/includes/articles.php';
     </div>
 </section>
 
+<?php require __DIR__ . '/includes/linkedin-feed-section.php'; ?>
+
 <?php require __DIR__ . '/includes/footer.php'; ?>
