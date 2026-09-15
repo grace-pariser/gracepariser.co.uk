@@ -772,6 +772,19 @@ p { margin: 0 0 var(--space-2); }
 .linkedin-card-lead .linkedin-card-para {
   font-size: 1.0625rem;
 }
+.linkedin-card-lead .linkedin-card-trigger {
+  cursor: default;
+}
+.linkedin-card-lead:hover {
+  border-color: var(--border);
+  transform: none;
+}
+.linkedin-card-para a {
+  color: var(--accent);
+}
+.linkedin-card-para a:hover {
+  color: var(--accent-hover);
+}
 @media (max-width: 700px) {
   .linkedin-card-lead .linkedin-card-main { flex-direction: column; }
   .linkedin-card-lead .linkedin-card-image { width: 100%; }

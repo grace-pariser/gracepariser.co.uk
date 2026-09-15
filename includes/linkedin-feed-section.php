@@ -23,6 +23,19 @@ function linkedin_feed_card_text(array $post, int $maxLength = 420): string
     }
     return rtrim($truncated, " \t\n\r,.") . '...';
 }
+
+// Turn bare URLs in already-escaped text into real, clickable links.
+function linkedin_feed_linkify(string $escapedText): string
+{
+    return preg_replace_callback(
+        '/https?:\/\/[^\s<]+/i',
+        function ($m) {
+            $url = rtrim($m[0], '.,;:)!?');
+            return '<a href="' . $url . '" target="_blank" rel="noopener">' . $url . '</a>';
+        },
+        $escapedText
+    );
+}
 ?>
 <section class="section wrap">
     <p class="section-label">From LinkedIn</p>
@@ -34,8 +47,9 @@ function linkedin_feed_card_text(array $post, int $maxLength = 420): string
         <?php foreach ($linkedinCards as $i => $post): ?>
         <?php $isLead = $i === 0 && $linkedinFeedLead; ?>
         <?php $cardText = $isLead ? $post['fullText'] : linkedin_feed_card_text($post, 420); ?>
+        <?php $tag = $isLead ? 'div' : 'button'; ?>
         <li class="linkedin-card<?= $isLead ? ' linkedin-card-lead' : '' ?>">
-            <button type="button" class="linkedin-card-trigger" data-linkedin-index="<?= $i ?>">
+            <<?= $tag ?><?= $isLead ? '' : ' type="button"' ?> class="linkedin-card-trigger"<?= $isLead ? '' : ' data-linkedin-index="' . $i . '"' ?>>
                 <span class="linkedin-card-header">
                     <?php if ($post['authorImage']): ?>
                     <img src="<?= htmlspecialchars($post['authorImage']) ?>" alt="" class="linkedin-card-avatar" loading="lazy">
@@ -52,12 +66,14 @@ function linkedin_feed_card_text(array $post, int $maxLength = 420): string
                     <span class="linkedin-card-body">
                         <?php foreach (explode("\n\n", $cardText) as $para): ?>
                             <?php if (trim($para) === '') continue; ?>
-                            <span class="linkedin-card-para"><?= nl2br(htmlspecialchars($para)) ?></span>
+                            <span class="linkedin-card-para"><?= nl2br(linkedin_feed_linkify(htmlspecialchars($para))) ?></span>
                         <?php endforeach; ?>
+                        <?php if (!$isLead): ?>
                         <span class="linkedin-card-link">Read full post &rarr;</span>
+                        <?php endif; ?>
                     </span>
                 </span>
-            </button>
+            </<?= $tag ?>>
         </li>
         <?php endforeach; ?>
     </ul>
