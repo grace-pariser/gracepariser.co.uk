@@ -18,7 +18,7 @@ $testimonials = require __DIR__ . '/includes/testimonials.php';
                 <p>It's an odd position to be in. You're there to protect the business, but half the time protecting the business means telling the person running it that they can't do the thing they want to do.</p>
             </div>
             <div class="pull-quote">
-                <p>I once had a manager refuse to speak to me for five days because I'd advocated for an eighteen year old employee he wanted rid of. I still think I was right.</p>
+                <p>I once had a manager refuse to speak to me for five days because I'd advocated for an eighteen year old employee he wanted rid of.</p>
             </div>
             <div class="prose">
                 <p>I'm CIPD Level 7 qualified. I've also become the person at the school gates who gets "oh, you're one of those" when I mention what I do for a living.</p>
