@@ -60,6 +60,15 @@ img { max-width: 100%; display: block; }
   padding: 0 var(--space-3);
 }
 
+/* Wider still, with a longer reading measure - for article body copy that
+   felt cramped at the standard 66ch. */
+.wrap-article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+  --measure: 78ch;
+}
+
 /* ---------- Links & buttons ---------- */
 
 a {
@@ -308,6 +317,23 @@ p { margin: 0 0 var(--space-2); }
   padding-top: 0.5em;
   border-top: 1px solid var(--border);
   display: inline-block;
+}
+
+.byline-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.byline-row .byline {
+  padding-top: 0;
+  border-top: none;
+}
+.byline-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .lede {
