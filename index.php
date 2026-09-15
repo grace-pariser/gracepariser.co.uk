@@ -40,11 +40,6 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
             <div class="prose">
                 <p>Employment law hasn't exactly sat still over the last few years, but there's a lot happening at the moment.</p>
                 <p>Day-one unfair dismissal rights. A new Fair Work Agency with its own enforcement powers. And the wider Making Work Pay agenda, which I think is achieving the opposite of what it says on the tin.</p>
-            </div>
-            <div class="pull-quote">
-                <p>A Making Work Pay agenda that I think is achieving the opposite of what it says on the tin.</p>
-            </div>
-            <div class="prose">
                 <p>The problem for employers is that the law doesn't politely wait until everyone has caught up before changing again.</p>
                 <p>There are businesses making decisions now based on rules that are about to change underneath them. And, as is usually the case with employment law, some people won't realise they've got it wrong until they're already dealing with the consequences.</p>
                 <p>That's where I come in.</p>
