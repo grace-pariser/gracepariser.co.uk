@@ -13,8 +13,9 @@ require __DIR__ . '/includes/header.php';
 
 <section class="section wrap" style="border-top:none; padding-top:2rem;">
     <div class="prose prose-wide">
-        <p>This site does not currently set any cookies: no analytics, no tracking, and no advertising cookies.</p>
-        <p>If that changes, for example if analytics are added in future, this notice will be updated first and you'll be asked for consent where the law requires it.</p>
+        <p>This site uses Google Analytics to understand how visitors find and use it, for example which pages are popular and how people arrive here. Nothing else: no advertising cookies, no tracking beyond that.</p>
+        <p>Google Analytics only runs if you accept it in the cookie banner. If you decline, or don't respond, no analytics cookies are set.</p>
+        <p>You can change your mind at any time by clearing your browser's cookies for this site, which will bring the banner back on your next visit.</p>
         <p>Any questions, contact <a href="mailto:enquiries@gracepariser.co.uk">enquiries@gracepariser.co.uk</a>.</p>
     </div>
 </section>

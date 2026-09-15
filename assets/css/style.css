@@ -849,6 +849,21 @@ p { margin: 0 0 var(--space-2); }
   background: var(--paper-raised);
   align-self: start;
 }
+
+.product-panel {
+  background: var(--paper-raised);
+  align-self: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-panel-logo {
+  width: auto;
+  max-width: 260px;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+}
 .changes-panel .cta-row {
   margin-top: var(--space-3);
 }
@@ -1123,6 +1138,36 @@ p { margin: 0 0 var(--space-2); }
 
 .footer-meta { color: var(--ink-faint); font-size: 0.8125rem; margin: 0 0 0.5em; }
 .footer-meta:last-child { margin-bottom: 0; }
+
+/* ---------- Cookie consent banner ---------- */
+
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  background: var(--paper-raised);
+  border-top: 1px solid var(--border);
+  padding: var(--space-2) var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.cookie-banner p {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  max-width: 640px;
+}
+.cookie-banner-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
 
 /* ---------- Links page (link-in-bio) ---------- */
 

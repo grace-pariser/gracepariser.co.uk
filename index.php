@@ -1,6 +1,6 @@
 <?php
-$pageTitle = 'Grace Pariser | Employment law and HR consultant';
-$pageDescription = "I'm Grace Pariser, an employment law and HR consultant based in Plymouth, and owner of HR On Call Ltd.";
+$pageTitle = 'Grace Pariser | HR Consultant in Plymouth';
+$pageDescription = "I'm Grace Pariser, an employment law and HR consultant in Plymouth, and owner of HR On Call Ltd.";
 $activeNav = '';
 require __DIR__ . '/includes/header.php';
 require __DIR__ . '/includes/article-card.php';

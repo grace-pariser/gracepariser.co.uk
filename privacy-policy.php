@@ -20,7 +20,7 @@ require __DIR__ . '/includes/header.php';
 
         <h3>What's collected</h3>
         <p>The only personal data this site collects is what you submit through the <a href="/contact.php">contact form</a>: your name, email address, and message. That information is emailed directly to me and is not stored in a database on this site.</p>
-        <p>Browsing the site otherwise doesn't collect personal data. The site does not use analytics or tracking cookies (see the <a href="/cookies.php">cookie notice</a>).</p>
+        <p>If you accept analytics cookies via the cookie banner, Google Analytics collects standard browsing data (pages viewed, how you arrived here, general location and device type) to help me understand how the site is used. See the <a href="/cookies.php">cookie notice</a> for how to control this.</p>
 
         <h3>What it's used for</h3>
         <p>Contact form submissions are used only to respond to your enquiry. Your details are not added to a mailing list, shared with third parties, or used for marketing.</p>
