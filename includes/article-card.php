@@ -4,19 +4,14 @@ function render_article_card(array $a): void {
     $dek = htmlspecialchars($a['dek']);
     $meta = array_filter([$a['outlet'] ?? null, $a['date'] ?? null]);
     $metaStr = htmlspecialchars(implode(' · ', $meta));
+    $hasHref = !empty($a['href']);
+    $attrs = $hasHref && str_starts_with($a['href'], 'http') ? ' target="_blank" rel="noopener"' : '';
     ?>
     <div class="article-card">
-        <h3><?php if (!empty($a['href'])):
-            $isExternal = str_starts_with($a['href'], 'http');
-            $attrs = $isExternal ? ' target="_blank" rel="noopener"' : '';
-        ?><a href="<?= htmlspecialchars($a['href']) ?>"<?= $attrs ?>><?= $title ?></a><?php else: ?><?= $title ?><?php endif; ?></h3>
+        <?php if ($metaStr): ?><p class="article-meta"><?= $metaStr ?></p><?php endif; ?>
+        <h3><?php if ($hasHref): ?><a href="<?= htmlspecialchars($a['href']) ?>"<?= $attrs ?>><?= $title ?></a><?php else: ?><?= $title ?><?php endif; ?></h3>
         <p><?= $dek ?></p>
-        <?php if ($metaStr || !empty($a['href'])): ?>
-        <div class="article-card-footer">
-            <?php if ($metaStr): ?><p class="article-meta"><?= $metaStr ?></p><?php endif; ?>
-            <?php if (!empty($a['href'])): ?><a class="article-card-link" href="<?= htmlspecialchars($a['href']) ?>"<?= $attrs ?>>Read more &rarr;</a><?php endif; ?>
-        </div>
-        <?php endif; ?>
+        <?php if ($hasHref): ?><a class="article-card-link" href="<?= htmlspecialchars($a['href']) ?>"<?= $attrs ?>>Read more &rarr;</a><?php endif; ?>
     </div>
     <?php
 }

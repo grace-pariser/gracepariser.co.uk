@@ -98,9 +98,8 @@ $articles = require __DIR__ . '/includes/articles.php';
             <p class="section-label">I write about this stuff</p>
             <div class="prose">
                 <p>I regularly write about employment law, HR and the things I think employers (and HR people) actually need to know.</p>
-                <p>Sometimes it's a straightforward legal update.</p>
-                <p>Sometimes it's me having a rant about something I think is ridiculous.</p>
-                <p>Usually it's somewhere in between.</p>
+                <p>These aren't legal updates.</p>
+                <p>They're my own take: opinions, arguments, and the occasional rant about something I think is ridiculous.</p>
             </div>
         </div>
         <div class="panel changes-panel">
