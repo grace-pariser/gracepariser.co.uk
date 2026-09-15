@@ -40,7 +40,7 @@ function linkedin_feed_linkify(string $escapedText): string
 <section class="section wrap">
     <p class="section-label">From LinkedIn</p>
     <div class="prose">
-        <p>Shorter thoughts, posted more often, over on LinkedIn.</p>
+        <p>Shorter thoughts, posted more often, over on LinkedIn. This feed updates automatically, straight from my LinkedIn posts.</p>
     </div>
     <?php if ($linkedinCards): ?>
     <ul class="linkedin-feed">
