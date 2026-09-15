@@ -3,9 +3,11 @@ $pageTitle = 'Contact | Grace Pariser';
 $pageDescription = "Tell me what you need and I'll come back to you directly.";
 $activeNav = 'contact';
 require __DIR__ . '/includes/header.php';
+require __DIR__ . '/includes/antispam.php';
 
 $sent = isset($_GET['sent']);
 $error = $_GET['error'] ?? null;
+$antispamToken = antispam_token();
 ?>
 
 <section class="hero wrap">
@@ -32,7 +34,8 @@ $error = $_GET['error'] ?? null;
                     <label for="website">Leave this field blank</label>
                     <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                 </div>
-                <input type="hidden" name="ts" value="<?= time() ?>">
+                <input type="hidden" name="ts" value="<?= $antispamToken['ts'] ?>">
+                <input type="hidden" name="sig" value="<?= htmlspecialchars($antispamToken['sig']) ?>">
 
                 <div class="form-field">
                     <label for="name">Name</label>

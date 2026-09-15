@@ -1,6 +1,9 @@
 <?php
-// Contact form handler: honeypot + minimum-fill-time check, then emails
-// the enquiry straight to Grace. No database, nothing stored.
+// Contact form handler: honeypot + signed timestamp + IP rate limit, then
+// emails the enquiry straight to Grace. No database, nothing stored beyond
+// a small rate-limit counter (see includes/antispam.php).
+
+require __DIR__ . '/includes/antispam.php';
 
 function fail(string $reason): void {
     header('Location: /contact.php?error=' . urlencode($reason));
@@ -17,10 +20,14 @@ if (!empty($_POST['website'])) {
     fail('spam');
 }
 
-// A bot that fills and submits the form in under 3 seconds is suspicious.
-$ts = (int)($_POST['ts'] ?? 0);
-if ($ts <= 0 || (time() - $ts) < 3) {
+// Signed timestamp: rejects forged/replayed values a bot posts without
+// ever loading the real page, and anything too fast or too stale.
+if (!antispam_verify_token($_POST['ts'] ?? null, $_POST['sig'] ?? null)) {
     fail('spam');
+}
+
+if (!antispam_rate_limit_ok($_SERVER['REMOTE_ADDR'] ?? '')) {
+    fail('rate-limited');
 }
 
 $name = trim($_POST['name'] ?? '');
