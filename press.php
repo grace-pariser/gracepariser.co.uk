@@ -36,10 +36,24 @@ $featured = [
 ?>
 
 <section class="hero wrap">
-    <h1>Press</h1>
-    <div class="prose lede">
-        <p>I comment on employment law and HR for national and trade press.</p>
-        <p>If you're working on something in this space, I'm easy to reach. And I don't take three days to get back to you.</p>
+    <div class="split">
+        <div>
+            <h1>Press</h1>
+            <div class="prose lede">
+                <p>I comment on employment law and HR for national and trade press.</p>
+                <p>If you're working on something in this space, I'm easy to reach. And I don't take three days to get back to you.</p>
+            </div>
+        </div>
+        <div class="panel changes-panel">
+            <p class="section-label">What I can speak about</p>
+            <ul class="changes-list">
+                <li>The Employment Rights Bill and the wider Making Work Pay agenda</li>
+                <li>The new Fair Work Agency</li>
+                <li>TUPE, redundancy, disciplinary process, settlement agreements</li>
+                <li>Whether businesses still need HR (I have views)</li>
+                <li>The politics behind employment law and workplace policy</li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -54,18 +68,6 @@ $featured = [
                 <p><?= htmlspecialchars($f['body']) ?></p>
             </div>
         <?php endforeach; ?>
-    </div>
-</section>
-
-<section class="section wrap">
-    <p class="section-label">What I can speak about</p>
-    <div class="prose">
-        <ul>
-            <li>The Employment Rights Bill and the wider Making Work Pay agenda</li>
-            <li>The new Fair Work Agency</li>
-            <li>TUPE, redundancy, disciplinary process, settlement agreements</li>
-            <li>Whether businesses still need HR (I have views)</li>
-        </ul>
     </div>
 </section>
 
