@@ -56,6 +56,10 @@ $linkedinPosts = require __DIR__ . '/includes/linkedin-feed.php';
                 <li>Day-one unfair dismissal rights</li>
                 <li>A new Fair Work Agency, with real enforcement powers</li>
                 <li>The wider Making Work Pay agenda</li>
+                <li>Stronger family-friendly rights</li>
+                <li>More trade union powers</li>
+                <li>Restrictions on zero hours contracts</li>
+                <li>Employer liability for third-party harassment</li>
             </ul>
             <div class="cta-row">
                 <a class="btn-quiet" href="/writing.php">Read my writing on this</a>
