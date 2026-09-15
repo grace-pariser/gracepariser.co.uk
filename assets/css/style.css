@@ -111,6 +111,27 @@ a:hover { color: var(--accent-hover); }
   border-bottom: 1px solid transparent;
 }
 .btn-quiet:hover { color: var(--accent-hover); }
+
+/* A boxed button like .btn, but neutral - for a secondary action
+   sitting next to a primary one (e.g. "Decline" beside "Accept"),
+   where .btn-quiet's accent colour and arrow would read as a link. */
+.btn-secondary {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.7em 1.4em;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+  background: transparent;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+.btn-secondary:hover {
+  border-color: var(--ink-faint);
+  color: var(--ink);
+}
 .btn-quiet::after { content: ' \2192'; }
 
 .cta-row {
@@ -143,6 +164,8 @@ a:hover { color: var(--accent-hover); }
 .wordmark:hover { color: var(--heading); }
 
 .masthead-tag {
+  display: flex;
+  align-items: center;
   font-family: var(--sans);
   font-size: 0.8125rem;
   font-weight: 600;
@@ -150,6 +173,19 @@ a:hover { color: var(--accent-hover); }
   text-transform: uppercase;
   color: var(--ink-faint);
   margin: 0;
+}
+.masthead-tag span {
+  display: flex;
+  align-items: center;
+}
+.masthead-tag span:not(:first-child)::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin: 0 0.6em;
 }
 .masthead-dot { color: var(--accent-2); }
 
@@ -1135,6 +1171,12 @@ p { margin: 0 0 var(--space-2); }
 }
 .footer-legal-links a { color: var(--ink-faint); font-weight: 600; font-size: 0.8125rem; }
 .footer-legal-links a:hover { color: var(--accent); }
+.links-legal-links {
+  justify-content: center;
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+}
 
 .footer-meta { color: var(--ink-faint); font-size: 0.8125rem; margin: 0 0 0.5em; }
 .footer-meta:last-child { margin-bottom: 0; }

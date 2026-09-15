@@ -115,6 +115,12 @@ $products = [
             <img class="product-logo" src="/assets/images/products/qwoted.svg" alt="Qwoted">
         </a>
     </div>
+
+    <ul class="footer-legal-links links-legal-links">
+        <li><a href="/terms.php">Terms</a></li>
+        <li><a href="/privacy-policy.php">Privacy notice</a></li>
+        <li><a href="/cookies.php">Cookies</a></li>
+    </ul>
 </section>
 
 </main>

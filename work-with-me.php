@@ -6,11 +6,18 @@ require __DIR__ . '/includes/header.php';
 ?>
 
 <section class="hero wrap">
-    <h1>Work with me</h1>
-    <div class="prose lede">
-        <p>There are two ways to work with me, and which one's right for you depends on which side of HR you're on.</p>
-        <p>If you run a business, I'm the person you call when something's gone wrong, or ideally before it does.</p>
-        <p>If you're an HR consultant yourself, I've already built the back office you're probably still running out of spreadsheets.</p>
+    <div class="split">
+        <div>
+            <h1>Work with me</h1>
+            <div class="prose lede">
+                <p>There are two ways to work with me, and which one's right for you depends on which side of HR you're on.</p>
+                <p>If you run a business, I'm the person you call when something's gone wrong, or ideally before it does.</p>
+                <p>If you're an HR consultant yourself, I've already built the back office you're probably still running out of spreadsheets.</p>
+            </div>
+        </div>
+        <div class="photo-placeholder-wrap">
+            <div class="photo-placeholder aspect-portrait">Photo: Grace Pariser</div>
+        </div>
     </div>
 </section>
 
