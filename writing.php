@@ -14,6 +14,7 @@ $articles = require __DIR__ . '/includes/articles.php';
             <div class="prose lede">
                 <p>Employment law and HR, written the way I'd actually explain it to you over coffee, not the legal-speak version.</p>
                 <p>This isn't a legal update service. It's my own take: opinion pieces, arguments, and the occasional rant about something I think is ridiculous.</p>
+                <p>That includes the politics behind it. When I think a piece of policy is badly designed, or going to hurt the people it claims to protect, I'll say so.</p>
             </div>
         </div>
         <div class="panel changes-panel">
@@ -23,6 +24,7 @@ $articles = require __DIR__ . '/includes/articles.php';
                 <li>The new Fair Work Agency</li>
                 <li>TUPE, redundancy, disciplinary process, settlement agreements</li>
                 <li>Whether businesses still need HR</li>
+                <li>The politics behind employment law and workplace policy</li>
             </ul>
             <div class="cta-row">
                 <a class="btn-quiet" href="/press.php">Press &amp; speaking</a>
