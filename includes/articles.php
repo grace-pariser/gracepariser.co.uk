@@ -11,20 +11,6 @@ return [
         'href' => '/writing/hr-bad-reputation.php',
     ],
     [
-        'title' => "Making Work Pay: the gaps nobody's talking about",
-        'dek' => 'Full piece coming soon.',
-        'outlet' => null,
-        'date' => null,
-        'href' => '/writing/making-work-pay.php',
-    ],
-    [
-        'title' => 'The Fair Work Agency, and what it actually means for employers',
-        'dek' => 'Full piece coming soon.',
-        'outlet' => null,
-        'date' => null,
-        'href' => '/writing/fair-work-agency.php',
-    ],
-    [
         'title' => 'Sorry, but your company really does need HR',
         'dek' => 'As-told-to piece making the case that HR remains essential, prompted by a tech CEO firing his entire HR department and calling it unnecessary.',
         'outlet' => 'The Telegraph',
