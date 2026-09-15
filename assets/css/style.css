@@ -849,6 +849,38 @@ p { margin: 0 0 var(--space-2); }
   padding: var(--space-4);
 }
 
+.changes-panel {
+  background: var(--paper-raised);
+  align-self: start;
+}
+.changes-panel .cta-row {
+  margin-top: var(--space-3);
+}
+.changes-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.changes-list li {
+  position: relative;
+  padding-left: 1.2em;
+  font-family: var(--serif);
+  color: var(--ink-soft);
+}
+.changes-list li:not(:last-child) {
+  margin-bottom: 0.75em;
+}
+.changes-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 /* High-contrast block for the two "get in touch" moments: an editorial
    device (the boxed callout), not the accent colour used as a big fill. */
 .panel-ink {
