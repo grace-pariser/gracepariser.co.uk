@@ -11,7 +11,12 @@ function render_article_card(array $a): void {
             $attrs = $isExternal ? ' target="_blank" rel="noopener"' : '';
         ?><a href="<?= htmlspecialchars($a['href']) ?>"<?= $attrs ?>><?= $title ?></a><?php else: ?><?= $title ?><?php endif; ?></h3>
         <p><?= $dek ?></p>
-        <?php if ($metaStr): ?><p class="article-meta"><?= $metaStr ?></p><?php endif; ?>
+        <?php if ($metaStr || !empty($a['href'])): ?>
+        <div class="article-card-footer">
+            <?php if ($metaStr): ?><p class="article-meta"><?= $metaStr ?></p><?php endif; ?>
+            <?php if (!empty($a['href'])): ?><a class="article-card-link" href="<?= htmlspecialchars($a['href']) ?>"<?= $attrs ?>>Read more &rarr;</a><?php endif; ?>
+        </div>
+        <?php endif; ?>
     </div>
     <?php
 }

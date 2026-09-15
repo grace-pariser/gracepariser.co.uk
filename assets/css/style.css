@@ -846,6 +846,11 @@ p { margin: 0 0 var(--space-2); }
   padding: var(--space-3);
   border: 1px solid var(--border);
   background: var(--paper-raised);
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+.article-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
 }
 .article-card h3 {
   margin-bottom: 0.4em;
@@ -857,12 +862,26 @@ p { margin: 0 0 var(--space-2); }
   font-size: 0.98rem;
   margin-bottom: 0.6em;
 }
-.article-meta {
+.article-card-footer {
+  margin-top: auto;
+}
+.article-card .article-meta {
   font-family: var(--sans);
   font-size: 0.8125rem;
   color: var(--accent);
   letter-spacing: 0.02em;
-  margin-top: auto;
+  margin-bottom: 0;
+}
+.article-card-link {
+  display: inline-block;
+  margin-top: 0.5em;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.article-card:hover .article-card-link {
+  color: var(--accent-hover);
 }
 
 /* ---------- Media / CTA panel ---------- */
