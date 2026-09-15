@@ -45,12 +45,14 @@
   }
 
   banner.hidden = false;
+  document.body.classList.add('has-cookie-banner');
   var acceptBtn = banner.querySelector('[data-consent-accept]');
   var declineBtn = banner.querySelector('[data-consent-decline]');
   if (acceptBtn) {
     acceptBtn.addEventListener('click', function () {
       try { localStorage.setItem(CONSENT_KEY, 'granted'); } catch (e) {}
       banner.hidden = true;
+      document.body.classList.remove('has-cookie-banner');
       loadAnalytics();
     });
   }
@@ -58,6 +60,7 @@
     declineBtn.addEventListener('click', function () {
       try { localStorage.setItem(CONSENT_KEY, 'denied'); } catch (e) {}
       banner.hidden = true;
+      document.body.classList.remove('has-cookie-banner');
     });
   }
 })();

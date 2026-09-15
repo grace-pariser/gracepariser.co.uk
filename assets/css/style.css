@@ -171,7 +171,7 @@ a:hover { color: var(--accent-hover); }
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: var(--heading);
   margin: 0;
 }
 .masthead-tag span {
@@ -845,9 +845,9 @@ p { margin: 0 0 var(--space-2); }
 
 .article-card {
   position: relative;
-  padding-top: var(--space-2);
-  padding-bottom: var(--space-3);
-  border-top: 1px solid var(--border);
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  background: var(--paper-raised);
 }
 .article-card .index-mark {
   display: block;
@@ -1197,6 +1197,12 @@ p { margin: 0 0 var(--space-2); }
   align-items: center;
   justify-content: space-between;
   gap: var(--space-2);
+}
+.cookie-banner[hidden] {
+  display: none;
+}
+body.has-cookie-banner {
+  padding-bottom: 5rem;
 }
 .cookie-banner p {
   margin: 0;
