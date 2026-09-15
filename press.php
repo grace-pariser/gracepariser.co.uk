@@ -40,8 +40,9 @@ $featured = [
         <div>
             <h1>Press</h1>
             <div class="prose lede">
-                <p>I comment on employment law and HR for national and trade press.</p>
-                <p>If you're working on something in this space, I'm easy to reach. And I don't take three days to get back to you.</p>
+                <p>I comment on employment law and HR for national and trade press, from the Telegraph to the trade titles that HR people actually read.</p>
+                <p>If you're working on something in this space, I'm easy to reach. I'll give you a straight answer, not a hedge dressed up as a quote.</p>
+                <p>And I don't take three days to get back to you. If you're on a deadline, say so, and I'll work to it.</p>
             </div>
         </div>
         <div class="panel changes-panel">
