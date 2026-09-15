@@ -106,6 +106,16 @@ function nav_class(string $key, string $active): string {
             'name' => 'Grace Pariser',
             'url' => 'https://gracepariser.co.uk/',
             'publisher' => ['@id' => 'https://gracepariser.co.uk/#person'],
+            'inLanguage' => 'en-GB',
+        ],
+        [
+            '@type' => 'WebPage',
+            '@id' => $canonicalUrl . '#webpage',
+            'url' => $canonicalUrl,
+            'name' => $pageTitle,
+            'isPartOf' => ['@id' => 'https://gracepariser.co.uk/#website'],
+            'about' => ['@id' => 'https://gracepariser.co.uk/#person'],
+            'inLanguage' => 'en-GB',
         ],
     ],
 ], JSON_UNESCAPED_SLASHES) ?>
