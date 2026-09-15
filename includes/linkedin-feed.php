@@ -38,6 +38,15 @@ foreach ($raw as $item) {
         'authorImage' => $item['author']['avatar']['url'] ?? null,
         'date' => date('j M Y', strtotime($postedAt)),
         'image' => $item['postImages'][0]['url'] ?? $item['ogImage'] ?? null,
+        'sortTs' => strtotime($postedAt),
     ];
 }
-return $posts;
+// The source array isn't reliably newest-first (its order depends on the
+// scraper run, not the post date), so sort explicitly before slicing to
+// "top N" elsewhere, or a newer post can push out one that's still more
+// recent than others left showing.
+usort($posts, fn($a, $b) => $b['sortTs'] <=> $a['sortTs']);
+return array_map(function ($p) {
+    unset($p['sortTs']);
+    return $p;
+}, $posts);
