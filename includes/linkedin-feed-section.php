@@ -8,13 +8,11 @@ $linkedinFeedCount = $linkedinFeedCount ?? ($linkedinFeedLead ? 4 : 3);
 $linkedinPosts = require __DIR__ . '/linkedin-feed.php';
 $linkedinCards = array_slice($linkedinPosts, 0, $linkedinFeedCount);
 
-// The cached snippet for whichever post happens to be first is longer
-// (meant for the enlarged lead card). On a plain grid with no lead,
-// re-trim every card's text to the same length instead, so length
-// doesn't just depend on where a post happened to land.
+// Trim each card's full text down for display: more room for the
+// enlarged lead card, less for a plain grid card.
 function linkedin_feed_card_text(array $post, int $maxLength = 420): string
 {
-    $text = $post['fullText'] ?? $post['text'];
+    $text = $post['fullText'];
     if (strlen($text) <= $maxLength) {
         return $text;
     }
@@ -35,7 +33,7 @@ function linkedin_feed_card_text(array $post, int $maxLength = 420): string
     <ul class="linkedin-feed">
         <?php foreach ($linkedinCards as $i => $post): ?>
         <?php $isLead = $i === 0 && $linkedinFeedLead; ?>
-        <?php $cardText = $isLead ? $post['text'] : linkedin_feed_card_text($post); ?>
+        <?php $cardText = linkedin_feed_card_text($post, $isLead ? 550 : 420); ?>
         <li class="linkedin-card<?= $isLead ? ' linkedin-card-lead' : '' ?>">
             <button type="button" class="linkedin-card-trigger" data-linkedin-index="<?= $i ?>">
                 <span class="linkedin-card-header">
@@ -64,7 +62,7 @@ function linkedin_feed_card_text(array $post, int $maxLength = 420): string
         <?php endforeach; ?>
     </ul>
     <script type="application/json" id="linkedin-feed-data"><?= json_encode(array_map(fn($p) => [
-        'text' => $p['fullText'] ?? $p['text'],
+        'text' => $p['fullText'],
         'date' => $p['date'],
         'url' => $p['url'],
         'image' => $p['image'],
