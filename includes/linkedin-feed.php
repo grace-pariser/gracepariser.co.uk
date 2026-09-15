@@ -37,7 +37,7 @@ foreach ($raw as $item) {
         'authorName' => $item['author']['name'] ?? 'Grace Pariser',
         'authorImage' => $item['author']['avatar']['url'] ?? null,
         'date' => date('j M Y', strtotime($postedAt)),
-        'image' => $item['postImages'][0]['url'] ?? null,
+        'image' => $item['postImages'][0]['url'] ?? $item['ogImage'] ?? null,
     ];
 }
 return $posts;
