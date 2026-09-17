@@ -34,7 +34,7 @@ $testimonials = require __DIR__ . '/includes/testimonials.php';
             </div>
         </div>
         <div class="photo-placeholder-wrap">
-            <div class="photo-placeholder aspect-portrait">Photo: Grace Pariser</div>
+            <img src="/assets/images/grace-pariser-about.jpg" alt="Grace Pariser at her desk, with her cat walking across it" class="photo-placeholder aspect-landscape">
         </div>
     </div>
 </section>

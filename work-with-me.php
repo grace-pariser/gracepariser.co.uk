@@ -16,7 +16,7 @@ require __DIR__ . '/includes/header.php';
             </div>
         </div>
         <div class="photo-placeholder-wrap">
-            <div class="photo-placeholder aspect-portrait">Photo: Grace Pariser</div>
+            <img src="/assets/images/grace-pariser-work-with-me.jpg" alt="Grace Pariser working on her laptop" class="photo-placeholder aspect-portrait">
         </div>
     </div>
 </section>

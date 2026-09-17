@@ -87,7 +87,7 @@ $articles = require __DIR__ . '/includes/articles.php';
             </div>
         </div>
         <div class="photo-placeholder-wrap">
-            <div class="photo-placeholder aspect-portrait">Photo: Grace Pariser</div>
+            <img src="/assets/images/grace-pariser-home.jpg" alt="Grace Pariser" class="photo-placeholder aspect-portrait">
         </div>
     </div>
 </section>

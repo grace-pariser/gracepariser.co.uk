@@ -527,23 +527,17 @@ p { margin: 0 0 var(--space-2); }
 /* ---------- Photo placeholders ---------- */
 
 .photo-placeholder {
-  background: var(--paper-raised);
-  border: 1px dashed var(--border);
-  color: var(--ink-faint);
-  font-family: var(--sans);
-  font-size: 0.8125rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  display: block;
   width: 100%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   position: sticky;
   top: 2rem;
 }
 .aspect-hero { aspect-ratio: 16 / 7; }
 .aspect-portrait { aspect-ratio: 4 / 5; }
+.aspect-landscape { aspect-ratio: 3 / 2; }
 .aspect-square { aspect-ratio: 1 / 1; }
 
 /* ---------- Article / card grid ---------- */
