@@ -130,8 +130,7 @@ $articles = require __DIR__ . '/includes/articles.php';
         <p class="section-label">For journalists</p>
         <div class="prose">
             <p>Working on a story about employment law, HR or workplace rights?</p>
-            <p>Get in touch.</p>
-            <p>I'll give you a straight answer.</p>
+            <p>I would love to comment.</p>
         </div>
         <div class="cta-row">
             <a class="btn" href="/contact.php">Get in touch</a>
