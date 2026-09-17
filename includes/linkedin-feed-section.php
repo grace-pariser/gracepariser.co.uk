@@ -61,7 +61,9 @@ function linkedin_feed_linkify(string $escapedText): string
                 </span>
                 <span class="linkedin-card-main">
                     <?php if ($isLead && $post['video']): ?>
-                    <video src="<?= htmlspecialchars($post['video']['url']) ?>" <?php if ($post['video']['thumbnail']): ?>poster="<?= htmlspecialchars($post['video']['thumbnail']) ?>"<?php endif; ?> class="linkedin-card-image" controls playsinline></video>
+                    <span class="linkedin-card-video-wrap">
+                        <video src="<?= htmlspecialchars($post['video']['url']) ?>" <?php if ($post['video']['thumbnail']): ?>poster="<?= htmlspecialchars($post['video']['thumbnail']) ?>"<?php endif; ?> class="linkedin-card-image" controls playsinline></video>
+                    </span>
                     <?php elseif ($isLead && $post['image']): ?>
                     <img src="<?= htmlspecialchars($post['image']) ?>" alt="" class="linkedin-card-image" loading="lazy">
                     <?php endif; ?>
