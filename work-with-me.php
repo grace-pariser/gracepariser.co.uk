@@ -10,7 +10,7 @@ require __DIR__ . '/includes/header.php';
         <div class="hero-split-copy">
             <h1>Work with me</h1>
         </div>
-        <img src="/assets/images/grace-pariser-work-with-me.jpg" alt="Grace Pariser working on her laptop" class="hero-split-photo-img" style="object-position: center 25%;">
+        <img src="/assets/images/grace-pariser-work-with-me.jpg" alt="Grace Pariser working on her laptop" class="hero-split-photo-img">
     </div>
     <div class="split" style="margin-top:var(--space-4);">
         <div class="prose lede">
