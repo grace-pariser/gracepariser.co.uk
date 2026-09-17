@@ -21,6 +21,7 @@ $articles = require __DIR__ . '/includes/articles.php';
             <a class="btn" href="/press.php">Invite me to comment</a>
             <a class="btn-quiet" href="/writing.php">Read my writing</a>
         </div>
+        <img src="/assets/images/grace-pariser-index-hero.jpg" alt="Grace Pariser working on her laptop" class="hero-photo-bg-mobile-img">
     </div>
 </section>
 

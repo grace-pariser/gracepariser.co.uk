@@ -461,10 +461,14 @@ p { margin: 0 0 var(--space-2); }
 .hero-photo-bg a.btn:hover { background: var(--paper); color: var(--ink-block); }
 .hero-photo-bg a.btn-quiet { color: var(--accent-on-dark); }
 .hero-photo-bg a.btn-quiet:hover { color: var(--paper); }
+/* Mobile-only: a normal photo at the bottom of the panel, not the
+   background image (see below). Hidden on wider screens. */
+.hero-photo-bg-mobile-img { display: none; }
 /* Below this width the box gets tall and narrow enough (text wraps to
    many lines) that cover-cropping a landscape photo into it either
    hides her entirely or shows almost nothing recognisable as a photo.
-   Drop the image and just keep the solid panel. */
+   Drop the background image and show her lower down instead, as a
+   normal photo inside the same panel. */
 @media (max-width: 600px) {
   .hero-photo-bg {
     background-image: none !important;
@@ -472,6 +476,15 @@ p { margin: 0 0 var(--space-2); }
   }
   .hero-photo-bg::before { background: none; }
   .hero-photo-bg > * { max-width: none; }
+  .hero-photo-bg-mobile-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: top;
+    border-radius: var(--radius);
+    margin-top: var(--space-3);
+  }
 }
 
 /* A photo-plus-name masthead: photo alongside a solid ink panel, not a
