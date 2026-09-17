@@ -848,9 +848,6 @@ p { margin: 0 0 var(--space-2); }
   width: 40%;
   flex-shrink: 0;
 }
-.linkedin-card-lead .linkedin-card-video-wrap {
-  align-self: flex-start;
-}
 /* The video itself also carries .linkedin-card-image (for the shared
    width/display rule), so the 40% above applies to it too, on top of
    its already-40%-wide wrapper. It should just fill the wrapper. */
