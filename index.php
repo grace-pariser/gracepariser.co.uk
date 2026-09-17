@@ -73,7 +73,7 @@ $articles = require __DIR__ . '/includes/articles.php';
 </section>
 
 <section class="section wrap">
-    <div class="split">
+    <div class="split split-reverse">
         <div>
             <p class="section-label">A bit about me</p>
             <div class="prose">
