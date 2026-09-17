@@ -31,13 +31,21 @@ foreach ($raw as $item) {
     if (!$url || !$content || !$postedAt) {
         continue;
     }
+    $video = null;
+    if (!empty($item['postVideo']['videoUrl'])) {
+        $video = [
+            'url' => $item['postVideo']['videoUrl'],
+            'thumbnail' => $item['postVideo']['thumbnailUrl'] ?? null,
+        ];
+    }
     $posts[] = [
         'url' => $url,
         'fullText' => linkedin_feed_clean_text($content),
         'authorName' => $item['author']['name'] ?? 'Grace Pariser',
         'authorImage' => $item['author']['avatar']['url'] ?? null,
         'date' => date('j M Y', strtotime($postedAt)),
-        'image' => $item['postImages'][0]['url'] ?? $item['ogImage'] ?? null,
+        'image' => $item['postImages'][0]['url'] ?? $video['thumbnail'] ?? $item['ogImage'] ?? null,
+        'video' => $video,
         'sortTs' => strtotime($postedAt),
     ];
 }

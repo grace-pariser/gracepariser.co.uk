@@ -78,6 +78,7 @@
   }
 
   var image = modal.querySelector('.linkedin-modal-image');
+  var video = modal.querySelector('.linkedin-modal-video');
   var avatar = modal.querySelector('.linkedin-modal-avatar');
   var author = modal.querySelector('.linkedin-modal-author');
   var date = modal.querySelector('.linkedin-modal-date');
@@ -99,12 +100,23 @@
   function open(index) {
     var post = posts[index];
     if (!post) return;
-    if (post.image) {
+    video.pause();
+    if (post.video && post.video.url) {
+      video.src = post.video.url;
+      if (post.video.thumbnail) { video.poster = post.video.thumbnail; }
+      video.hidden = false;
+      image.hidden = true;
+      image.removeAttribute('src');
+    } else if (post.image) {
       image.src = post.image;
       image.hidden = false;
+      video.hidden = true;
+      video.removeAttribute('src');
     } else {
       image.hidden = true;
       image.removeAttribute('src');
+      video.hidden = true;
+      video.removeAttribute('src');
     }
     if (post.authorImage) {
       avatar.src = post.authorImage;
@@ -130,6 +142,7 @@
 
   function close() {
     modal.hidden = true;
+    video.pause();
     document.body.style.overflow = '';
     if (lastTrigger) lastTrigger.focus();
   }

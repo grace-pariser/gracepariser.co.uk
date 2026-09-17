@@ -60,7 +60,9 @@ function linkedin_feed_linkify(string $escapedText): string
                     </span>
                 </span>
                 <span class="linkedin-card-main">
-                    <?php if ($isLead && $post['image']): ?>
+                    <?php if ($isLead && $post['video']): ?>
+                    <video src="<?= htmlspecialchars($post['video']['url']) ?>" <?php if ($post['video']['thumbnail']): ?>poster="<?= htmlspecialchars($post['video']['thumbnail']) ?>"<?php endif; ?> class="linkedin-card-image" controls playsinline></video>
+                    <?php elseif ($isLead && $post['image']): ?>
                     <img src="<?= htmlspecialchars($post['image']) ?>" alt="" class="linkedin-card-image" loading="lazy">
                     <?php endif; ?>
                     <span class="linkedin-card-body">
@@ -69,7 +71,7 @@ function linkedin_feed_linkify(string $escapedText): string
                             <span class="linkedin-card-para"><?= nl2br(linkedin_feed_linkify(htmlspecialchars($para))) ?></span>
                         <?php endforeach; ?>
                         <?php if (!$isLead): ?>
-                        <span class="linkedin-card-link">Read full post &rarr;</span>
+                        <span class="linkedin-card-link"><?= $post['video'] ? 'Watch the video' : 'Read full post' ?> &rarr;</span>
                         <?php endif; ?>
                     </span>
                 </span>
@@ -82,6 +84,7 @@ function linkedin_feed_linkify(string $escapedText): string
         'date' => $p['date'],
         'url' => $p['url'],
         'image' => $p['image'],
+        'video' => $p['video'],
         'authorName' => $p['authorName'],
         'authorImage' => $p['authorImage'],
     ], $linkedinCards), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>
@@ -97,6 +100,7 @@ function linkedin_feed_linkify(string $escapedText): string
                 </span>
             </div>
             <div class="prose linkedin-modal-text"></div>
+            <video class="linkedin-modal-video" controls playsinline hidden></video>
             <img class="linkedin-modal-image" alt="" hidden>
             <div class="cta-row">
                 <a class="btn-quiet linkedin-modal-link" target="_blank" rel="noopener">Read on LinkedIn</a>
