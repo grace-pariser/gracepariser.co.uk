@@ -6,8 +6,8 @@ require __DIR__ . '/includes/header.php';
 ?>
 
 <section class="hero wrap">
-    <div class="split">
-        <div>
+    <div class="hero-split-photo">
+        <div class="hero-split-copy">
             <h1>Work with me</h1>
             <div class="prose lede">
                 <p>There are two ways to work with me, and which one's right for you depends on which side of HR you're on.</p>
@@ -15,9 +15,7 @@ require __DIR__ . '/includes/header.php';
                 <p>If you're an HR consultant yourself, I've already built the back office you're probably still running out of spreadsheets.</p>
             </div>
         </div>
-        <div class="photo-placeholder-wrap">
-            <img src="/assets/images/grace-pariser-work-with-me.jpg" alt="Grace Pariser working on her laptop" class="photo-placeholder aspect-portrait">
-        </div>
+        <img src="/assets/images/grace-pariser-work-with-me.jpg" alt="Grace Pariser working on her laptop" class="hero-split-photo-img" style="object-position: center 25%;">
     </div>
 </section>
 

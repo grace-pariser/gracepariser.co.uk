@@ -438,16 +438,16 @@ p { margin: 0 0 var(--space-2); }
 .hero-photo-bg {
   position: relative;
   background-size: cover;
-  background-position: right center;
+  background-position: right 20%;
   border-radius: var(--radius);
-  padding: var(--space-5) var(--space-4);
+  padding: var(--space-4);
 }
 .hero-photo-bg::before {
   content: '';
   position: absolute;
   inset: 0;
   background: var(--ink-block);
-  opacity: 0.78;
+  opacity: 0.5;
   border-radius: inherit;
 }
 .hero-photo-bg > * {
@@ -472,13 +472,20 @@ p { margin: 0 0 var(--space-2); }
 .hero-split-copy {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   padding: var(--space-4);
   background: var(--ink-block);
   color: var(--paper);
 }
-.hero-split-copy h1 { color: var(--paper); max-width: none; }
-.hero-split-copy .section-label { color: var(--accent-on-dark); border-left-color: var(--accent-on-dark); }
+.hero-split-copy h1 {
+  color: var(--paper);
+  max-width: none;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin: 0;
+}
+.hero-split-copy .section-label { color: var(--accent-on-dark); border-left-color: var(--accent-on-dark); margin-bottom: var(--space-2); }
+.hero-split-copy .lede { margin-top: var(--space-3); }
+.hero-split-copy .lede p { color: var(--paper); }
 .hero-split-photo-img {
   width: 100%;
   height: 100%;
