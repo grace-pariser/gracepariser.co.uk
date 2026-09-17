@@ -431,6 +431,64 @@ p { margin: 0 0 var(--space-2); }
 .hero { padding-top: var(--space-5); padding-bottom: var(--space-4); }
 .hero h1 { max-width: 20ch; }
 .hero h1.hero-headline-long { max-width: 34ch; }
+
+/* A photo used as a hero's background: a flat (non-gradient) ink tint
+   over the photo for legible white text, not a scrim gradient - keeps
+   to the site's flat, no-gradient, no-shadow language. */
+.hero-photo-bg {
+  position: relative;
+  background-size: cover;
+  background-position: right center;
+  border-radius: var(--radius);
+  padding: var(--space-5) var(--space-4);
+}
+.hero-photo-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ink-block);
+  opacity: 0.78;
+  border-radius: inherit;
+}
+.hero-photo-bg > * {
+  position: relative;
+  z-index: 1;
+}
+.hero-photo-bg h1,
+.hero-photo-bg .lede p { color: var(--paper); }
+.hero-photo-bg a.btn { border-color: var(--paper); color: var(--paper); }
+.hero-photo-bg a.btn:hover { background: var(--paper); color: var(--ink-block); }
+.hero-photo-bg a.btn-quiet { color: var(--accent-on-dark); }
+.hero-photo-bg a.btn-quiet:hover { color: var(--paper); }
+
+/* A photo-plus-name masthead: photo alongside a solid ink panel, not a
+   full-width slab of image dumped above unrelated body copy. Used where
+   the hero's own copy is just a label/heading, not the full page body. */
+.hero-split-photo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 18rem;
+}
+.hero-split-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-4);
+  background: var(--ink-block);
+  color: var(--paper);
+}
+.hero-split-copy h1 { color: var(--paper); max-width: none; }
+.hero-split-copy .section-label { color: var(--accent-on-dark); border-left-color: var(--accent-on-dark); }
+.hero-split-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 780px) {
+  .hero-split-photo { grid-template-columns: 1fr; }
+  .hero-split-photo-img { height: 14rem; }
+}
+
 .hero-role {
   font-family: var(--sans);
   font-size: 1rem;
@@ -540,17 +598,6 @@ p { margin: 0 0 var(--space-2); }
 .aspect-landscape { aspect-ratio: 3 / 2; }
 .aspect-square { aspect-ratio: 1 / 1; }
 
-/* A full-width photo banner above a page's hero copy - for landscape
-   photos, which look small and squeezed in the narrow photo-placeholder
-   sidebar column that's sized for portrait shots. */
-.hero-photo {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  margin-bottom: var(--space-4);
-}
 
 /* ---------- Article / card grid ---------- */
 

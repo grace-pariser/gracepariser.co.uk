@@ -36,10 +36,14 @@ $featured = [
 ?>
 
 <section class="hero wrap">
-    <img src="/assets/images/grace-pariser-press-hero.jpg" alt="Grace Pariser" class="hero-photo aspect-landscape">
+    <div class="hero-split-photo" style="margin-bottom:var(--space-4);">
+        <div class="hero-split-copy">
+            <h1>Press</h1>
+        </div>
+        <img src="/assets/images/grace-pariser-press-hero.jpg" alt="Grace Pariser" class="hero-split-photo-img">
+    </div>
     <div class="split">
         <div>
-            <h1>Press</h1>
             <div class="prose lede">
                 <p>I comment on employment law and HR for national and trade press, from the Telegraph to the trade titles that HR people actually read.</p>
                 <p>If you're working on something in this space, I'm easy to reach. I'll give you a straight answer, not a hedge dressed up as a quote.</p>

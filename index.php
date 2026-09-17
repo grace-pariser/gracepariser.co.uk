@@ -8,18 +8,19 @@ $articles = require __DIR__ . '/includes/articles.php';
 ?>
 
 <section class="hero wrap">
-    <img src="/assets/images/grace-pariser-index-hero.jpg" alt="Grace Pariser working on her laptop" class="hero-photo aspect-landscape">
-    <h1 class="hero-headline-long">I'm Grace Pariser. I'm an employment law and HR consultant based in Plymouth.</h1>
-    <div class="prose lede">
-        <p>I've been doing this for the best part of a decade now, first in-house and then on my own.</p>
-        <p>And if there's one thing nine years of HR and employment law has taught me, it's that most people who've never had to deal with a disciplinary process think it's a lot simpler than it actually is.</p>
-        <p>It isn't.</p>
-        <p>There are rules, risks, difficult conversations, managers who want to do something you really don't think they should do, and employees who have suddenly discovered ChatGPT.</p>
-        <p>I help employers work their way through all of that.</p>
-    </div>
-    <div class="cta-row">
-        <a class="btn" href="/press.php">Invite me to comment</a>
-        <a class="btn-quiet" href="/writing.php">Read my writing</a>
+    <div class="hero-photo-bg" style="background-image: url('/assets/images/grace-pariser-index-hero.jpg');">
+        <h1 class="hero-headline-long">I'm Grace Pariser. I'm an employment law and HR consultant based in Plymouth.</h1>
+        <div class="prose lede">
+            <p>I've been doing this for the best part of a decade now, first in-house and then on my own.</p>
+            <p>And if there's one thing nine years of HR and employment law has taught me, it's that most people who've never had to deal with a disciplinary process think it's a lot simpler than it actually is.</p>
+            <p>It isn't.</p>
+            <p>There are rules, risks, difficult conversations, managers who want to do something you really don't think they should do, and employees who have suddenly discovered ChatGPT.</p>
+            <p>I help employers work their way through all of that.</p>
+        </div>
+        <div class="cta-row">
+            <a class="btn" href="/press.php">Invite me to comment</a>
+            <a class="btn-quiet" href="/writing.php">Read my writing</a>
+        </div>
     </div>
 </section>
 

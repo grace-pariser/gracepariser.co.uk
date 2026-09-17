@@ -7,10 +7,14 @@ $testimonials = require __DIR__ . '/includes/testimonials.php';
 ?>
 
 <section class="section wrap" style="border-top:none;">
-    <img src="/assets/images/grace-pariser-about.jpg" alt="Grace Pariser at her desk, with her cat walking across it" class="hero-photo aspect-landscape">
-    <p class="section-label">About</p>
-    <h1>Grace Pariser</h1>
-    <div class="prose dropcap">
+    <div class="hero-split-photo">
+        <div class="hero-split-copy">
+            <p class="section-label">About</p>
+            <h1>Grace Pariser</h1>
+        </div>
+        <img src="/assets/images/grace-pariser-about.jpg" alt="Grace Pariser at her desk, with her cat walking across it" class="hero-split-photo-img">
+    </div>
+    <div class="prose dropcap" style="margin-top:var(--space-4);">
         <p>I've been in HR for the best part of a decade. Five of those years as a consultant, and independent for the last two.</p>
         <p>I run HR On Call. Business owners come to me for disciplinary processes, TUPE, settlement agreements, and the bits of employment law that only come up once and then completely derail someone's week.</p>
         <p>Before that I worked in-house. I left partly because I got tired of watching directors ask for advice and then get annoyed when the advice wasn't what they wanted to hear.</p>

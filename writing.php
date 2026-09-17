@@ -8,10 +8,14 @@ $articles = require __DIR__ . '/includes/articles.php';
 ?>
 
 <section class="hero wrap">
-    <img src="/assets/images/grace-pariser-writing-hero.jpg" alt="Grace Pariser writing on her laptop" class="hero-photo aspect-landscape">
+    <div class="hero-split-photo" style="margin-bottom:var(--space-4);">
+        <div class="hero-split-copy">
+            <h1>Writing</h1>
+        </div>
+        <img src="/assets/images/grace-pariser-writing-hero.jpg" alt="Grace Pariser writing on her laptop" class="hero-split-photo-img">
+    </div>
     <div class="split">
         <div>
-            <h1>Writing</h1>
             <div class="prose lede">
                 <p>Employment law and HR, written the way I'd actually explain it to you over coffee, not the legal-speak version.</p>
                 <p>This isn't a legal update service. It's my own take: opinion pieces, arguments, and the occasional rant about something I think is ridiculous.</p>
