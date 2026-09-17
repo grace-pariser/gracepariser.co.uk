@@ -12,7 +12,7 @@ $testimonials = require __DIR__ . '/includes/testimonials.php';
             <p class="section-label">About</p>
             <h1>Grace Pariser</h1>
         </div>
-        <img src="/assets/images/grace-pariser-about.jpg" alt="Grace Pariser at her desk, with her cat walking across it" class="hero-split-photo-img">
+        <img src="/assets/images/grace-pariser-about.webp" alt="Grace Pariser at her desk, with her cat walking across it" class="hero-split-photo-img">
     </div>
     <div class="split-equal" style="margin-top:var(--space-4);">
         <div>

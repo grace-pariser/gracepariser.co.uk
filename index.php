@@ -8,7 +8,7 @@ $articles = require __DIR__ . '/includes/articles.php';
 ?>
 
 <section class="hero wrap">
-    <div class="hero-photo-bg" style="background-image: url('/assets/images/grace-pariser-index-hero.jpg');">
+    <div class="hero-photo-bg" style="background-image: url('/assets/images/grace-pariser-index-hero.webp');">
         <h1 class="hero-headline-long">I'm Grace Pariser. I'm an employment law and HR consultant based in Plymouth.</h1>
         <div class="prose lede">
             <p>I've been doing this for the best part of a decade now, first in-house and then on my own.</p>
@@ -21,17 +21,17 @@ $articles = require __DIR__ . '/includes/articles.php';
             <a class="btn" href="/press.php">Invite me to comment</a>
             <a class="btn-quiet" href="/writing.php">Read my writing</a>
         </div>
-        <img src="/assets/images/grace-pariser-index-hero.jpg" alt="Grace Pariser working on her laptop" class="hero-photo-bg-mobile-img">
+        <img src="/assets/images/grace-pariser-index-hero.webp" alt="Grace Pariser working on her laptop" class="hero-photo-bg-mobile-img">
     </div>
 </section>
 
 <section class="press-strip wrap">
     <p class="section-label">My services and products</p>
     <ul class="press-logos">
-        <li><a href="https://hr.on-call.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/hr-on-call.png" alt="HR On Call" class="press-logo press-logo-uniform"></a></li>
+        <li><a href="https://hr.on-call.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/hr-on-call.webp" alt="HR On Call" class="press-logo press-logo-uniform"></a></li>
         <li><a href="https://thehrvault.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/hr-vault.webp" alt="The HR Vault" class="press-logo press-logo-uniform"></a></li>
-        <li><a href="https://practice-hub.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/practice-hub.png" alt="Practice Hub" class="press-logo press-logo-uniform"></a></li>
-        <li><a href="https://popandpixel.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/pop-pixel.png" alt="Pop + Pixel" class="press-logo press-logo-uniform"></a></li>
+        <li><a href="https://practice-hub.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/practice-hub.webp" alt="Practice Hub" class="press-logo press-logo-uniform"></a></li>
+        <li><a href="https://popandpixel.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/pop-pixel.webp" alt="Pop + Pixel" class="press-logo press-logo-uniform"></a></li>
     </ul>
 </section>
 
@@ -69,7 +69,7 @@ $articles = require __DIR__ . '/includes/articles.php';
     <p class="section-label">As seen in</p>
     <ul class="press-logos">
         <li><a href="https://www.telegraph.co.uk" target="_blank" rel="noopener"><img src="/assets/images/press/telegraph.svg" alt="The Telegraph" class="press-logo press-logo-telegraph"></a></li>
-        <li><a href="https://www.personneltoday.com" target="_blank" rel="noopener"><img src="/assets/images/press/personnel-today.png" alt="Personnel Today" class="press-logo press-logo-pt"></a></li>
+        <li><a href="https://www.personneltoday.com" target="_blank" rel="noopener"><img src="/assets/images/press/personnel-today.webp" alt="Personnel Today" class="press-logo press-logo-pt"></a></li>
     </ul>
 </section>
 
@@ -90,7 +90,7 @@ $articles = require __DIR__ . '/includes/articles.php';
             </div>
         </div>
         <div class="photo-placeholder-wrap">
-            <img src="/assets/images/grace-pariser-home.jpg" alt="Grace Pariser" class="photo-placeholder aspect-portrait">
+            <img src="/assets/images/grace-pariser-home.webp" alt="Grace Pariser" class="photo-placeholder aspect-portrait">
         </div>
     </div>
 </section>

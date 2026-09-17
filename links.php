@@ -7,7 +7,7 @@ $products = [
     [
         'name' => 'HR On Call',
         'desc' => 'Retainer support and one-off advice for business owners.',
-        'logo' => '/assets/images/products/hr-on-call.png',
+        'logo' => '/assets/images/products/hr-on-call.webp',
         'href' => 'https://hr.on-call.co.uk',
     ],
     [
@@ -19,13 +19,13 @@ $products = [
     [
         'name' => 'Practice Hub',
         'desc' => 'Practice management built for independent HR consultants.',
-        'logo' => '/assets/images/products/practice-hub.png',
+        'logo' => '/assets/images/products/practice-hub.webp',
         'href' => 'https://practice-hub.co.uk',
     ],
     [
         'name' => 'Pop + Pixel',
         'desc' => 'Websites for HR consultancies, built by a working HR consultant.',
-        'logo' => '/assets/images/products/pop-pixel.png',
+        'logo' => '/assets/images/products/pop-pixel.webp',
         'href' => 'https://popandpixel.co.uk',
     ],
 ];

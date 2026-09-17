@@ -9,7 +9,7 @@ require __DIR__ . '/../includes/header.php';
     <p class="section-label">Opinion</p>
     <h1>The Real Problem With HR Isn't HR</h1>
     <div class="byline-row">
-        <img src="/assets/images/grace-pariser-avatar.jpg" alt="Grace Pariser" class="byline-avatar">
+        <img src="/assets/images/grace-pariser-avatar.webp" alt="Grace Pariser" class="byline-avatar">
         <p class="byline">By Grace Pariser &middot; September 2026</p>
     </div>
 </section>

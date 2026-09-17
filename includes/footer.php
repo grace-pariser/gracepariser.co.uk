@@ -41,7 +41,7 @@
   </div>
 </footer>
 <div class="cookie-banner" id="cookie-banner" hidden>
-  <p>This site uses Google Analytics to understand how visitors find and use it. <a href="/cookies.php">Learn more</a>.</p>
+  <p>This site uses Google Analytics to understand how visitors find and use it. <a href="/cookies.php">Learn more about cookies</a>.</p>
   <div class="cookie-banner-actions">
     <button type="button" class="btn-secondary" data-consent-decline>Decline</button>
     <button type="button" class="btn" data-consent-accept>Accept</button>

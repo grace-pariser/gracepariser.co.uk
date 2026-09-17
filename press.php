@@ -16,7 +16,7 @@ $featured = [
     ],
     [
         'outlet' => 'Personnel Today',
-        'logo' => '/assets/images/press/personnel-today.png',
+        'logo' => '/assets/images/press/personnel-today.webp',
         'logoClass' => 'press-logo-pt',
         'date' => 'June 2025',
         'title' => 'Seven ways to prepare now for the Employment Rights Bill',
@@ -25,7 +25,7 @@ $featured = [
     ],
     [
         'outlet' => 'Personnel Today',
-        'logo' => '/assets/images/press/personnel-today.png',
+        'logo' => '/assets/images/press/personnel-today.webp',
         'logoClass' => 'press-logo-pt',
         'date' => 'October 2024',
         'title' => 'Bereavement leave: understanding the value of employer support',
@@ -40,7 +40,7 @@ $featured = [
         <div class="hero-split-copy">
             <h1>Press</h1>
         </div>
-        <img src="/assets/images/grace-pariser-press-hero.jpg" alt="Grace Pariser" class="hero-split-photo-img">
+        <img src="/assets/images/grace-pariser-press-hero.webp" alt="Grace Pariser" class="hero-split-photo-img">
     </div>
     <div class="split">
         <div>

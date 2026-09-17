@@ -12,7 +12,7 @@ $articles = require __DIR__ . '/includes/articles.php';
         <div class="hero-split-copy">
             <h1>Writing</h1>
         </div>
-        <img src="/assets/images/grace-pariser-writing-hero.jpg" alt="Grace Pariser writing on her laptop" class="hero-split-photo-img">
+        <img src="/assets/images/grace-pariser-writing-hero.webp" alt="Grace Pariser writing on her laptop" class="hero-split-photo-img">
     </div>
     <div class="split">
         <div>

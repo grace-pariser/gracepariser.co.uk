@@ -10,7 +10,7 @@ require __DIR__ . '/includes/header.php';
         <div class="hero-split-copy">
             <h1>Work with me</h1>
         </div>
-        <img src="/assets/images/grace-pariser-work-with-me.jpg" alt="Grace Pariser working on her laptop" class="hero-split-photo-img">
+        <img src="/assets/images/grace-pariser-work-with-me.webp" alt="Grace Pariser working on her laptop" class="hero-split-photo-img">
     </div>
     <div class="split" style="margin-top:var(--space-4);">
         <div class="prose lede">
@@ -43,7 +43,7 @@ require __DIR__ . '/includes/header.php';
             </div>
         </div>
         <div class="panel product-panel">
-            <img src="/assets/images/products/hr-on-call.png" alt="HR On Call" class="product-panel-logo">
+            <img src="/assets/images/products/hr-on-call.webp" alt="HR On Call" class="product-panel-logo">
         </div>
     </div>
 </section>
@@ -59,14 +59,14 @@ require __DIR__ . '/includes/header.php';
             </div>
         </div>
         <div class="article-card">
-            <img src="/assets/images/products/practice-hub.png" alt="Practice Hub" class="card-logo">
+            <img src="/assets/images/products/practice-hub.webp" alt="Practice Hub" class="card-logo">
             <p>The practice management system built specifically for independent HR consultants, so you can spend less time on admin and more time on the work that actually pays.</p>
             <div class="cta-row">
                 <a class="btn" href="https://practice-hub.co.uk" target="_blank" rel="noopener">Explore Practice Hub</a>
             </div>
         </div>
         <div class="article-card">
-            <img src="/assets/images/products/pop-pixel.png" alt="Pop + Pixel" class="card-logo">
+            <img src="/assets/images/products/pop-pixel.webp" alt="Pop + Pixel" class="card-logo">
             <p>Websites for HR consultancies, designed to make you look credible and bring in the clients you actually want. Built by a web designer who's also a working HR consultant.</p>
             <div class="cta-row">
                 <a class="btn" href="https://popandpixel.co.uk" target="_blank" rel="noopener">Explore Pop + Pixel</a>

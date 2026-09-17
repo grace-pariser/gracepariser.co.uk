@@ -105,7 +105,7 @@ function linkedin_feed_linkify(string $escapedText): string
             <video class="linkedin-modal-video" controls playsinline hidden></video>
             <img class="linkedin-modal-image" alt="" hidden>
             <div class="cta-row">
-                <a class="btn-quiet linkedin-modal-link" target="_blank" rel="noopener">Read on LinkedIn</a>
+                <a class="btn-quiet linkedin-modal-link" href="https://www.linkedin.com/in/grace-pariser/" target="_blank" rel="noopener">Read on LinkedIn</a>
             </div>
         </div>
     </div>
