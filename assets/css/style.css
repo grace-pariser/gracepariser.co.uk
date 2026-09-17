@@ -461,6 +461,18 @@ p { margin: 0 0 var(--space-2); }
 .hero-photo-bg a.btn:hover { background: var(--paper); color: var(--ink-block); }
 .hero-photo-bg a.btn-quiet { color: var(--accent-on-dark); }
 .hero-photo-bg a.btn-quiet:hover { color: var(--paper); }
+/* Below this width the box gets tall and narrow enough (text wraps to
+   many lines) that cover-cropping a landscape photo into it either
+   hides her entirely or shows almost nothing recognisable as a photo.
+   Drop the image and just keep the solid panel. */
+@media (max-width: 600px) {
+  .hero-photo-bg {
+    background-image: none !important;
+    background-color: var(--ink-block);
+  }
+  .hero-photo-bg::before { background: none; }
+  .hero-photo-bg > * { max-width: none; }
+}
 
 /* A photo-plus-name masthead: photo alongside a solid ink panel, not a
    full-width slab of image dumped above unrelated body copy. Used where
