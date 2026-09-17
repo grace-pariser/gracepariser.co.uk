@@ -439,7 +439,7 @@ p { margin: 0 0 var(--space-2); }
 .hero-photo-bg {
   position: relative;
   background-size: cover;
-  background-position: right 20%;
+  background-position: left 20%;
   border-radius: var(--radius);
   padding: var(--space-4);
 }
@@ -447,7 +447,7 @@ p { margin: 0 0 var(--space-2); }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(100deg, var(--ink) 0%, var(--ink) 30%, rgba(32, 29, 25, 0.35) 60%, rgba(32, 29, 25, 0) 85%);
+  background: linear-gradient(100deg, var(--ink-block) 0%, var(--ink-block) 30%, rgba(26, 46, 74, 0.35) 60%, rgba(26, 46, 74, 0) 85%);
   border-radius: inherit;
 }
 .hero-photo-bg > * {
