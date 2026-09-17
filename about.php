@@ -17,22 +17,15 @@ $testimonials = require __DIR__ . '/includes/testimonials.php';
     <div class="split-equal" style="margin-top:var(--space-4);">
         <div>
             <div class="prose dropcap">
-                <p>I've been in HR for the best part of a decade. Five of those years as a consultant, and independent for the last two.</p>
-                <p>I run HR On Call. Business owners come to me for disciplinary processes, TUPE, settlement agreements, and the bits of employment law that only come up once and then completely derail someone's week.</p>
-                <p>Before that I worked in-house. I left partly because I got tired of watching directors ask for advice and then get annoyed when the advice wasn't what they wanted to hear.</p>
-                <p>It's an odd position to be in. You're there to protect the business, but half the time protecting the business means telling the person running it that they can't do the thing they want to do.</p>
-            </div>
-            <div class="pull-quote">
-                <p>I once had a manager refuse to speak to me for five days because I'd advocated for an eighteen year old employee he wanted rid of.</p>
+                <p>I've been in HR for the best part of a decade, five of those years as a consultant and independent for the last two. I run HR On Call, and business owners come to me for disciplinary processes, TUPE, settlement agreements, and the bits of employment law that only come up once and then completely derail someone's week.</p>
+                <p>Before that I worked in-house, and left partly because I got tired of watching directors ask for advice, then get annoyed when the advice wasn't what they wanted to hear. It's an odd position to be in. You're there to protect the business, but half the time that means telling the person running it that they can't do the thing they want to do. I once had a manager refuse to speak to me for five days because I'd advocated for an eighteen year old employee he wanted rid of.</p>
+                <p>I'm CIPD Level 7 qualified. I've also become the person at the school gates who gets "oh, you're one of those" when I mention what I do for a living.</p>
+                <p>Fair enough.</p>
             </div>
         </div>
         <div class="prose">
-            <p>I'm CIPD Level 7 qualified. I've also become the person at the school gates who gets "oh, you're one of those" when I mention what I do for a living.</p>
-            <p>Fair enough.</p>
-            <p>A lot of people have opinions about HR. Most of them haven't had to sit across from someone during a redundancy conversation.</p>
-            <p>These days I get to choose who I work with. That helps.</p>
-            <p>I've always been a fan of tech. At some point I taught myself to code, and what started as a passion project on the side is now part of the business: The HR Vault, and Rocket Digital Ltd, a second company for the dev work behind Pop + Pixel and Practice Hub.</p>
-            <p>I'm an HR person first. The rest happened because the tools I wanted didn't exist yet.</p>
+            <p>A lot of people have opinions about HR. Most of them haven't had to sit across from someone during a redundancy conversation, and these days I get to choose who I work with, which helps.</p>
+            <p>I taught myself to code a few years ago, and that turned into The HR Vault, plus Rocket Digital Ltd, a second company that does the dev work behind Pop + Pixel and Practice Hub. I'm an HR person first, the coding just came along with it.</p>
             <p>Based in Plymouth. Happy to work with clients further afield too.</p>
         </div>
     </div>

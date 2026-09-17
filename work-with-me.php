@@ -60,14 +60,14 @@ require __DIR__ . '/includes/header.php';
         </div>
         <div class="article-card">
             <img src="/assets/images/products/practice-hub.webp" alt="Practice Hub" class="card-logo">
-            <p>The practice management system built specifically for independent HR consultants, so you can spend less time on admin and more time on the work that actually pays.</p>
+            <p>The practice management system built specifically for independent HR consultants, covering client records, billing and time tracking in one place instead of three.</p>
             <div class="cta-row">
                 <a class="btn" href="https://practice-hub.co.uk" target="_blank" rel="noopener">Explore Practice Hub</a>
             </div>
         </div>
         <div class="article-card">
             <img src="/assets/images/products/pop-pixel.webp" alt="Pop + Pixel" class="card-logo">
-            <p>Websites for HR consultancies, designed to make you look credible and bring in the clients you actually want. Built by a web designer who's also a working HR consultant.</p>
+            <p>Websites for HR consultancies, built by a web designer who's also a working HR consultant, so the site actually says what an HR consultancy needs to say.</p>
             <div class="cta-row">
                 <a class="btn" href="https://popandpixel.co.uk" target="_blank" rel="noopener">Explore Pop + Pixel</a>
             </div>

@@ -5,14 +5,14 @@
 return [
     [
         'title' => "The Government Is Pricing Workers Out of Jobs",
-        'dek' => "Opinion: taken together, this autumn's employment law changes don't protect workers so much as price them out of being hired at all.",
+        'dek' => "Opinion: this autumn's employment law changes will price workers out of being hired.",
         'outlet' => null,
         'date' => 'September 2026',
         'href' => '/writing/pricing-workers-out-of-jobs.php',
     ],
     [
         'title' => "The Real Problem With HR Isn't HR",
-        'dek' => "Opinion: directors set the risk, HR administers the consequences, and gets blamed for it either way.",
+        'dek' => "Opinion: directors set the risk, HR carries out the decision, and gets blamed either way.",
         'outlet' => null,
         'date' => 'September 2026',
         'href' => '/writing/hr-bad-reputation.php',

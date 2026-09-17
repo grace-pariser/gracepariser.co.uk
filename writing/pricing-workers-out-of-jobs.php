@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "The Government Is Pricing Workers Out of Jobs | Grace Pariser";
-$pageDescription = "Opinion: taken together, this autumn's employment law changes don't protect workers so much as price them out of being hired at all.";
+$pageDescription = "Opinion: this autumn's employment law changes will price workers out of being hired.";
 $activeNav = 'writing';
 require __DIR__ . '/../includes/header.php';
 ?>

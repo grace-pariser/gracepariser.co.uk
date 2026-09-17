@@ -43,8 +43,7 @@ $articles = require __DIR__ . '/includes/articles.php';
                 <p>Employment law hasn't exactly sat still over the last few years, but there's a lot happening at the moment.</p>
                 <p>Six months unfair dismissal rights. A new Fair Work Agency with its own enforcement powers. And the wider Making Work Pay agenda, which I think is achieving the opposite of what it says on the tin.</p>
                 <p>The problem for employers is that the law doesn't politely wait until everyone has caught up before changing again.</p>
-                <p>There are businesses making decisions now based on rules that are about to change underneath them. And, as is usually the case with employment law, some people won't realise they've got it wrong until they're already dealing with the consequences.</p>
-                <p>That's where I come in.</p>
+                <p>There are businesses making decisions right now based on rules that won't still be true in six months. And, as is usually the case with employment law, some people won't find out they got it wrong until they're sitting across from an employment tribunal. I help them sort it out before it gets that far.</p>
             </div>
         </div>
         <div class="panel changes-panel">
@@ -78,8 +77,8 @@ $articles = require __DIR__ . '/includes/articles.php';
         <div>
             <p class="section-label">A bit about me</p>
             <div class="prose">
-                <p>I'm CIPD Level 7 qualified and advise business owners on TUPE, settlement agreements, disciplinary processes and the various employment law changes that keep appearing.</p>
-                <p>I've spent most of my career dealing with the things that employers would generally rather not deal with.</p>
+                <p>I'm CIPD Level 7 qualified and advise business owners on TUPE, settlement agreements, disciplinary processes and the various employment law changes that keep coming.</p>
+                <p>I've spent most of my career dealing with the things that employers would rather not deal with.</p>
                 <p>Difficult employees. Difficult managers. Difficult decisions. And occasionally difficult lawyers.</p>
                 <p>I've also been the person a manager refuses to speak to for a week because they didn't like my advice.</p>
                 <p>I don't take it personally.</p>
@@ -101,8 +100,7 @@ $articles = require __DIR__ . '/includes/articles.php';
             <p class="section-label">I write about this stuff</p>
             <div class="prose">
                 <p>I regularly write about employment law, HR and the things I think employers (and HR people) actually need to know.</p>
-                <p>These aren't legal updates.</p>
-                <p>They're my own take: opinions, arguments, and the occasional rant about something I think is ridiculous.</p>
+                <p>I write my own take on this stuff: opinions, arguments, and the occasional rant about something I think is ridiculous.</p>
             </div>
         </div>
         <div class="panel changes-panel">
