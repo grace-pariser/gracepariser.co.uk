@@ -432,9 +432,10 @@ p { margin: 0 0 var(--space-2); }
 .hero h1 { max-width: 20ch; }
 .hero h1.hero-headline-long { max-width: 34ch; }
 
-/* A photo used as a hero's background: a flat (non-gradient) ink tint
-   over the photo for legible white text, not a scrim gradient - keeps
-   to the site's flat, no-gradient, no-shadow language. */
+/* A photo used as a hero's background: a fade from ink (behind the
+   text) to fully clear (over the photo's subject), so the text has a
+   legible backdrop without a flat tint sitting over her the whole way
+   across, or ever losing the photo's own colour. */
 .hero-photo-bg {
   position: relative;
   background-size: cover;
@@ -446,13 +447,13 @@ p { margin: 0 0 var(--space-2); }
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--ink-block);
-  opacity: 0.5;
+  background: linear-gradient(100deg, var(--ink) 0%, var(--ink) 30%, rgba(32, 29, 25, 0.35) 60%, rgba(32, 29, 25, 0) 85%);
   border-radius: inherit;
 }
 .hero-photo-bg > * {
   position: relative;
   z-index: 1;
+  max-width: 32rem;
 }
 .hero-photo-bg h1,
 .hero-photo-bg .lede p { color: var(--paper); }

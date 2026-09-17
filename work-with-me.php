@@ -9,13 +9,24 @@ require __DIR__ . '/includes/header.php';
     <div class="hero-split-photo">
         <div class="hero-split-copy">
             <h1>Work with me</h1>
-            <div class="prose lede">
-                <p>There are two ways to work with me, and which one's right for you depends on which side of HR you're on.</p>
-                <p>If you run a business, I'm the person you call when something's gone wrong, or ideally before it does.</p>
-                <p>If you're an HR consultant yourself, I've already built the back office you're probably still running out of spreadsheets.</p>
-            </div>
         </div>
         <img src="/assets/images/grace-pariser-work-with-me.jpg" alt="Grace Pariser working on her laptop" class="hero-split-photo-img" style="object-position: center 25%;">
+    </div>
+    <div class="split" style="margin-top:var(--space-4);">
+        <div class="prose lede">
+            <p>There are two ways to work with me, and which one's right for you depends on which side of HR you're on.</p>
+            <p>If you run a business, I'm the person you call when something's gone wrong, or ideally before it does.</p>
+            <p>If you're an HR consultant yourself, I've already built the back office you're probably still running out of spreadsheets.</p>
+        </div>
+        <div class="panel changes-panel">
+            <p class="section-label">What I do</p>
+            <ul class="changes-list">
+                <li>HR and employment law advice for business owners</li>
+                <li>Documents, calculators and resources for HR consultants</li>
+                <li>Practice management software for HR consultants</li>
+                <li>Web design for HR consultancies</li>
+            </ul>
+        </div>
     </div>
 </section>
 
