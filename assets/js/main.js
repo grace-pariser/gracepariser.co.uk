@@ -103,20 +103,22 @@
     video.pause();
     if (post.video && post.video.url) {
       video.src = post.video.url;
-      if (post.video.thumbnail) { video.poster = post.video.thumbnail; }
+      if (post.video.thumbnail) { video.setAttribute('poster', post.video.thumbnail); } else { video.removeAttribute('poster'); }
       video.hidden = false;
       image.hidden = true;
       image.removeAttribute('src');
-    } else if (post.image) {
-      image.src = post.image;
-      image.hidden = false;
-      video.hidden = true;
-      video.removeAttribute('src');
     } else {
-      image.hidden = true;
-      image.removeAttribute('src');
-      video.hidden = true;
       video.removeAttribute('src');
+      video.removeAttribute('poster');
+      video.load();
+      video.hidden = true;
+      if (post.image) {
+        image.src = post.image;
+        image.hidden = false;
+      } else {
+        image.hidden = true;
+        image.removeAttribute('src');
+      }
     }
     if (post.authorImage) {
       avatar.src = post.authorImage;

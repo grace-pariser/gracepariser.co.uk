@@ -505,7 +505,8 @@ p { margin: 0 0 var(--space-2); }
   object-fit: cover;
 }
 @media (max-width: 780px) {
-  .hero-split-photo { grid-template-columns: 1fr; }
+  .hero-split-photo { grid-template-columns: 1fr; min-height: 0; }
+  .hero-split-copy { padding: var(--space-3); }
   .hero-split-photo-img { height: 14rem; }
 }
 
@@ -842,7 +843,8 @@ p { margin: 0 0 var(--space-2); }
   flex-direction: row;
   align-items: center;
 }
-.linkedin-card-lead .linkedin-card-image {
+.linkedin-card-lead .linkedin-card-image,
+.linkedin-card-lead .linkedin-card-video-wrap {
   width: 40%;
   flex-shrink: 0;
 }
@@ -867,7 +869,8 @@ p { margin: 0 0 var(--space-2); }
 }
 @media (max-width: 700px) {
   .linkedin-card-lead .linkedin-card-main { flex-direction: column; }
-  .linkedin-card-lead .linkedin-card-image { width: 100%; }
+  .linkedin-card-lead .linkedin-card-image,
+  .linkedin-card-lead .linkedin-card-video-wrap { width: 100%; }
 }
 
 /* ---------- LinkedIn post modal ---------- */
@@ -924,6 +927,7 @@ p { margin: 0 0 var(--space-2); }
   margin-bottom: var(--space-2);
   background: var(--ink-block);
 }
+.linkedin-modal-video[hidden] { display: none; }
 .linkedin-modal-close {
   position: absolute;
   top: var(--space-2);
