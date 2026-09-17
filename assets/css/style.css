@@ -848,6 +848,9 @@ p { margin: 0 0 var(--space-2); }
   width: 40%;
   flex-shrink: 0;
 }
+.linkedin-card-lead .linkedin-card-video-wrap {
+  align-self: flex-start;
+}
 .linkedin-card-lead .linkedin-card-body {
   padding: var(--space-3);
 }
