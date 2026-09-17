@@ -540,6 +540,18 @@ p { margin: 0 0 var(--space-2); }
 .aspect-landscape { aspect-ratio: 3 / 2; }
 .aspect-square { aspect-ratio: 1 / 1; }
 
+/* A full-width photo banner above a page's hero copy - for landscape
+   photos, which look small and squeezed in the narrow photo-placeholder
+   sidebar column that's sized for portrait shots. */
+.hero-photo {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-4);
+}
+
 /* ---------- Article / card grid ---------- */
 
 .card-grid {

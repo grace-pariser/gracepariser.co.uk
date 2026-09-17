@@ -8,6 +8,7 @@ $articles = require __DIR__ . '/includes/articles.php';
 ?>
 
 <section class="hero wrap">
+    <img src="/assets/images/grace-pariser-writing-hero.jpg" alt="Grace Pariser writing on her laptop" class="hero-photo aspect-landscape">
     <div class="split">
         <div>
             <h1>Writing</h1>

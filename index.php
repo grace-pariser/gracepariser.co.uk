@@ -8,6 +8,7 @@ $articles = require __DIR__ . '/includes/articles.php';
 ?>
 
 <section class="hero wrap">
+    <img src="/assets/images/grace-pariser-index-hero.jpg" alt="Grace Pariser working on her laptop" class="hero-photo aspect-landscape">
     <h1 class="hero-headline-long">I'm Grace Pariser. I'm an employment law and HR consultant based in Plymouth.</h1>
     <div class="prose lede">
         <p>I've been doing this for the best part of a decade now, first in-house and then on my own.</p>

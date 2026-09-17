@@ -36,6 +36,7 @@ $featured = [
 ?>
 
 <section class="hero wrap">
+    <img src="/assets/images/grace-pariser-press-hero.jpg" alt="Grace Pariser" class="hero-photo aspect-landscape">
     <div class="split">
         <div>
             <h1>Press</h1>
