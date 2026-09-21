@@ -16,7 +16,7 @@ require __DIR__ . '/../includes/header.php';
 
 <section class="section wrap-article" style="border-top:none;">
     <div class="prose dropcap">
-        <p>From 1 October, employers become liable for right to work breaches committed by their subcontractors' staff, even where the individual concerned has never been anywhere near their own payroll. A second change lands on 30 October. Employers must tell every new starter, in a standalone document with specified wording, that they have the right to join a trade union, and do it before day one. Employment lawyers have spent the summer briefing clients on both changes, and the reaction from company directors has been fairly uniform. Here comes HR with another problem.</p>
+        <p>From 1 October, employers become liable for right to work breaches committed by their subcontractors' staff, even where the individual concerned has never been anywhere near their own payroll. A second change arrives on 30 October. Employers must tell every new starter, in a standalone document with specified wording, that they have the right to join a trade union, and do it before day one. Employment lawyers have spent the summer briefing clients on both changes, and the reaction from company directors has been fairly uniform. Here comes HR with another problem.</p>
         <p>I've spent nine years advising employers on exactly this kind of change, and I recognise that reaction because I hear a slightly different version of it in most meetings I sit in. The assumption underneath it is that HR invented the problem, or at least chose to bring it through the door.</p>
         <p>Neither is true.</p>
         <p>HR didn't write the Immigration Act, and it didn't decide that trade union notification deserved its own document. Someone in HR simply has to explain it, implement it, and then absorb the blame when a director decides it's excessive.</p>
@@ -26,7 +26,7 @@ require __DIR__ . '/../includes/header.php';
         <p>None of that is HR being difficult.</p>
     </div>
     <div class="pull-quote">
-        <p>That's HR standing between a director and a criminal charge.</p>
+        <p>HR is standing between a director and a criminal charge.</p>
     </div>
     <div class="prose">
         <p>I did my CIPD qualification back in 2020, and I left it convinced I'd spend my career building the perfect employee experience, fair and kind to everyone, because that's what the syllabus teaches. What it doesn't teach is commercialism, or what happens when a founder tells you that fairness costs money that they aren't prepared to spend. That's a hard lesson, and I learned it the slow way, like most people in this profession do. It's also why HR rarely gets a genuine seat at the table. The idealism the qualification instils doesn't survive contact with a board that sees HR as a cost centre rather than a partner, and the disappointment on both sides gets mistaken for HR being obstructive when it's really HR being naive.</p>
