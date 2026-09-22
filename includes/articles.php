@@ -4,6 +4,13 @@
 // their full body copy, or a press mention awaiting its real article link).
 return [
     [
+        'title' => "The Employment Tribunal Runs on Who Can Afford to Find Out Who's Right",
+        'dek' => "Opinion: defending an employment tribunal claim costs an employer thousands regardless of the outcome, and almost nothing stops a speculative one being filed.",
+        'outlet' => null,
+        'date' => 'September 2026',
+        'href' => '/writing/tribunal-who-can-afford.php',
+    ],
+    [
         'title' => "The Government Is Pricing Workers Out of Jobs",
         'dek' => "Opinion: this autumn's employment law changes will price workers out of being hired.",
         'outlet' => null,
