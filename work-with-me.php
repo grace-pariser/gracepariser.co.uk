@@ -52,7 +52,7 @@ require __DIR__ . '/includes/header.php';
 
 <section class="section wrap">
     <p class="section-label">For HR consultants</p>
-    <div class="card-grid">
+    <div class="card-grid card-grid-2">
         <div class="article-card">
             <img src="/assets/images/products/hr-vault.webp" alt="The HR Vault" class="card-logo">
             <p>The back office of an HR consultancy, in one subscription: documents, builders, calculators, resources and 30 minutes of advice a month.</p>

@@ -29,10 +29,16 @@ $products = [
         'href' => 'https://popandpixel.co.uk',
     ],
     [
-        'name' => 'Handbook Portal',
+        'name' => 'Handbook Portal (business owners)',
         'desc' => "Upload the handbook you already have in Word and get a beautiful online portal in your company's brand.",
         'logo' => '/assets/images/products/handbook-portal.webp',
         'href' => 'https://handbookportal.co.uk',
+    ],
+    [
+        'name' => 'Handbook Portal (HR consultants)',
+        'desc' => "Turn any Word handbook into a beautiful online portal in your client's brand.",
+        'logo' => '/assets/images/products/handbook-portal.webp',
+        'href' => 'https://handbookportal.co.uk/resellers.php',
     ],
 ];
 ?><!DOCTYPE html>
