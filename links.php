@@ -29,7 +29,7 @@ $products = [
         'href' => 'https://popandpixel.co.uk',
     ],
     [
-        'name' => 'Handbook Portal (business owners)',
+        'name' => 'Handbook Portal (businesses)',
         'desc' => "Upload the handbook you already have and get an online portal in your company's brand.",
         'logo' => '/assets/images/products/handbook-portal.webp',
         'href' => 'https://handbookportal.co.uk',
