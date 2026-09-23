@@ -31,19 +31,21 @@ require __DIR__ . '/includes/header.php';
 </section>
 
 <section class="section wrap">
-    <div class="split">
-        <div>
-            <p class="section-label">For business owners</p>
-            <div class="prose">
-                <p>Retainer support, project work, and one-off advice on TUPE, settlement agreements, disciplinary and grievance processes, and bespoke document drafting.</p>
-                <p>I work with businesses directly.</p>
-            </div>
+    <p class="section-label">For business owners</p>
+    <div class="card-grid card-grid-2">
+        <div class="article-card">
+            <img src="/assets/images/products/hr-on-call.webp" alt="HR On Call" class="card-logo">
+            <p>Retainer support, project work, and one-off advice on TUPE, settlement agreements, disciplinary and grievance processes, and bespoke document drafting.</p>
             <div class="cta-row">
                 <a class="btn" href="https://hr.on-call.co.uk" target="_blank" rel="noopener">Explore HR On Call</a>
             </div>
         </div>
-        <div class="panel product-panel">
-            <img src="/assets/images/products/hr-on-call.webp" alt="HR On Call" class="product-panel-logo">
+        <div class="article-card">
+            <img src="/assets/images/products/handbook-portal.webp" alt="Handbook Portal" class="card-logo">
+            <p>Upload the handbook you already have in Word and get a beautiful online portal in your company's brand.</p>
+            <div class="cta-row">
+                <a class="btn" href="https://handbookportal.co.uk" target="_blank" rel="noopener">Explore Handbook Portal</a>
+            </div>
         </div>
     </div>
 </section>
@@ -70,6 +72,13 @@ require __DIR__ . '/includes/header.php';
             <p>Websites for HR consultancies, built by a web designer who's also a working HR consultant, so the site actually says what an HR consultancy needs to say.</p>
             <div class="cta-row">
                 <a class="btn" href="https://popandpixel.co.uk" target="_blank" rel="noopener">Explore Pop + Pixel</a>
+            </div>
+        </div>
+        <div class="article-card">
+            <img src="/assets/images/products/handbook-portal.webp" alt="Handbook Portal" class="card-logo">
+            <p>Turn any Word handbook into a beautiful online portal in your client's brand.</p>
+            <div class="cta-row">
+                <a class="btn" href="https://handbookportal.co.uk/resellers.php" target="_blank" rel="noopener">Explore Handbook Portal</a>
             </div>
         </div>
     </div>
