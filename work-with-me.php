@@ -42,7 +42,7 @@ require __DIR__ . '/includes/header.php';
         </div>
         <div class="article-card">
             <img src="/assets/images/products/handbook-portal.webp" alt="Handbook Portal" class="card-logo">
-            <p>Upload the handbook you already have in Word and get a beautiful online portal in your company's brand.</p>
+            <p>Upload the handbook you already have and get an online portal in your company's brand.</p>
             <div class="cta-row">
                 <a class="btn" href="https://handbookportal.co.uk" target="_blank" rel="noopener">Explore Handbook Portal</a>
             </div>

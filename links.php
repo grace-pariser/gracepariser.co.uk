@@ -30,7 +30,7 @@ $products = [
     ],
     [
         'name' => 'Handbook Portal (business owners)',
-        'desc' => "Upload the handbook you already have in Word and get a beautiful online portal in your company's brand.",
+        'desc' => "Upload the handbook you already have and get an online portal in your company's brand.",
         'logo' => '/assets/images/products/handbook-portal.webp',
         'href' => 'https://handbookportal.co.uk',
     ],
