@@ -30,7 +30,7 @@ require __DIR__ . '/includes/header.php';
 
         <h3>Your rights</h3>
         <p>Under UK data protection law you have the right to ask what data is held about you, to have it corrected, and to have it deleted. Contact <a href="mailto:enquiries@gracepariser.co.uk">enquiries@gracepariser.co.uk</a> to exercise any of these.</p>
-        <p>You also have the right to complain to the Information Commissioner's Office (ICO) if you believe your data has been mishandled: <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>, or 0303 123 1113.</p>
+        <p>You also have the right to complain to the Information Commission if you believe your data has been mishandled: <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>, or 0303 123 1113.</p>
     </div>
 </section>
 
