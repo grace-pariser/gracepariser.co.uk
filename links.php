@@ -23,12 +23,6 @@ $products = [
         'href' => 'https://practice-hub.co.uk',
     ],
     [
-        'name' => 'Pop + Pixel',
-        'desc' => 'Websites for HR consultancies, built by a working HR consultant.',
-        'logo' => '/assets/images/products/pop-pixel.webp',
-        'href' => 'https://popandpixel.co.uk',
-    ],
-    [
         'name' => 'Handbook Portal (businesses)',
         'desc' => "Upload the handbook you already have and get an online portal in your company's brand.",
         'logo' => '/assets/images/products/handbook-portal.webp',

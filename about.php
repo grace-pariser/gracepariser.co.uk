@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'About | Grace Pariser';
-$pageDescription = "I'm an HR person first. Practice Hub, Pop + Pixel and The HR Vault happened because the tools I wanted didn't exist yet.";
+$pageDescription = "I'm an HR person first. Practice Hub and The HR Vault happened because the tools I wanted didn't exist yet.";
 $activeNav = 'about';
 require __DIR__ . '/includes/header.php';
 $testimonials = require __DIR__ . '/includes/testimonials.php';
@@ -25,7 +25,7 @@ $testimonials = require __DIR__ . '/includes/testimonials.php';
         </div>
         <div class="prose">
             <p>A lot of people have opinions about HR. Most of them haven't had to sit across from someone during a redundancy conversation, and these days I get to choose who I work with, which helps.</p>
-            <p>I taught myself to code a few years ago, and that turned into The HR Vault, plus Rocket Digital Ltd, a second company that does the dev work behind Pop + Pixel and Practice Hub. I'm an HR person first, the coding just came along with it.</p>
+            <p>I taught myself to code a few years ago, and that turned into The HR Vault, plus Practice Hub HR Ltd, a second company that does the dev work behind Practice Hub. I'm an HR person first, the coding just came along with it.</p>
             <p>Based in Plymouth. Happy to work with clients further afield too.</p>
         </div>
     </div>
@@ -43,7 +43,7 @@ $testimonials = require __DIR__ . '/includes/testimonials.php';
                 <li>
                     <span class="timeline-date">Apr 2026 &ndash; present</span>
                     <h3 class="timeline-title">Founder &amp; Director</h3>
-                    <p class="timeline-org">Rocket Digital Ltd</p>
+                    <p class="timeline-org">Practice Hub HR Ltd</p>
                 </li>
                 <li>
                     <span class="timeline-date">Feb 2025 &ndash; present</span>

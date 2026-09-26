@@ -31,7 +31,6 @@ $articles = require __DIR__ . '/includes/articles.php';
         <li><a href="https://hr.on-call.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/hr-on-call.webp" alt="HR On Call" class="press-logo press-logo-uniform"></a></li>
         <li><a href="https://thehrvault.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/hr-vault.webp" alt="The HR Vault" class="press-logo press-logo-uniform"></a></li>
         <li><a href="https://practice-hub.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/practice-hub.webp" alt="Practice Hub" class="press-logo press-logo-uniform"></a></li>
-        <li><a href="https://popandpixel.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/pop-pixel.webp" alt="Pop + Pixel" class="press-logo press-logo-uniform"></a></li>
         <li><a href="https://handbookportal.co.uk" target="_blank" rel="noopener"><img src="/assets/images/products/handbook-portal.webp" alt="Handbook Portal" class="press-logo press-logo-uniform"></a></li>
     </ul>
 </section>

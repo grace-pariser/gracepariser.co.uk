@@ -52,7 +52,7 @@ require __DIR__ . '/includes/header.php';
 
 <section class="section wrap">
     <p class="section-label">For HR consultants</p>
-    <div class="card-grid card-grid-2">
+    <div class="card-grid">
         <div class="article-card">
             <img src="/assets/images/products/hr-vault.webp" alt="The HR Vault" class="card-logo">
             <p>The back office of an HR consultancy, in one subscription: documents, builders, calculators, resources and 30 minutes of advice a month.</p>
@@ -65,13 +65,6 @@ require __DIR__ . '/includes/header.php';
             <p>The practice management system built specifically for independent HR consultants, covering client records, billing and time tracking in one place instead of three.</p>
             <div class="cta-row">
                 <a class="btn" href="https://practice-hub.co.uk" target="_blank" rel="noopener">Explore Practice Hub</a>
-            </div>
-        </div>
-        <div class="article-card">
-            <img src="/assets/images/products/pop-pixel.webp" alt="Pop + Pixel" class="card-logo">
-            <p>Websites for HR consultancies, built by a web designer who's also a working HR consultant, so the site actually says what an HR consultancy needs to say.</p>
-            <div class="cta-row">
-                <a class="btn" href="https://popandpixel.co.uk" target="_blank" rel="noopener">Explore Pop + Pixel</a>
             </div>
         </div>
         <div class="article-card">
