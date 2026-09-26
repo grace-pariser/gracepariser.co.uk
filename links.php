@@ -13,7 +13,7 @@ $products = [
     [
         'name' => 'The HR Vault',
         'desc' => 'The back office of an HR consultancy, in one subscription.',
-        'logo' => '/assets/images/products/hr-vault.webp',
+        'logo' => '/assets/images/products/hr-vault.webp?v=2026',
         'href' => 'https://thehrvault.co.uk',
     ],
     [
