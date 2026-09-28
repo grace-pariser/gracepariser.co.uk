@@ -28,7 +28,7 @@
   </div>
   <div class="wrap footer-legal">
     <p class="footer-meta">&copy; <?= date('Y') ?> Grace Pariser.</p>
-    <p class="footer-meta"><a href="https://thehrvault.co.uk" target="_blank" rel="noopener">The HR Vault</a> is a trading name of <a href="https://on-call.co.uk" target="_blank" rel="noopener">HR On Call Ltd</a>. HR On Call Ltd is a company registered in England and Wales under company number 16891106. VAT number: 515981373.</p>
+    <p class="footer-meta"><a href="https://thehrvault.co.uk" target="_blank" rel="noopener">The HR Vault</a> and <a href="https://handbookportal.co.uk" target="_blank" rel="noopener">The Handbook Portal</a> are trading names of <a href="https://on-call.co.uk" target="_blank" rel="noopener">HR On Call Ltd</a>. HR On Call Ltd is a company registered in England and Wales under company number 16891106. VAT number: 515981373.</p>
     <p class="footer-meta"><a href="https://practice-hub.co.uk" target="_blank" rel="noopener">Practice Hub</a> is a trading name of Practice Hub HR Ltd. Practice Hub HR Ltd is a company registered in England and Wales under company number 17109960.</p>
     <p class="footer-meta">Photography: <a href="https://jimwileman.photoshelter.com/index" target="_blank" rel="noopener">Jim Wileman</a>.</p>
   </div>
